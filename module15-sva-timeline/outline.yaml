@@ -1,0 +1,12 @@
+# Module 15 outline
+title: "SVA timeline (lite)"
+kind: lab
+lab: sva-timeline
+slides:
+  - Course context / why layered TB + UVM matter
+  - Core idea (1 concept)
+  - Track B: show lab starter if shipped (else diagram)
+  - Track A: offline / legacy demo cue
+  - Common pitfalls
+  - Your turn + quiz prompt
+duration_minutes: 8

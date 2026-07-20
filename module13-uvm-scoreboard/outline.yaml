@@ -1,0 +1,12 @@
+# Module 13 outline
+title: "Scoreboard"
+kind: lab
+lab: uvm-scoreboard
+slides:
+  - Course context / why layered TB + UVM matter
+  - Core idea (1 concept)
+  - Track B: show lab starter if shipped (else diagram)
+  - Track A: offline / legacy demo cue
+  - Common pitfalls
+  - Your turn + quiz prompt
+duration_minutes: 8
