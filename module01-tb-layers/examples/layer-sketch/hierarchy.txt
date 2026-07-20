@@ -1,0 +1,20 @@
+UVM testbench layer sketch (literacy — not runnable UVM)
+============================================================
+
+test (uvm_test)
+  └── env (uvm_env)
+        ├── agent (uvm_agent, active)
+        │     ├── sequencer  ──►  driver  ──►  virtual interface  ──►  DUT
+        │     └── monitor    ──►  analysis port  ──►  scoreboard
+        └── scoreboard (uvm_scoreboard)
+
+Stimulus path:
+  sequence → sequencer → driver → vif → DUT
+
+Observe path:
+  DUT → vif → monitor → scoreboard (predict vs actual)
+
+Notes:
+  - Passive agent: monitor only (no sequencer/driver activity).
+  - Env may hold multiple agents; scoreboard often shared.
+  - Flat classic TB collapses these roles into one module.

@@ -1,0 +1,35 @@
+UVM TLM wiring sketch (literacy)
+================================
+
+Rule: port (initiator) .connect( export (target) )
+      Wire in connect_phase — after build creates port objects.
+
+1) seq_item — driver pulls from sequencer
+   drv.seq_item_port.connect( sqr.seq_item_export );
+   // in driver run task:
+   //   seq_item_port.get_next_item( txn );
+   //   ... drive pins ...
+   //   seq_item_port.item_done();
+
+2) put — push from producer to consumer
+   prod.put_port.connect( cons.put_export );
+   // producer calls put_port.put( txn );
+
+3) get — pull from producer export
+   cons.get_port.connect( prod.get_export );
+   // consumer calls get_port.get( txn );
+
+4) analysis — monitor broadcast (one → many)
+   mon.analysis_port.connect( sb.analysis_export );  // or uvm_analysis_imp
+   // monitor calls analysis_port.write( txn );
+   // subscribers receive write() — fan-out
+
+Classic active agent hookup:
+   driver.seq_item_port.connect( sequencer.seq_item_export );
+   monitor.analysis_port.connect( scoreboard.actual_imp );
+
+Common mistakes:
+   wiring in build_phase (ports may not exist yet)
+   reversed port/export direction
+   forget item_done after get_next_item
+   treating analysis like a paired export (it's broadcast)

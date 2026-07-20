@@ -1,0 +1,53 @@
+{
+  "module": "module14-ral-map",
+  "title": "RAL map check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "UVM RAL mainly models…",
+      "choices": [
+        "block → register → field over an address map",
+        "only sequence items for the driver",
+        "factory overrides without addresses",
+        "report phase summaries only"
+      ],
+      "answer": 0,
+      "explain": "RAL names the register hierarchy and map."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "A front-door register access…",
+      "choices": [
+        "uses the bus/adapter (real bus cycles)",
+        "only reads plusargs",
+        "skips the mirror entirely",
+        "runs only in build_phase"
+      ],
+      "answer": 0,
+      "explain": "Front-door = stimulus through the bus path."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Back-door peek/poke typically…",
+      "choices": [
+        "uses an HDL path without bus cycles",
+        "requires a sequence on the sequencer",
+        "deletes the register block",
+        "replaces the scoreboard"
+      ],
+      "answer": 0,
+      "explain": "Back-door = direct RTL access for debug/bring-up."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "The register mirror tracks the model’s predicted hardware value.",
+      "answer": true,
+      "explain": "Mirror vs DUT compare is core RAL checking."
+    }
+  ]
+}

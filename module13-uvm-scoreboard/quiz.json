@@ -1,0 +1,53 @@
+{
+  "module": "module13-uvm-scoreboard",
+  "title": "Scoreboard check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "A UVM scoreboard mainly…",
+      "choices": [
+        "compare predicted (expect) vs observed (actual) transactions",
+        "randomize sequence items only",
+        "replace the driver",
+        "run only in build_phase"
+      ],
+      "answer": 0,
+      "explain": "Scoreboards check expect against actual."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "The expect queue typically receives…",
+      "choices": [
+        "predicted/reference transactions",
+        "RTL synthesis output",
+        "plusarg strings only",
+        "reset signals from the DUT"
+      ],
+      "answer": 0,
+      "explain": "Expect = what you think should happen."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "The actual queue typically receives…",
+      "choices": [
+        "monitor analysis (observed bus activity)",
+        "factory overrides",
+        "sequence start_item calls",
+        "LibreOffice exports"
+      ],
+      "answer": 0,
+      "explain": "Actual = what the monitor saw on the interface."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Leftover items in expect or actual at end of test usually mean an orphan bug.",
+      "answer": true,
+      "explain": "Unmatched queue entries → missing predict or observe."
+    }
+  ]
+}

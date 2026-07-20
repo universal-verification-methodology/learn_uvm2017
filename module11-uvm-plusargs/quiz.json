@@ -1,0 +1,53 @@
+{
+  "module": "module11-uvm-plusargs",
+  "title": "Plusargs / testname check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "+UVM_TESTNAME primarily…",
+      "choices": [
+        "selects which uvm_test class the factory builds at run time",
+        "sets the simulator clock frequency",
+        "replaces the scoreboard",
+        "runs only in report_phase"
+      ],
+      "answer": 0,
+      "explain": "+UVM_TESTNAME is the standard test-selection plusarg."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "A +SEED plusarg is used to…",
+      "choices": [
+        "pick the uvm_test class name",
+        "control randomization reproducibility",
+        "skip connect_phase",
+        "disable the monitor"
+      ],
+      "answer": 1,
+      "explain": "Seed knobs help replay the same random stimulus."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "uvm_cmdline_processor / $value$plusargs help you…",
+      "choices": [
+        "read plusarg knobs from the simulation command line",
+        "compile RTL inside the testbench",
+        "connect seq_item ports automatically",
+        "raise objections in build_phase"
+      ],
+      "answer": 0,
+      "explain": "Custom project knobs are read from the command line."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "If +UVM_TESTNAME is absent, the run has no selected test class from that plusarg.",
+      "answer": true,
+      "explain": "Without testname, factory test selection from that arg fails."
+    }
+  ]
+}

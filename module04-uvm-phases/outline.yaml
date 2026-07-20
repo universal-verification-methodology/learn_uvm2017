@@ -1,12 +1,77 @@
-# Module 04 outline
-title: "UVM phases"
-kind: lab
-lab: uvm-phases
+title: UVM phases
+footer: learn_uvm2017 — uvm phases
 slides:
-  - Course context / why layered TB + UVM matter
-  - Core idea (1 concept)
-  - Track B: show lab starter if shipped (else diagram)
-  - Track A: offline / legacy demo cue
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: UVM phases
+  subtitle: UVM does not run your whole testbench in one initial block
+  notes: 'UVM does not run your whole testbench in one initial block. It walks a fixed
+    phase schedule so construction, wiring, stimulus, and checking happen in a predictable
+    order. This module is that timeline: build, connect, run, check, report—and why
+    objections keep run alive. We will use the browser lab for the picture, then anchor
+    the same schedule in notes you can read offline.'
+- type: bullets
+  title: Build, connect, run, check, report
+  bullets:
+  - Build constructs the component tree
+  - Connect wires TLM ports and virtual interfaces, usually bottom-up after everything
+    exists
+  - Run is where time advances
+  - When all objections drop, run ends and cleanup phases run
+  - Check is where scoreboards and self-checks decide pass versus fail
+  - Report prints summaries and error counts
+  notes: 'Build constructs the component tree—test creates env, env creates agents—typically
+    top-down through the factory. Connect wires TLM ports and virtual interfaces,
+    usually bottom-up after everything exists. Run is where time advances: sequences
+    start, drivers wiggle pins, and objections tell UVM the test is not finished yet.
+    When all objections drop, run ends and cleanup phases run. Check is where scoreboards
+    and self-checks decide pass versus fail. Report prints summaries and error counts.
+    Neighbor phases like end of elaboration or extract exist, but those five are the
+    spine every UVM engineer memorizes first.'
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: UVM phases lab starter
+  notes: In the browser lab track, open the UVM phase timeline lab. You will see a
+    horizontal phase rail, a preset picker, and detail for whichever phase is selected.
+    Load the starter preset—it pauses in run with an objection raised so you see why
+    simulation stays open. Click build and connect to compare top-down versus bottom-up
+    direction. Step to check and report to see post-run cleanup. Work a few challenges,
+    then Check. The lab teaches schedule literacy—not a full simulator run.
+- type: image
+  title: Real UVM literacy
+  image: assets/real-shell.png
+  caption: Real shell — phase timeline sketch
+  notes: In the real UVM track, open this module’s examples folder and read the phase
+    timeline sketch. For each core phase, say what happens and which direction the
+    tree walk uses. If the legacy offline course is checked out next door, skim any
+    example that declares build phase, connect phase, and run phase—you will see the
+    same names in SystemVerilog methods. You are learning the schedule before you
+    debug a stuck run phase in anger.
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not drive the DUT in build, build is for construction and configuration, not
+    time
+  - Do not forget objections in run
+  - Do not assume connect and build walk the same direction
+  - And remember
+  notes: 'Do not drive the DUT in build—build is for construction and configuration,
+    not time. Do not forget objections in run—a test that raises none may end before
+    your sequences finish. Do not assume connect and build walk the same direction—connect
+    is bottom-up wiring after the tree exists. And remember: the browser timeline
+    is a sketch; your simulator log will show real phase callbacks when you run offline.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, load the starter, walk the core five phases, and finish a few
+    challenges
+  - On real UVM, recite build through report from memory and note where objections
+    belong
+  - When you are ready, take the short quiz, then continue to the factory in the next
+    module
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    load the starter, walk the core five phases, and finish a few challenges. On real
+    UVM, recite build through report from memory and note where objections belong.
+    When you are ready, take the short quiz, then continue to the factory in the next
+    module.

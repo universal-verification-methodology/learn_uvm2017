@@ -1,12 +1,72 @@
-# Module 00 outline
-title: "Welcome to UVM"
-kind: intro
-lab: null
+title: Welcome to UVM 2017 methodology
+footer: learn_uvm2017 — intro
 slides:
-  - Course context / why layered TB + UVM matter
-  - Core idea (1 concept)
-  - Track B: show lab starter if shipped (else diagram)
-  - Track A: offline / legacy demo cue
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: Welcome to UVM 2017 methodology
+  subtitle: Verification at block and chip level needs structure, not only a DUT and
+    a few directed tests
+  notes: Verification at block and chip level needs structure—not only a DUT and a
+    few directed tests. This short clip welcomes you to learn UVM twenty seventeen—the
+    Accellera library for the IEEE UVM standard from twenty seventeen—and shows how
+    the course is meant to be used.
+- type: bullets
+  title: Why layered testbenches matter
+  bullets:
+  - As designs grow, you need reusable agents, predictable phase order
+  - A flat procedural testbench can work for a tiny block, but it breaks when teams,
+    protocols
+  - UVM gives you a shared vocabulary for environments, sequences, configuration
+  notes: As designs grow, you need reusable agents, predictable phase order, and a
+    scoreboard that scales. A flat procedural testbench can work for a tiny block,
+    but it breaks when teams, protocols, and random stimulus pile on. UVM gives you
+    a shared vocabulary for environments, sequences, configuration, and checking—so
+    you can read someone else's bench without guessing their ad-hoc conventions.
+- type: bullets
+  title: Two tracks, one idea
+  bullets:
+  - Every lab module offers two ways to practice
+  - Makefile runs feel like work you will keep
+  - Agent intuition without installing UVM
+  - You may do either track, or both
+  - The usual rhythm is browser first for the idea, then offline runs for fidelity
+  notes: Every lab module offers two ways to practice. The real UVM track uses your
+    own simulator with the Accellera library—Verilator UVM flow or a commercial tool—so
+    compile flags, plusargs, and Makefile runs feel like work you will keep. The browser
+    lab track uses interactive sketches on the learning platform, so you can build
+    phase, factory, and agent intuition without installing UVM. You may do either
+    track, or both. The usual rhythm is browser first for the idea, then offline runs
+    for fidelity.
+- type: bullets
+  title: Set up the real UVM track
+  bullets:
+  - Obtain a UVM library and a simulator that can run it
+  - Open the legacy offline course tree linked from this repo
+  - Confirm you can compile and run a small testbench once
+  - Module twenty-two in this course is the dedicated offline run
+  notes: Obtain a UVM library and a simulator that can run it. Open the legacy offline
+    course tree linked from this repo—it holds Makefile examples and SystemVerilog
+    UVM tests. Confirm you can compile and run a small testbench once. Module twenty-two
+    in this course is the dedicated offline run; you do not need a perfect farm on
+    day one, only a path that works on your machine.
+- type: image
+  title: Set up the browser lab track
+  image: assets/lab-tools-index.png
+  caption: UVM 2017 tools on the platform
+  notes: From the monorepo, serve the platform folder with a simple local web server,
+    then open the tools index in your browser. Scroll to the UVM twenty seventeen
+    methodology section when you are curious—you will meet testbench anatomy and the
+    layer diagram in the first lab modules. If you prefer, use the published tools
+    site instead. Either way, open the testbench anatomy sketch once so you know the
+    layout.
+- type: bullets
+  title: How to move through modules
+  bullets:
+  - For each module
+  - Python pyuvm is a separate course; this path stays with SystemVerilog UVM twenty
+    seventeen
+  - 'When you finish this intro checklist, continue to the first lab module: testbench
+    layers'
+  notes: 'For each module, read the README for the outcome, pick a track—or both—then
+    work the checklist. Python pyuvm is a separate course; this path stays with SystemVerilog
+    UVM twenty seventeen. When you finish this intro checklist, continue to the first
+    lab module: testbench layers.'

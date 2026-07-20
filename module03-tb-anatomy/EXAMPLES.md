@@ -1,13 +1,13 @@
 # Module 03 examples — TB anatomy refresh
 
-Track A (real UVM literacy). Browser lab may still be planned.
+Track A (classic SV TB). Browser lab is shipped.
 
 ## Prompts
 
-1. Restate the core idea of **TB anatomy refresh** in one sentence.
-2. Sketch the block / timeline / override on paper (agent, phase, factory, …).
-3. Point to where this appears in [`../learn_uvm2017_sv_verilator/`](../learn_uvm2017_sv_verilator/) if you can find it.
+1. Open `examples/and2-tb/and2_tb.v` and restate the core idea in one sentence.
+2. Label on paper: DUT module, tb module, stimulus regs, observe wire, DUT instance, initial block.
+3. Explain why driving wire `y` from the testbench would be wrong.
 
-## Stretch (optional)
+## Stretch
 
-When the browser lab ships, redo the same idea with the starter challenges.
+Compare the browser lab timeline steps to the delays in `and2_tb.v`.

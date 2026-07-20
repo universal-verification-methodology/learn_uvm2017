@@ -1,0 +1,53 @@
+{
+  "module": "module03-tb-anatomy",
+  "title": "TB anatomy check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "In a classic Verilog testbench, stimulus inputs driven in initial are usually…",
+      "choices": [
+        "reg (or logic) variables in the TB",
+        "wire nets driven by the DUT",
+        "UVM sequence items only",
+        "Parameters in the DUT only"
+      ],
+      "answer": 0,
+      "explain": "The TB assigns stimulus; reg/logic is the usual classic pattern."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "The DUT output net observed by the TB is typically…",
+      "choices": [
+        "A wire (or logic) driven by the DUT",
+        "A reg the TB assigns in initial",
+        "A virtual interface handle",
+        "A scoreboard class"
+      ],
+      "answer": 0,
+      "explain": "Outputs are nets the design drives; the TB reads them."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "The initial block in a classic TB mainly…",
+      "choices": [
+        "Synthesizes the DUT into gates",
+        "Applies stimulus over time, prints, and finishes the run",
+        "Replaces the need for a DUT instance",
+        "Is only used in UVM run_phase"
+      ],
+      "answer": 1,
+      "explain": "initial holds procedural stimulus, display, and finish."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Driving a wire that the DUT also drives is good practice.",
+      "answer": false,
+      "explain": "Two drivers on one net cause contention; observe DUT outputs, don't drive them."
+    }
+  ]
+}

@@ -1,13 +1,13 @@
 # Module 10 examples — Objections
 
-Track A (real UVM literacy). Browser lab may still be planned.
+Track A (real UVM literacy). Browser lab is shipped.
 
 ## Prompts
 
-1. Restate the core idea of **Objections** in one sentence.
-2. Sketch the block / timeline / override on paper (agent, phase, factory, …).
-3. Point to where this appears in [`../learn_uvm2017_sv_verilator/`](../learn_uvm2017_sv_verilator/) if you can find it.
+1. Read `examples/objections-sketch/holds.txt` and restate raise/drop in one sentence.
+2. Sketch a run_phase task with raise, seq.start, and drop in order.
+3. Explain why two components each raising once need two drops.
 
-## Stretch (optional)
+## Stretch
 
-When the browser lab ships, redo the same idea with the starter challenges.
+Open `uvm-objections`, load multi preset, drop one actor, then grep `raise_objection` in the legacy tree.

@@ -1,0 +1,53 @@
+{
+  "module": "module02-tb-vs-uvm-map",
+  "title": "Basic TB vs UVM map check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Classic “pin wiggle in initial” maps most directly to UVM…",
+      "choices": [
+        "Scoreboard only",
+        "Driver + virtual interface",
+        "RAL back-door access",
+        "Only $finish"
+      ],
+      "answer": 1,
+      "explain": "The driver consumes items and drives pins through a virtual interface."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Hard-coded vectors / nested tasks map to…",
+      "choices": [
+        "Sequence + sequencer",
+        "DUT synthesis constraints",
+        "Waveform dump only",
+        "ConfigDB set/get only"
+      ],
+      "answer": 0,
+      "explain": "Sequences express scenario intent; the sequencer feeds the driver."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Inline `if (got !== exp) $error` maps to…",
+      "choices": [
+        "Monitor analysis port only",
+        "Scoreboard predict vs actual on transactions",
+        "Virtual sequence parallel fork",
+        "Phase objection drop"
+      ],
+      "answer": 1,
+      "explain": "Scoreboards compare expected vs observed at transaction level."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "UVM eliminates the need for stimulus, observation, and checking.",
+      "answer": false,
+      "explain": "UVM reorganizes the same jobs—it does not remove verification work."
+    }
+  ]
+}

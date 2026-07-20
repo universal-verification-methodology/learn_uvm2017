@@ -1,0 +1,75 @@
+# real shell session (Track A — UVM callbacks)
+
+$ pwd
+/mnt/d/proj/designs/learning/courses/learn_uvm2017/module18-uvm-callbacks
+
+$ ls examples/callbacks-sketch/
+callbacks.txt
+
+$ cat examples/callbacks-sketch/callbacks.txt
+UVM callbacks sketch (literacy)
+===============================
+
+Idea:
+  extend a host component (driver, monitor, …) at hook points
+  without subclassing the host — register callback objects instead
+
+Hook flow (driver example):
+  pre_drive(item)  →  drive body on vif  →  post_drive(item)
+
+Callback base (typical):
+  class my_driver_cb extends uvm_callback;
+    virtual function void pre_drive(my_driver drv, my_item item);
+    virtual function void post_drive(my_driver drv, my_item item);
+
+Derived callback (test-specific):
+  class err_inj_cb extends my_driver_cb;
+    function void pre_drive(my_driver drv, my_item item);
+      item.data ^= 8'h01;   // fault inject before drive
+    endfunction
+
+Registration (pair types once):
+  `uvm_register_cb(my_driver, err_inj_cb)
+
+Add instance on the host:
+  err_inj_cb cb = err_inj_cb::type_id::create("cb");
+  uvm_callbacks#(my_driver, err_inj_cb)::add(drv, cb);
+
+Host invokes at hook points:
+  `uvm_do_callbacks(my_driver, err_inj_cb, pre_drive(this, item))
+  // ... drive body ...
+  `uvm_do_callbacks(my_driver, err_inj_cb, post_drive(this, item))
+
+Enable / disable:
+  uvm_callbacks#(my_driver, err_inj_cb)::display(drv);
+  cb.set_enabled(0);   // registered but skipped on next hook
+
+Why callbacks vs subclass:
+  VIP driver stays vendor-clean
+  per-test hooks: err inject, logging, coverage
+  multiple callbacks — registration order = invocation order
+
+Common mistakes:
+  forgot `uvm_register_cb(type pairing)
+  disabled confused with unregistered
+  heavy work in pre hook stalls driver
+  two pre callbacks fighting over same field — mind order
+
+Legacy reference:
+  learn_uvm2017_sv_verilator/module5/examples/callbacks/callbacks.sv
+
+$ grep -n "uvm_register_cb\|uvm_do_callbacks\|pre_drive\|post_drive" ../../learn_uvm2017_sv_verilator/module5/examples/callbacks/callbacks.sv | head -14
+8: *   3. Master callback registration (`uvm_register_cb)
+9: *   4. Understand callback invocation (`uvm_do_callbacks)
+72: *   - pre_drive: Called before driving transaction
+73: *   - post_drive: Called after driving transaction
+76:class DriverCallbackBase extends uvm_callback;
+77:    `uvm_object_utils(DriverCallbackBase)
+79:    function new(string name = "DriverCallbackBase");
+98:    virtual function void pre_drive(uvm_driver #(CallbackTransaction) driver, 
+120:    virtual function void post_drive(uvm_driver #(CallbackTransaction) driver, 
+140: *   - `uvm_register_cb: Registers callback type with component type
+144:class DriverCallback extends DriverCallbackBase;
+145:    `uvm_object_utils(DriverCallback)
+152:    //   `uvm_register_cb(component_type, callback_type)
+156:    //   - callback_type: Callback class (DriverCallback)

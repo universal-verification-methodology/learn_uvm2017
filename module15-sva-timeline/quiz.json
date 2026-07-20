@@ -1,0 +1,53 @@
+{
+  "module": "module15-sva-timeline",
+  "title": "SVA timeline check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "a |-> b means…",
+      "choices": [
+        "when a is true, b must be true in the same cycle",
+        "b is checked two cycles later always",
+        "a and b are wires in the DUT netlist only",
+        "the assertion is disabled"
+      ],
+      "answer": 0,
+      "explain": "|-> is overlapping implication (same cycle)."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "a |=> b means…",
+      "choices": [
+        "when a is true, b must be true in the next cycle",
+        "b must be true in the same cycle as a",
+        "only vacuous success is allowed",
+        "randomize() must return 1"
+      ],
+      "answer": 0,
+      "explain": "|=> is non-overlapping (next cycle)."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "If a never goes high, a |-> b typically…",
+      "choices": [
+        "passes vacuously (no failing attempt)",
+        "always fails hard",
+        "hangs the simulator",
+        "deletes the covergroup"
+      ],
+      "answer": 0,
+      "explain": "No antecedent attempts → vacuous success."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "An implication attempt starts when the antecedent a is true in a cycle.",
+      "answer": true,
+      "explain": "a high starts the implication check."
+    }
+  ]
+}

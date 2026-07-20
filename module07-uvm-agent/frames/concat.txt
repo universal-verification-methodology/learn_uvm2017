@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module07-uvm-agent/frames/slide-1.png'
+duration 25.848
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module07-uvm-agent/frames/slide-2.png'
+duration 42.984
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module07-uvm-agent/frames/slide-3.png'
+duration 30.312
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module07-uvm-agent/frames/slide-4.png'
+duration 32.496
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module07-uvm-agent/frames/slide-5.png'
+duration 24.432
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module07-uvm-agent/frames/slide-6.png'
+duration 21.744
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module07-uvm-agent/frames/slide-6.png'

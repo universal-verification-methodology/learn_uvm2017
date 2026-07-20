@@ -1,12 +1,75 @@
-# Module 02 outline
-title: "Basic TB vs UVM map"
-kind: lab
-lab: tb-vs-uvm-map
+title: Basic TB vs UVM map
+footer: learn_uvm2017 — tb vs uvm map
 slides:
-  - Course context / why layered TB + UVM matter
-  - Core idea (1 concept)
-  - Track B: show lab starter if shipped (else diagram)
-  - Track A: offline / legacy demo cue
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: Basic TB vs UVM map
+  subtitle: You already know how a small block testbench wiggles pins, prints values,
+    and checks results in one module
+  notes: 'You already know how a small block testbench wiggles pins, prints values,
+    and checks results in one module. UVM does not throw that away—it reorganizes
+    the same jobs into named roles you can reuse. This module is the translation chart:
+    classic testbench habit on one side, UVM counterpart on the other. We will use
+    the browser lab for the pairs, then anchor them in notes you can carry offline.'
+- type: bullets
+  title: Six pairs to memorize
+  bullets:
+  - Think in six mappings
+  - Pin wiggle in an initial block becomes a driver behind a virtual interface
+  - Hard-coded vectors and nested tasks become sequences feeding a sequencer
+  - A display peek in the same initial becomes a monitor on an analysis path
+  - Inline expect becomes a scoreboard comparing predict versus actual on transactions
+  - One flat testbench module becomes test, environment, and agents around the DUT
+  notes: Think in six mappings. Pin wiggle in an initial block becomes a driver behind
+    a virtual interface. Hard-coded vectors and nested tasks become sequences feeding
+    a sequencer. A display peek in the same initial becomes a monitor on an analysis
+    path. Inline expect becomes a scoreboard comparing predict versus actual on transactions.
+    One flat testbench module becomes test, environment, and agents around the DUT.
+    Copy-paste the whole bench for the next block becomes factory overrides and packaged
+    agents—a VIP mindset. Same verification work; different containers so teams can
+    share pieces.
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: TB vs UVM map lab starter
+  notes: In the browser lab track, open the basic testbench versus UVM map lab. You
+    will see classic and UVM columns, six clickable pairs, and a protocol vignette—UART
+    transmit is the starter. Load the starter example so pin-drive maps to driver
+    plus interface are already selected. Click through stimulus, observe, check, structure,
+    and reuse to read each bridge sentence. Mark pairs mapped when the idea clicks,
+    work a few challenges, then use Check. The lab is side-by-side literacy—not a
+    simulator run.
+- type: image
+  title: Real UVM literacy
+  image: assets/real-shell.png
+  caption: Real shell — classic vs UVM map
+  notes: In the real UVM track, open this module’s examples folder and read the six-pair
+    map—it mirrors the browser table in plain text. For each classic habit, say the
+    UVM role aloud before you open source code. If the legacy offline course is checked
+    out next door, skim any example where a driver converts items to pin activity—that
+    is the pin-wiggle pair in real SystemVerilog. You are building a mental Rosetta
+    stone, not running a full regression yet.
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not treat UVM as magic that replaces thinking, you still need stimulus, observation
+  - Do not map only the driver and skip the monitor
+  - Do not assume every project needs every UVM feature
+  - And remember
+  notes: 'Do not treat UVM as magic that replaces thinking—you still need stimulus,
+    observation, and checks. Do not map only the driver and skip the monitor; observation
+    split from stimulus is the whole point. Do not assume every project needs every
+    UVM feature—a tiny block may stay classic until reuse pressure appears. And remember:
+    the browser lab does not execute Accellera UVM; it teaches names and relationships
+    before your Makefile does the heavy lifting.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser
+  - On real UVM, restate the six mappings without looking at the cheat sheet
+  - When you are ready
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    map all six pairs on the UART starter, then try another protocol vignette if you
+    are curious. On real UVM, restate the six mappings without looking at the cheat
+    sheet. When you are ready, take the short quiz, then continue to testbench anatomy
+    refresh in the next module.

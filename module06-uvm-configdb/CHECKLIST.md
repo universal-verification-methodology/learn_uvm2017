@@ -2,14 +2,14 @@
 
 ## Track A — Real UVM
 
-- [ ] Worked through at least one prompt in [EXAMPLES.md](EXAMPLES.md)
-- [ ] Can explain the outcome in my own words
+- [ ] Read `examples/configdb-sketch/set-get.txt`
+- [ ] Can explain set/get, walk-up, and most-specific path wins
 
 ## Track B — Browser lab (`uvm-configdb`)
 
 - [ ] Opened the lab (local or live)
-- [ ] Loaded starter + completed a few challenges
+- [ ] Loaded starter + ran get + completed a few challenges
 
 ## Done when
 
-- [ ] I can explain the idea offline **or** I finished the browser challenges (preferably both when shipped)
+- [ ] I can explain ConfigDB lookup offline **or** I finished the browser challenges (preferably both)

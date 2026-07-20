@@ -1,0 +1,53 @@
+{
+  "module": "module18-uvm-callbacks",
+  "title": "Callbacks check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "UVM callbacks let you…",
+      "choices": [
+        "extend host behavior at hook points without subclassing the host",
+        "replace connect_phase with report_phase",
+        "skip the sequencer entirely",
+        "drive pins only from report_phase"
+      ],
+      "answer": 0,
+      "explain": "Callbacks register hook objects on a host component."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "A typical drive hook order is…",
+      "choices": [
+        "pre hooks → host body → post hooks",
+        "post hooks → host body → pre hooks",
+        "host body only — no hooks",
+        "build_phase → connect_phase → run_phase only"
+      ],
+      "answer": 0,
+      "explain": "Pre runs before the operation; post runs after."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "A pre_drive callback is often used to…",
+      "choices": [
+        "modify or inject faults on the item before the host drives",
+        "connect analysis_port to scoreboard",
+        "create agents in build_phase",
+        "raise objections at test end"
+      ],
+      "answer": 0,
+      "explain": "Pre hooks can change the transaction before drive."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "A registered but disabled callback is skipped when the host runs its hooks.",
+      "answer": true,
+      "explain": "Enable/disable controls whether a registered cb fires."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "module": "module19-uvm-reporting",
+  "title": "UVM reporting check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "In UVM reporting, severity describes…",
+      "choices": [
+        "message gravity (INFO → WARNING → ERROR → FATAL)",
+        "how many sequences ran",
+        "TLM port direction",
+        "factory override type"
+      ],
+      "answer": 0,
+      "explain": "Severity is how serious the message is."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "An `uvm_info` message typically prints when…",
+      "choices": [
+        "its verbosity is at or below the configured threshold",
+        "connect_phase has finished only",
+        "the scoreboard is passive",
+        "every analysis_port is connected"
+      ],
+      "answer": 0,
+      "explain": "Verbosity gates INFO/WARNING chattiness."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Compared to INFO, `uvm_error` messages…",
+      "choices": [
+        "still print even when verbosity is very low",
+        "never appear in the log",
+        "only print in build_phase",
+        "require a virtual sequence"
+      ],
+      "answer": 0,
+      "explain": "ERROR/FATAL severity wins over verbosity gate."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "An ID filter can suppress a whole message family (e.g. all DRV) without editing the component source.",
+      "answer": true,
+      "explain": "set_report_id_action / filters act on the ID string."
+    }
+  ]
+}

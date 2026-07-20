@@ -1,0 +1,53 @@
+{
+  "module": "module07-uvm-agent",
+  "title": "Agent anatomy check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "A UVM agent mainly bundles…",
+      "choices": [
+        "Sequencer, driver, and monitor around one interface",
+        "Only the DUT RTL module",
+        "Report phase summaries only",
+        "Synthesis constraints for the chip"
+      ],
+      "answer": 0,
+      "explain": "One agent ≈ one protocol interface with drive/observe paths."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "An active agent differs from passive because it…",
+      "choices": [
+        "Has no monitor",
+        "Includes sequencer and driver to stimulate the DUT",
+        "Cannot use ConfigDB",
+        "Skips connect phase entirely"
+      ],
+      "answer": 1,
+      "explain": "Active = drive + observe; passive = observe only."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "The monitor’s job is best described as…",
+      "choices": [
+        "Pull seq_items and drive pins",
+        "Sample the interface and publish transactions",
+        "Replace the scoreboard",
+        "Run only in report phase"
+      ],
+      "answer": 1,
+      "explain": "Monitor observes and sends analysis transactions downstream."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "A passive agent still includes a monitor.",
+      "answer": true,
+      "explain": "Passive drops the drive path, not observation."
+    }
+  ]
+}

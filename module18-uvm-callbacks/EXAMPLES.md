@@ -1,13 +1,13 @@
 # Module 18 examples — Callbacks
 
-Track A (real UVM literacy). Pair with Track B `uvm-callbacks` when you want the browser sketch.
+Track A (real UVM literacy). Browser lab is shipped.
 
 ## Prompts
 
-1. Restate why callbacks beat subclassing a VIP driver in one sentence.
+1. Read `examples/callbacks-sketch/callbacks.txt` and restate why callbacks beat subclassing a VIP driver.
 2. Sketch pre → body → post and name one use for each hook.
-3. Point to where this appears in [`../learn_uvm2017_sv_verilator/`](../learn_uvm2017_sv_verilator/) if you can find it.
+3. Explain what changes when a registered callback is disabled vs unregistered.
 
-## Stretch (optional)
+## Stretch
 
-Redo the same idea with the `uvm-callbacks` starter (Drive with err_inj, then Disable / Demo both).
+Open `uvm-callbacks`, Drive with err_inj on the starter, then try Disable / Demo both presets.

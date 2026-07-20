@@ -2,14 +2,14 @@
 
 ## Track A — Real UVM
 
-- [ ] Worked through at least one prompt in [EXAMPLES.md](EXAMPLES.md)
-- [ ] Can explain the outcome in my own words
+- [ ] Read `examples/objections-sketch/holds.txt`
+- [ ] Can explain raise/drop balance and the total count
 
 ## Track B — Browser lab (`uvm-objections`)
 
 - [ ] Opened the lab (local or live)
-- [ ] Loaded starter + completed a few challenges
+- [ ] Loaded starter + tried multi preset + Drop all
 
 ## Done when
 
-- [ ] I can explain the idea offline **or** I finished the browser challenges (preferably both when shipped)
+- [ ] I can explain objections offline **or** I finished the browser challenges (preferably both)

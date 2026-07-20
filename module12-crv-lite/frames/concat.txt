@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module12-crv-lite/frames/slide-1.png'
+duration 26.496
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module12-crv-lite/frames/slide-2.png'
+duration 36.288
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module12-crv-lite/frames/slide-3.png'
+duration 32.904
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module12-crv-lite/frames/slide-4.png'
+duration 29.28
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module12-crv-lite/frames/slide-5.png'
+duration 27.672
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module12-crv-lite/frames/slide-6.png'
+duration 19.848
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module12-crv-lite/frames/slide-6.png'

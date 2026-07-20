@@ -1,0 +1,53 @@
+{
+  "module": "module06-uvm-configdb",
+  "title": "ConfigDB check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "ConfigDB set/get is mainly used to…",
+      "choices": [
+        "Pass configuration like virtual interfaces and modes by hierarchy path",
+        "Synthesize the DUT netlist",
+        "Replace the UVM factory entirely",
+        "Run only during report phase"
+      ],
+      "answer": 0,
+      "explain": "ConfigDB shares typed settings across the component tree."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "When multiple sets match a get, which wins?",
+      "choices": [
+        "The shortest path always wins",
+        "The longest (most specific) matching path wins",
+        "The first set in random order",
+        "Report phase decides"
+      ],
+      "answer": 1,
+      "explain": "More specific hierarchy paths override broader parent sets."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "A get for field `vif` misses when…",
+      "choices": [
+        "Only `is_active` was set at that path",
+        "Any set exists anywhere in the testbench",
+        "The DUT has outputs",
+        "Run phase has objections"
+      ],
+      "answer": 0,
+      "explain": "Field names must match exactly for a successful get."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "A driver under env.agent1 can get a vif set only on env.agent0.",
+      "answer": false,
+      "explain": "Sibling subtrees do not walk into each other; walk-up is within your ancestry."
+    }
+  ]
+}

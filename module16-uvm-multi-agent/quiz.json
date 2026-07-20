@@ -1,0 +1,53 @@
+{
+  "module": "module16-uvm-multi-agent",
+  "title": "Multi-agent env check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "A multi-agent environment typically…",
+      "choices": [
+        "owns two or more agents plus shared checkers like a scoreboard",
+        "has exactly one passive monitor only",
+        "replaces connect_phase with report_phase",
+        "forbids analysis_port fan-in"
+      ],
+      "answer": 0,
+      "explain": "Env groups agents + shared verification components."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Monitors from different agents usually…",
+      "choices": [
+        "fan analysis transactions into shared checkers (e.g. scoreboard)",
+        "share one sequencer by default",
+        "cannot share an env",
+        "skip virtual interfaces"
+      ],
+      "answer": 0,
+      "explain": "Each monitor ap can connect to shared subscribers."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Each agent is usually scoped to…",
+      "choices": [
+        "one protocol / interface role",
+        "every pin on the chip",
+        "only report_phase",
+        "synthesis constraints"
+      ],
+      "answer": 0,
+      "explain": "One agent ≈ one interface (UART, SPI, …)."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Active vs passive mode is still configured per agent, not once for the whole env.",
+      "answer": true,
+      "explain": "is_active and vif are set on each agent path."
+    }
+  ]
+}

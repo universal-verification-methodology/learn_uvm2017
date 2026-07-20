@@ -1,0 +1,38 @@
+UVM factory sketch (literacy — overrides)
+=======================================
+
+Registration:
+  `uvm_component_utils(my_driver)
+  `uvm_object_utils(my_sequence)
+
+Creation (typical):
+  my_driver::type_id::create("drv", this);   // parent = agent
+
+Vocabulary:
+  requested type  — what the source code asks the factory for
+  constructed type — what the factory actually builds
+
+Type override (global for that type):
+  set_type_override_by_type(base_driver::get_type(), error_driver::get_type())
+  → every create(base_driver) yields error_driver
+
+Instance override (one path):
+  set_inst_override_by_type(base_driver::get_type(), error_driver::get_type(),
+                            "env.agent.drv")
+  → only that path gets error_driver
+
+Precedence at a path:
+  instance override > type override > no override (identity create)
+
+Common swap targets:
+  driver / monitor variants (error injection, quiet mode)
+  sequence types (stress vs smoke)
+  whole agent (base_agent → vip_agent)
+
+Timing:
+  set overrides before create — usually early in build phase
+
+Common mistakes:
+  using `new` on UVM components (bypasses factory)
+  setting overrides after create (too late)
+  forgetting which path an instance override matches

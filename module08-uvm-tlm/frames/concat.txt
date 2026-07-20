@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module08-uvm-tlm/frames/slide-1.png'
+duration 28.848
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module08-uvm-tlm/frames/slide-2.png'
+duration 35.064
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module08-uvm-tlm/frames/slide-3.png'
+duration 30.84
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module08-uvm-tlm/frames/slide-4.png'
+duration 31.056
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module08-uvm-tlm/frames/slide-5.png'
+duration 28.176
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module08-uvm-tlm/frames/slide-6.png'
+duration 21.192
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module08-uvm-tlm/frames/slide-6.png'

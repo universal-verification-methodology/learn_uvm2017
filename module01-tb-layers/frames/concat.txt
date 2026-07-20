@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module01-tb-layers/frames/slide-1.png'
+duration 19.344
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module01-tb-layers/frames/slide-2.png'
+duration 43.968
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module01-tb-layers/frames/slide-3.png'
+duration 35.352
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module01-tb-layers/frames/slide-4.png'
+duration 27.384
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module01-tb-layers/frames/slide-5.png'
+duration 27.36
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module01-tb-layers/frames/slide-6.png'
+duration 23.28
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module01-tb-layers/frames/slide-6.png'

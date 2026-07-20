@@ -1,0 +1,41 @@
+Offline UVM run sketch (literacy)
+=================================
+
+Goal:
+  Build and run one course UVM example outside the browser
+  (Verilator + Accellera UVM 2017, or commercial SIM=…)
+
+Practice surface:
+  courses/learn_uvm2017_sv_verilator/
+  (legacy Makefile / scripts tree linked from this curriculum)
+
+Minimal flow:
+  1. cd courses/learn_uvm2017_sv_verilator
+  2. export UVM_HOME=$PWD/tools/uvm-2017/1800.2-2017-1.0/src
+     (or your site UVM install)
+  3. cd module1/tests/uvm_tests
+  4. make run SIM=verilator TEST=test_and_gate_uvm
+
+What you should see:
+  Verilator compile of uvm_pkg.sv + DUT + test
+  binary run with +UVM_TESTNAME=…
+  UVM info / report summary — capture pass or fail
+
+Alternate entry:
+  ./scripts/module1.sh --uvm-tests
+  (orchestrator sets UVM_HOME and runs selected tests)
+
+Commercial shape (same TEST idea):
+  make run SIM=vcs TEST=test_and_gate_uvm
+  make run SIM=questa TEST=test_and_gate_uvm
+
+Notes:
+  First UVM+Verilator compile can take several minutes
+  Browser sketches ≠ simulator pass
+  Record simulator version + UVM version in your notes
+
+Common mistakes:
+  UVM_HOME unset
+  make from wrong directory
+  expecting instant compile on cold cache
+  treating platform HTML as the offline run

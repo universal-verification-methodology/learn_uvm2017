@@ -1,0 +1,75 @@
+# real shell session (Track A — ConfigDB literacy)
+
+$ pwd
+/mnt/d/proj/designs/learning/courses/learn_uvm2017/module06-uvm-configdb
+
+$ ls examples/configdb-sketch/
+set-get.txt
+
+$ cat examples/configdb-sketch/set-get.txt
+UVM ConfigDB sketch (literacy — set / get / path)
+===============================================
+
+API pattern (offline UVM):
+  uvm_config_db#(T)::set(cntxt, inst_name, field, value)
+  uvm_config_db#(T)::get(cntxt, inst_name, field, value)
+
+Teaching triple (browser lab model):
+  set(path, field, value)
+  get(from_path, field) → walk up ancestors of from_path
+
+Starter example:
+  set("env.agent", "vif", uart_vif)
+  get("env.agent.drv", "vif") → HIT (walk: drv → agent → env …)
+
+Lookup rules:
+  1. Field name must match exactly
+  2. Set path must be an ancestor of get path (or empty top)
+  3. Among matches, longest path wins (most specific)
+
+Examples:
+  set env + set env.agent (same field) → agent child sees env.agent value
+  set env.agent.vif but get is_active → MISS
+  set on env.agent0, get from env.agent1.drv → MISS (siblings)
+
+Typical uses:
+  virtual interface handles to drivers/monitors
+  is_active / is_passive mode
+  timeouts, verbosity knobs scoped by path
+
+Timing:
+  set early (test or env build) before downstream get in build/connect
+
+Common mistakes:
+  typo in field string
+  set too late (getter already ran)
+  expecting sibling agent to see another agent's set
+
+$ head -28 ../../learn_uvm2017_sv_verilator/tools/uvm-2017/1800.2-2017-1.0/src/base/uvm_config_db.svh
+//----------------------------------------------------------------------
+// Copyright 2010-2014 Mentor Graphics Corporation
+// Copyright 2015 Analog Devices, Inc.
+// Copyright 2014 Semifore
+// Copyright 2010-2014 Synopsys, Inc.
+// Copyright 2010-2018 Cadence Design Systems, Inc.
+// Copyright 2011-2012 AMD
+// Copyright 2012-2018 NVIDIA Corporation
+// Copyright 2014-2017 Cisco Systems, Inc.
+// Copyright 2011 Cypress Semiconductor Corp.
+// Copyright 2017 Verific
+//   All Rights Reserved Worldwide
+//
+//   Licensed under the Apache License, Version 2.0 (the
+//   "License"); you may not use this file except in
+//   compliance with the License.  You may obtain a copy of
+//   the License at
+//
+//       http://www.apache.org/licenses/LICENSE-2.0
+//
+//   Unless required by applicable law or agreed to in
+//   writing, software distributed under the License is
+//   distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+//   CONDITIONS OF ANY KIND, either express or implied.  See
+//   the License for the specific language governing
+//   permissions and limitations under the License.
+//----------------------------------------------------------------------

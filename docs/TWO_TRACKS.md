@@ -16,8 +16,7 @@ Concept sketches on the learning platform (no Accellera UVM in-tab).
 
 - Local tools: http://127.0.0.1:8080/tools/
 - Live: https://universal-verification-methodology.github.io/learning/tools/
-- Shipped today: `tb-anatomy`, `tb-vs-uvm-map`, `sv-class-sketch` (SV OOP literacy), `crv-lite`, `sva-timeline`, `vif-wiring` (and any UVM sketches as they land)
-- Most UVM sketch ids remain **Planned** — use Track A until they ship
+- Shipped today: full UVM 2017 sketch shelf (`tb-layers` through `vip-anatomy`) plus TB literacy tools (`tb-anatomy`, `tb-vs-uvm-map`, `sv-class-sketch`, `crv-lite`, `sva-timeline`, `vif-wiring`)
 
 ## Recommended path
 

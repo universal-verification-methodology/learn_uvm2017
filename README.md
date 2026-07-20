@@ -35,13 +35,12 @@ learn_uvm2017/
 ├── scripts/
 │   └── module.sh
 ├── module00-intro/
-├── module03-tb-anatomy/   # shipped browser lab today
-├── …
+├── module01-tb-layers/ … module21-vip-anatomy/   # lab modules + media
 ├── module22-offline-uvm-example/
 └── module23-wrap/
 ```
 
-Videos and decks are optional per module. Generate with the **module-slides** skill in the parent monorepo when ready.
+Each module ships a **module-slides** media bundle (transcript, deck, audio, video, quiz) generated in the parent monorepo. Rebuild with the skill when content changes.
 
 ## Browse or clone
 
@@ -96,7 +95,7 @@ Full status table: **[docs/MODULES.md](docs/MODULES.md)**. Clusters: 00 intro ·
 
 | Module | Landing |
 |--------|---------|
-| 00 — Welcome to UVM | [module00-intro](module00-intro/README.md) |
+| 00 — Welcome to UVM 2017 | [module00-intro](module00-intro/README.md) |
 | 01 — TB layers | [module01-tb-layers](module01-tb-layers/README.md) |
 | 02 — Basic TB vs UVM map | [module02-tb-vs-uvm-map](module02-tb-vs-uvm-map/README.md) |
 | 03 — TB anatomy refresh | [module03-tb-anatomy](module03-tb-anatomy/README.md) |

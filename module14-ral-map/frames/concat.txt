@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module14-ral-map/frames/slide-1.png'
+duration 25.2
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module14-ral-map/frames/slide-2.png'
+duration 35.064
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module14-ral-map/frames/slide-3.png'
+duration 33.216
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module14-ral-map/frames/slide-4.png'
+duration 30.12
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module14-ral-map/frames/slide-5.png'
+duration 26.976
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module14-ral-map/frames/slide-6.png'
+duration 21.888
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module14-ral-map/frames/slide-6.png'

@@ -1,12 +1,70 @@
-# Module 15 outline
-title: "SVA timeline (lite)"
-kind: lab
-lab: sva-timeline
+title: SVA timeline lite
+footer: learn_uvm2017 — sva timeline
 slides:
-  - Course context / why layered TB + UVM matter
-  - Core idea (1 concept)
-  - Track B: show lab starter if shipped (else diagram)
-  - Track A: offline / legacy demo cue
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: SVA timeline lite
+  subtitle: Assertions check protocol rules on the timeline, not just at end of test
+  notes: Assertions check protocol rules on the timeline—not just at end of test.
+    SystemVerilog assertions use properties over clock cycles; implication says when
+    antecedent a is true, consequent b must follow. This module is lite literacy—overlap
+    versus next cycle, pass, fail, and vacuous. We will read waves in the browser
+    lab, then anchor the same syntax in offline notes.
+- type: bullets
+  title: Overlap, next cycle, and vacuous
+  bullets:
+  - Pipe arrow overlap means when a is true, check b in the same cycle
+  - Double pipe arrow non-overlap means when a is true, check b on the next cycle
+  - An attempt starts when the antecedent fires, a high on that clock edge
+  - Pass means the consequent matched; fail means a fired but b did not
+  - Vacuous success means a never went high
+  - Real SVA wraps this in a property and assert property on posedge clock
+  notes: Pipe arrow overlap means when a is true, check b in the same cycle. Double
+    pipe arrow non-overlap means when a is true, check b on the next cycle. An attempt
+    starts when the antecedent fires—a high on that clock edge. Pass means the consequent
+    matched; fail means a fired but b did not. Vacuous success means a never went
+    high—no failing attempt, but also nothing was really checked. Real SVA wraps this
+    in a property and assert property on posedge clock.
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: SVA timeline lab starter
+  notes: In the browser lab track, open the SVA implication timeline lab. The starter
+    shows a pipe arrow b overlapping pass—at cycle two both a and b are high. Hit
+    Evaluate for pass. Load fail preset to see a high but b low same cycle. Try non-overlap
+    pass and fail presets for next-cycle checking. Load vacuous to see a never high.
+    Step the cursor and watch status change. Work a few challenges, then Check. The
+    lab is not a full assertion engine—it teaches the timeline idea.
+- type: image
+  title: Real UVM literacy
+  image: assets/real-shell.png
+  caption: Real shell — SVA implication sketch
+  notes: 'In the real UVM track, open this module’s implication sketch—it shows property
+    and assert property syntax in plain language. Trace one overlap rule on paper:
+    mark cycles where a and b must align. Assertions live in RTL or bind modules—they
+    run in parallel with your UVM test, catching bugs closer to the signal. UVM still
+    needs scoreboards for transaction-level checks; SVA catches cycle-level protocol
+    rules.'
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not confuse overlap and next-cycle operators, they check different cycles
+  - Do not treat vacuous pass as strong coverage, if a never fires, the rule never
+    exercised
+  - Do not write assertions without clocking, posedge clk is the usual sampling event
+  - And remember
+  notes: 'Do not confuse overlap and next-cycle operators—they check different cycles.
+    Do not treat vacuous pass as strong coverage—if a never fires, the rule never
+    exercised. Do not write assertions without clocking—posedge clk is the usual sampling
+    event. And remember: the browser wave is eight cycles; real designs need complete
+    properties with disable iff and covers too.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, load overlap fail and explain the verdict
+  - On paper, sketch a pipe arrow b pass and a double-pipe b pass on the same wave
+  - When you are ready
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    load overlap fail and explain the verdict. On paper, sketch a pipe arrow b pass
+    and a double-pipe b pass on the same wave. When you are ready, take the short
+    quiz, then continue to multi-agent env in the next module.

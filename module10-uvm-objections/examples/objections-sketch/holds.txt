@@ -1,0 +1,36 @@
+UVM objections sketch (literacy)
+===============================
+
+Purpose: keep run_phase open while async work (sequences, forks) runs
+         run ends when total objection count hits 0
+
+Pattern in run_phase task:
+  task run_phase(uvm_phase phase);
+    phase.raise_objection(this);     // hold run open
+    // start sequences, fork tasks, wait for completion
+    my_seq.start(sequencer);
+    // or: fork ... join
+    phase.drop_objection(this);      // release hold
+  endtask
+
+Rules:
+  raise increments total count; drop decrements
+  total > 0  → run stays open, sim time advances
+  total == 0 → run can end → check_phase → report_phase
+  whoever raises must drop (balanced)
+  multiple components can hold simultaneously — all must drop
+
+Common actors:
+  test (uvm_test) — often raises around top-level stimulus
+  env / virtual sequences — may raise for long-running traffic
+  sequences — may raise/drop inside body for sub-flows
+
+Common mistakes:
+  raise without drop → sim hangs in run (count stuck > 0)
+  drop before sequences finish → test ends too early
+  drop in wrong phase (objections are phase-specific)
+  double raise without double drop
+
+Tie-in with sequence flow:
+  raise BEFORE seq.start so run does not end mid-sequence
+  drop AFTER sequences / forks complete

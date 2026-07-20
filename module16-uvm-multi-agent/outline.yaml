@@ -1,12 +1,73 @@
-# Module 16 outline
-title: "Multi-agent env"
-kind: lab
-lab: uvm-multi-agent
+title: Multi-agent env
+footer: learn_uvm2017 — uvm multi agent
 slides:
-  - Course context / why layered TB + UVM matter
-  - Core idea (1 concept)
-  - Track B: show lab starter if shipped (else diagram)
-  - Track A: offline / legacy demo cue
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: Multi-agent env
+  subtitle: Real designs rarely have one bus, your testbench env often owns several
+    agents, one per interface or protocol role
+  notes: Real designs rarely have one bus—your testbench env often owns several agents,
+    one per interface or protocol role. A shared scoreboard can fan in analysis from
+    every monitor to check the whole system. This module sketches env with UART plus
+    SPI agents and one scoreboard. We will wire analysis links in the browser lab,
+    then read the same hierarchy in offline notes.
+- type: bullets
+  title: Env, N agents, and shared checkers
+  bullets:
+  - The environment is the parent that builds agents and shared components like scoreboard
+    or
+  - Each agent still follows the one-protocol rule
+  - Active versus passive is still per agent via is active in ConfigDB
+  - In connect phase
+  - Stimulus may run in parallel on each agent
+  notes: The environment is the parent that builds agents and shared components like
+    scoreboard or coverage. Each agent still follows the one-protocol rule—UART agent
+    on the UART interface, SPI agent on SPI. Active versus passive is still per agent
+    via is active in ConfigDB. In connect phase, each monitor analysis port connects
+    to the shared scoreboard import—fan-in from many observers to one checker. Stimulus
+    may run in parallel on each agent; checking stays centralized unless you split
+    scoreboards on purpose.
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: Multi-agent env lab starter
+  notes: In the browser lab track, open the multi-agent env lab. The starter loads
+    UART and SPI agents under env, both analysis ports wired to a shared scoreboard.
+    Click Observe to see a beat from an agent. Try Disconnect on one analysis link
+    and see observe blocked. Load UART-only and Add SPI to grow into multi-agent.
+    Demo fan-in to watch both agents feed the scoreboard. Work a few challenges, then
+    Check. The lab is literacy—you still declare each agent in build and connect in
+    real UVM.
+- type: image
+  title: Real UVM literacy
+  image: assets/real-shell.png
+  caption: Real shell — multi-agent sketch
+  notes: In the real UVM track, open this module’s multi-agent sketch—it lists env,
+    two agents, and scoreboard fan-in in plain language. Trace build creating uart
+    agent and spi agent, then connect linking both monitor analysis ports to scoreboard
+    imports. If the legacy offline course is checked out, grep for multi agent in
+    module six—you will see an env with two agents and coordination patterns. Virtual
+    sequences on the next module often start traffic on multiple agents from one test.
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not put two unrelated protocols in one agent, add a second agent instead
+  - Do not forget to connect every monitor you care about
+  - Do not assume one agent’s ConfigDB settings apply to another
+  - And remember
+  notes: 'Do not put two unrelated protocols in one agent—add a second agent instead.
+    Do not forget to connect every monitor you care about—or that agent’s traffic
+    never reaches the scoreboard. Do not assume one agent’s ConfigDB settings apply
+    to another—set vif and is active per agent path. And remember: multi-agent env
+    is about structure; parallel sequence coordination comes in the virtual sequence
+    module next.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, disconnect one analysis link and explain what breaks
+  - On real UVM, sketch env with two agents and one shared scoreboard
+  - When you are ready
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    disconnect one analysis link and explain what breaks. On real UVM, sketch env
+    with two agents and one shared scoreboard. When you are ready, take the short
+    quiz, then continue to virtual sequences in the next module.

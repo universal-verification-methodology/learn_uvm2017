@@ -1,0 +1,58 @@
+# real shell session (Track A — UVM plusargs / testname)
+
+$ pwd
+/mnt/d/proj/designs/learning/courses/learn_uvm2017/module11-uvm-plusargs
+
+$ ls examples/plusargs-sketch/
+cmdline.txt
+
+$ cat examples/plusargs-sketch/cmdline.txt
+UVM plusargs sketch (literacy)
+==============================
+
+Sim command (example):
+  ./simv +UVM_TESTNAME=base_test +SEED=1 +UVM_VERBOSITY=UVM_LOW \
+         +NUM_PKTS=16 +MODE=burst
+
+Roles:
+  +UVM_TESTNAME=<class>  → factory picks which uvm_test to build/run
+  +SEED=<n>              → randomization reproducibility knob
+  +UVM_VERBOSITY=<level> → log noise (UVM_LOW / UVM_MEDIUM / UVM_HIGH …)
+  +CUSTOM=<value>         → project knobs (NUM_PKTS, MODE, …)
+
+Reading custom knobs in SV (two common APIs):
+  // uvm_cmdline_processor (UVM CLP)
+  string val;
+  if (uvm_cmdline_proc.get_arg_value("+test_mode", val)) begin
+    // use val
+  end
+
+  // SystemVerilog built-in
+  int n;
+  if ($value$plusargs("NUM_PKTS=%d", n)) begin
+    // use n
+  end
+
+Makefile pattern:
+  SIM_ARGS += +UVM_TESTNAME=$(TEST) +SEED=$(SEED)
+
+Common mistakes:
+  typo in +UVM_TESTNAME → factory cannot find test class
+  missing + prefix on sim command line
+  expecting +SEED alone to select a test
+  custom knob name mismatch between Makefile and get_arg_value string
+
+Test selection vs knobs:
+  TESTNAME → which test runs (factory)
+  everything else → how the test runs (read inside test/env)
+
+$ grep -n "get_arg_value\|UVM_TESTNAME\|plusarg" ../../learn_uvm2017_sv_verilator/module8/examples/clp/clp.sv | head -12
+8: *   3. Understand plusarg handling
+20: *   - CLP parsing: uvm_cmdline_proc.get_arg_value()
+211: *   - uvm_cmdline_proc.get_arg_value(): Get plusarg value
+248:        //   - uvm_cmdline_proc.get_arg_value(): Get plusarg value
+274:        void'(uvm_cmdline_proc.get_arg_value("+test_mode", test_mode));
+298:        //     - get_arg_value() returns bool (true if found)
+311:        if (uvm_cmdline_proc.get_arg_value("+debug_level", str_val)) begin
+337:        if (uvm_cmdline_proc.get_arg_value("+num_transactions", str_val)) begin
+355:        if (uvm_cmdline_proc.get_arg_value("+seed", str_val)) begin

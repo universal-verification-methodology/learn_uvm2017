@@ -1,13 +1,13 @@
 # Module 15 examples — SVA timeline (lite)
 
-Track A (real UVM / SV). Browser lab is shipped as concept literacy.
+Track A (real UVM / SV literacy). Browser lab is shipped.
 
 ## Prompts
 
-1. Restate the core idea of **SVA implication** in one sentence (`|->` vs `|=>`).
-2. Explain vacuous success using the vacuous preset in the lab.
-3. Optional: peek at assertion examples in [`../learn_uvm2017_sv_verilator/`](../learn_uvm2017_sv_verilator/).
+1. Read `examples/sva-sketch/implication.txt` and restate `|->` vs `|=>` in one sentence each.
+2. Explain vacuous success using the vacuous preset idea.
+3. Sketch one wave where overlap passes but next-cycle fails.
 
 ## Stretch
 
-In `sva-timeline`, take the overlapping-pass wave, switch implication to `|=>`, and explain why Evaluate fails.
+In `sva-timeline`, load overlap pass then switch to `|=>` on the same wave and explain the new verdict.

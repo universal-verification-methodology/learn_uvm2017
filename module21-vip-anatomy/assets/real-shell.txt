@@ -1,0 +1,66 @@
+# real shell session (Track A — VIP anatomy)
+
+$ pwd
+/mnt/d/proj/designs/learning/courses/learn_uvm2017/module21-vip-anatomy
+
+$ ls examples/vip-sketch/
+vip.txt
+
+$ cat examples/vip-sketch/vip.txt
+VIP anatomy sketch (literacy)
+=============================
+
+Verification IP package = reusable handoff unit for one protocol/interface.
+
+Four deliverables (all required for COMPLETE):
+  agent     — drive / observe one interface
+              sequencer + driver + monitor + vif / seq items
+  checker   — passive bus-rule / protocol legality
+              orthogonal to env scoreboard (payload expect/actual)
+  coverage  — covergroups / bins: which scenarios did the VIP exercise?
+  docs      — API notes, README, examples, self-test for consumers
+
+Starter (COMPLETE):
+  UART VIP with agent + checker + coverage + docs
+
+Incomplete examples:
+  missing checker  → INCOMPLETE (no legality)
+  missing coverage → INCOMPLETE (no measurement)
+  missing docs     → INCOMPLETE (no handoff)
+  agent only       → scaffold, not a VIP package yet
+
+Typical placement:
+  VIP ships: agent, checker, coverage, docs
+  Env often owns: scoreboard, virtual sequences, test glue
+
+Consumer integrate flow:
+  1. instantiate / factory agent
+  2. bind / enable checker
+  3. sample / close coverage
+  4. read docs + run self-test
+
+Common mistakes:
+  calling agent-only tree a "VIP"
+  stuffing project scoreboard into every VIP
+  shipping code without self-test / README
+  assuming compile success == package complete
+
+Legacy reference:
+  learn_uvm2017_sv_verilator/module7/examples/vip/vip.sv
+  (agent scaffold — txn + seq + driver + agent; add checker/cov/docs for full VIP)
+
+$ grep -n "VipAgent\|VipDriver\|VipTxn\|VIP" ../../learn_uvm2017_sv_verilator/module7/examples/vip/vip.sv | head -14
+2: * Module 7 Example 7.5: VIP Development (skeleton)
+3: * Demonstrates how a protocol VIP might be packaged: txn + seq + agent.
+6: *   1. Understand VIP (Verification IP) structure
+7: *   2. Learn VIP packaging patterns
+8: *   3. Understand reusable VIP components
+9: *   4. Learn VIP agent structure
+10: *   5. Understand VIP transaction modeling
+12: * VIP STRUCTURE:
+13: *   - Transaction: VipTxn (protocol-specific data)
+14: *   - Sequence: VipSeq (transaction generation)
+15: *   - Driver: VipDriver (protocol driving)
+16: *   - Agent: VipAgent (complete VIP component)
+18: * VIP PACKAGING:
+31: * VipTxn: VIP transaction class

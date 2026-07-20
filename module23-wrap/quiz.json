@@ -1,0 +1,53 @@
+{
+  "module": "module23-wrap",
+  "title": "UVM path complete check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "This wrap module mainly…",
+      "choices": [
+        "recaps outcomes and points to the next courses on the ladder",
+        "introduces a brand-new browser lab",
+        "replaces Accellera UVM with sketches forever",
+        "deletes the legacy Verilator tree"
+      ],
+      "answer": 0,
+      "explain": "Wrap modules summarize and link the syllabus next step."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "If you mostly used browser labs, a good next step is…",
+      "choices": [
+        "prioritize Track A and the offline Makefile run (module 22)",
+        "never open a simulator again",
+        "skip factory and ConfigDB forever",
+        "treat HTML tools as Accellera UVM"
+      ],
+      "answer": 0,
+      "explain": "Closing Track A gaps makes real UVM compile/run feel natural."
+    },
+    {
+      "id": "q3",
+      "type": "true_false",
+      "prompt": "Browser UVM tools are concept literacy sketches — they do not replace Accellera UVM + a real simulator.",
+      "answer": true,
+      "explain": "Sketches teach ideas; fidelity is offline."
+    },
+    {
+      "id": "q4",
+      "type": "multiple_choice",
+      "prompt": "Natural next courses after this path include…",
+      "choices": [
+        "verification planning/management, protocol VIP work, or learn_pyuvm",
+        "only rewriting Unix from scratch",
+        "skipping all scoreboard ideas",
+        "factory overrides only"
+      ],
+      "answer": 0,
+      "explain": "Syllabus ladder: planning, VIP protocols, or Python pyuvm."
+    }
+  ]
+}

@@ -2,14 +2,14 @@
 
 ## Track A — Real UVM
 
-- [ ] Worked through at least one prompt in [EXAMPLES.md](EXAMPLES.md)
-- [ ] Can explain the outcome in my own words
+- [ ] Read `examples/ral-sketch/map.txt`
+- [ ] Can explain block/reg/field hierarchy and access paths
 
 ## Track B — Browser lab (`ral-map`)
 
 - [ ] Opened the lab (local or live)
-- [ ] Loaded starter + completed a few challenges
+- [ ] Loaded starter + tried front-door write and backdoor poke
 
 ## Done when
 
-- [ ] I can explain the idea offline **or** I finished the browser challenges (preferably both)
+- [ ] I can explain RAL map offline **or** I finished the browser challenges (preferably both)

@@ -1,13 +1,13 @@
 # Module 12 examples — CRV lite
 
-Track A (real UVM / SV). Browser lab is shipped as concept literacy.
+Track A (real UVM / SV literacy). Browser lab is shipped.
 
 ## Prompts
 
-1. Restate the core idea of **CRV lite** in one sentence (`rand` + constraint + `randomize()`).
-2. Explain what `randomize()` returning 0 means, using the conflict preset in the lab.
-3. Optional: peek at constrained-random notes in [`../learn_uvm2017_sv_verilator/`](../learn_uvm2017_sv_verilator/).
+1. Read `examples/crv-sketch/randomize.txt` and restate rand + constraint + randomize in one sentence.
+2. Explain what randomize() returning 0 means using the conflict preset idea.
+3. Sketch one seq_item with two constraints and note when randomize would fail.
 
 ## Stretch
 
-In `crv-lite`, compare the range preset histogram after Roll ×10 with seed 42 vs seed 99.
+In `crv-lite`, roll ten times on range with seed 42 vs seed 99, then grep `constraint` in the legacy random_utils tree.

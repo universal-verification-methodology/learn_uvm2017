@@ -1,0 +1,53 @@
+{
+  "module": "module17-uvm-vseq",
+  "title": "Virtual sequence check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "A virtual sequencer primarily…",
+      "choices": [
+        "holds references to agent sequencers (does not create agents)",
+        "creates every agent and driver in build_phase",
+        "replaces monitor analysis ports",
+        "runs only in report_phase"
+      ],
+      "answer": 0,
+      "explain": "The vsequencer stores handles wired in connect_phase."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "A virtual sequence typically…",
+      "choices": [
+        "starts sub-sequences on agent sequencers via those refs",
+        "drives pins directly on the DUT interface",
+        "connects analysis_port to scoreboard",
+        "sets is_active for the whole env once"
+      ],
+      "answer": 0,
+      "explain": "The vseq coordinates sub-sequences across handles."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Parallel coordination across two agent sequencers often uses…",
+      "choices": [
+        "fork … join around two start() calls",
+        "only uvm_config_db::set",
+        "a single shared monitor",
+        "report_phase callbacks only"
+      ],
+      "answer": 0,
+      "explain": "fork-join launches both sub-sequences concurrently."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Starting a sub-sequence on an unwired (null) sequencer ref should fail or stall—you must wire refs before start.",
+      "answer": true,
+      "explain": "Missing uart_sqr/spi_sqr refs break coordination at start time."
+    }
+  ]
+}

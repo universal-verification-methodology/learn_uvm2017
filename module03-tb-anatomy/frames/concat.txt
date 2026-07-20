@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module03-tb-anatomy/frames/slide-1.png'
+duration 28.368
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module03-tb-anatomy/frames/slide-2.png'
+duration 44.544
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module03-tb-anatomy/frames/slide-3.png'
+duration 36.504
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module03-tb-anatomy/frames/slide-4.png'
+duration 30.024
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module03-tb-anatomy/frames/slide-5.png'
+duration 29.256
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module03-tb-anatomy/frames/slide-6.png'
+duration 20.904
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module03-tb-anatomy/frames/slide-6.png'

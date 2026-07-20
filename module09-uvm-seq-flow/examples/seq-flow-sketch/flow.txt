@@ -1,0 +1,37 @@
+UVM sequence → driver flow sketch (literacy)
+============================================
+
+Path:  sequence → sequencer → driver → vif → DUT
+
+seq_item — transaction object (extends uvm_sequence_item)
+  fields: address, data, length, … per protocol
+
+Sequence body (describes WHAT to send):
+  req = MyItem::type_id::create("req");
+  start_item(req);
+  // randomize or assign fields
+  req.data = 8'hA5;
+  finish_item(req);          // hand off → sequencer → driver
+
+Sequencer — arbitration + TLM to driver
+  multiple sequences can share one sequencer
+  finish_item pushes item toward driver side
+
+Driver run task (describes HOW on pins):
+  forever begin
+    seq_item_port.get_next_item(req);   // pull from sequencer
+    // translate req fields → vif signals (protocol)
+    vif.tx <= req.data;
+    @(posedge vif.clk);
+    seq_item_port.item_done();          // release sequencer
+  end
+
+Rules:
+  sequences do NOT wiggle pins — driver owns the vif
+  always item_done after get_next_item
+  connect: driver.seq_item_port ↔ sequencer.seq_item_export
+
+Common mistakes:
+  driving vif from sequence body
+  forget item_done → sequencer stalls
+  assuming finish_item means DUT already saw the transaction

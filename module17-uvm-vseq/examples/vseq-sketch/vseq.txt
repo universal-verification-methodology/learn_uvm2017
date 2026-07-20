@@ -1,0 +1,51 @@
+Virtual sequence UVM sketch (literacy)
+======================================
+
+Roles:
+  virtual sequencer  = holds handles to agent sequencers (does not create them)
+  virtual sequence   = coordinates sub-sequences across those handles
+
+Hierarchy (typical):
+  uvm_test
+    └── uvm_env
+          ├── uart_agent.sequencer
+          ├── spi_agent.sequencer
+          └── (optional) virtual_sequencer  ← often owned by env or test
+                ├── uart_sqr  (ref)
+                └── spi_sqr   (ref)
+
+connect_phase (env or test):
+  vsqr.uart_sqr = env.uart_agent.sequencer;
+  vsqr.spi_sqr  = env.spi_agent.sequencer;
+
+virtual sequence body — sequential:
+  uart_seq seq_u;
+  spi_seq  seq_s;
+  seq_u = uart_seq::type_id::create("seq_u");
+  seq_s = spi_seq::type_id::create("seq_s");
+  seq_u.start(vsqr.uart_sqr);   // UART first
+  seq_s.start(vsqr.spi_sqr);    // then SPI
+
+virtual sequence body — parallel:
+  fork
+    seq_u.start(vsqr.uart_sqr);
+    seq_s.start(vsqr.spi_sqr);
+  join
+
+test start (typical):
+  vseq = my_vseq::type_id::create("vseq");
+  vseq.start(vsqr);   // vseq grabs refs from vsqr inside body/pre_body
+
+Why virtual sequences:
+  one test coordinates multi-interface scenarios
+  reuse agent sequences instead of duplicating protocol code
+  choose sequential vs parallel timing explicitly
+
+Common mistakes:
+  virtual sequencer expected to build agents
+  null ref (forgot connect) → start fails
+  driving pins inside vseq instead of delegating to agent sequences
+  parallel fork-join without checking scoreboard / ordering assumptions
+
+Legacy reference:
+  learn_uvm2017_sv_verilator/module5/examples/virtual_sequences/virtual_sequences.sv

@@ -1,0 +1,63 @@
+# real shell session (Track A — UVM layer literacy)
+
+$ pwd
+/mnt/d/proj/designs/learning/courses/learn_uvm2017/module01-tb-layers
+
+$ ls examples/layer-sketch/
+hierarchy.txt
+
+$ cat examples/layer-sketch/hierarchy.txt
+UVM testbench layer sketch (literacy — not runnable UVM)
+============================================================
+
+test (uvm_test)
+  └── env (uvm_env)
+        ├── agent (uvm_agent, active)
+        │     ├── sequencer  ──►  driver  ──►  virtual interface  ──►  DUT
+        │     └── monitor    ──►  analysis port  ──►  scoreboard
+        └── scoreboard (uvm_scoreboard)
+
+Stimulus path:
+  sequence → sequencer → driver → vif → DUT
+
+Observe path:
+  DUT → vif → monitor → scoreboard (predict vs actual)
+
+Notes:
+  - Passive agent: monitor only (no sequencer/driver activity).
+  - Env may hold multiple agents; scoreboard often shared.
+  - Flat classic TB collapses these roles into one module.
+
+$ head -32 ../../learn_uvm2017_sv_verilator/module6/examples/architecture/architecture.sv
+/**
+ * Module 6 Example 6.1: Testbench Architecture
+ * Demonstrates a structured, hierarchical UVM environment skeleton.
+ * 
+ * LEARNING OBJECTIVES:
+ *   1. Understand UVM testbench hierarchy
+ *   2. Learn component relationships (test -> env -> agent -> driver/monitor/sequencer)
+ *   3. Understand transaction flow (sequence -> sequencer -> driver)
+ *   4. Learn component creation and connection
+ *   5. Understand UVM phases execution
+ * 
+ * TESTBENCH HIERARCHY:
+ *   ArchitectureTest (uvm_test)
+ *     └── ArchEnv (uvm_env)
+ *           └── ArchAgent (uvm_agent)
+ *                 ├── ArchSequencer (uvm_sequencer)
+ *                 ├── ArchDriver (uvm_driver)
+ *                 └── ArchMonitor (uvm_monitor)
+ * 
+ * TRANSACTION FLOW:
+ *   1. Test creates sequence
+ *   2. Sequence starts on sequencer
+ *   3. Sequencer provides transactions to driver
+ *   4. Driver drives DUT signals
+ *   5. Monitor samples DUT signals (not implemented in this example)
+ * 
+ * UVM PHASES:
+ *   - build_phase: Create components
+ *   - connect_phase: Connect components (driver-sequencer)
+ *   - run_phase: Execute test (sequences, driving, monitoring)
+ *   - report_phase: Generate reports
+ */

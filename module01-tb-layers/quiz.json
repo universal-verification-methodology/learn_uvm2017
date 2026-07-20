@@ -1,0 +1,53 @@
+{
+  "module": "module01-tb-layers",
+  "title": "TB layers check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "In a typical UVM stack, the environment (env) mainly…",
+      "choices": [
+        "Replaces the DUT inside the RTL netlist",
+        "Holds agents, scoreboard, and other TB structure",
+        "Is the same thing as the virtual interface only",
+        "Runs only in the browser lab, never offline"
+      ],
+      "answer": 1,
+      "explain": "The env is the container for agents and checking components."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "The stimulus path for driving the DUT is best described as…",
+      "choices": [
+        "monitor → scoreboard → DUT",
+        "sequence → sequencer → driver → virtual interface → DUT",
+        "DUT → driver → sequencer only",
+        "test → DUT with no agent"
+      ],
+      "answer": 1,
+      "explain": "Sequences flow through the sequencer and driver to the interface pins."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "A passive agent differs from an active agent because it…",
+      "choices": [
+        "Has no monitor",
+        "Observes without a driver/sequencer stimulus path",
+        "Cannot connect to a virtual interface",
+        "Must live outside the env"
+      ],
+      "answer": 1,
+      "explain": "Passive agents monitor only; active agents include driver (and sequencer)."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "The browser tb-layers lab runs Accellera UVM inside your tab.",
+      "answer": false,
+      "explain": "Track B is a concept sketch; real UVM runs offline with a simulator."
+    }
+  ]
+}

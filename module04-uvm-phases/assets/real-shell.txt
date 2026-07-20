@@ -1,0 +1,44 @@
+# real shell session (Track A — UVM phase literacy)
+
+$ pwd
+/mnt/d/proj/designs/learning/courses/learn_uvm2017/module04-uvm-phases
+
+$ ls examples/phase-timeline/
+phases.txt
+
+$ cat examples/phase-timeline/phases.txt
+UVM phase timeline sketch (literacy — core spine)
+=================================================
+
+CORE PATH (memorize first):
+  build   → construct components (factory create), top-down
+  connect → wire TLM / virtual interfaces, bottom-up
+  run     → time advances; sequences + drivers; objections hold run open
+  check   → scoreboard / self-check pass vs fail
+  report  → summaries, UVM error counts
+
+Neighbors (awareness):
+  end_of_elaboration  — last build-time topology tweak
+  start_of_simulation — just before time moves
+  extract             — gather results after run
+  final               — last cleanup
+
+Run phase notes:
+  - Test raises objection before starting sequences
+  - Drop objection when stimulus/checking is done
+  - No objections → run may end immediately
+
+Common mistakes:
+  - Driving DUT in build (belongs in run via driver)
+  - Forgetting connect after build (ports unwired)
+  - Ending run while sequences still active (objection dropped too early)
+
+$ grep -n "phase" ../../learn_uvm2017_sv_verilator/module6/examples/architecture/architecture.sv | head -8
+10: *   5. Understand UVM phases execution
+28: *   - build_phase: Create components
+29: *   - connect_phase: Connect components (driver-sequencer)
+30: *   - run_phase: Execute test (sequences, driving, monitoring)
+31: *   - report_phase: Generate reports
+174:     * Run phase: Drive transactions
+188:    task run_phase(uvm_phase phase);
+296:        //   - Created in constructor (before build_phase)

@@ -1,0 +1,32 @@
+UVM agent anatomy sketch (literacy)
+===================================
+
+agent (uvm_agent) — one protocol interface
+  ├── sequencer   (active only)  ← sequences / seq_items
+  ├── driver      (active only)  → virtual interface → DUT
+  └── monitor     (always)       → analysis port → scoreboard/subscribers
+
+Active (UVM_ACTIVE):
+  build sequencer + driver + monitor
+  stimulus: sequence → sequencer → driver → vif → DUT
+  observe:  DUT → vif → monitor → analysis
+
+Passive (UVM_PASSIVE):
+  build monitor only
+  observe only — no sequencer/driver drive path
+
+ConfigDB (typical on agent path):
+  is_active  — active vs passive mode
+  vif        — shared handle for driver and monitor
+
+One agent per protocol:
+  uart_agent, spi_agent, mem_agent — do not mix unrelated protocols
+
+Connect phase (offline):
+  sequencer.seq_item_port ↔ driver.seq_item_export
+  monitor.analysis_port   → scoreboard / coverage
+
+Common mistakes:
+  two protocols in one agent
+  passive agent with no monitor (wrong — passive still monitors)
+  driver/monitor without vif set on agent path

@@ -2,7 +2,7 @@
 
 **Kind:** `lab` · Primary lab: `tb-layers` · **Shipped**
 
-[← Welcome to UVM](../module00-intro/README.md) · [Course README](../README.md) · [Basic TB vs UVM map →](../module02-tb-vs-uvm-map/README.md)
+[← Welcome to UVM 2017](../module00-intro/README.md) · [Course README](../README.md) · [Basic TB vs UVM map →](../module02-tb-vs-uvm-map/README.md)
 
 ## Outcomes
 
@@ -12,9 +12,9 @@ After this module you can explain and practice the ideas taught by **`tb-layers`
 
 ### Track A — Real UVM (hands-on)
 
-1. Open [EXAMPLES.md](EXAMPLES.md) and work the prompts (often against [`../learn_uvm2017_sv_verilator/`](../learn_uvm2017_sv_verilator/)).
-2. Complete [CHECKLIST.md](CHECKLIST.md) with real UVM/Makefile notes when the browser lab is planned.
-3. Optional self-check: `./scripts/module.sh 01 --check` (from course root).
+1. Open [EXAMPLES.md](EXAMPLES.md) and read the Track A sketch under `examples/`.
+2. Explain TB layers in your own words; optional notes against [`../learn_uvm2017_sv_verilator/`](../learn_uvm2017_sv_verilator/).
+3. Check off the Track A items in [CHECKLIST.md](CHECKLIST.md).
 
 ### Track B — Browser lab (online)
 
@@ -25,13 +25,19 @@ After this module you can explain and practice the ideas taught by **`tb-layers`
 
 > Browser UVM tools are **concept literacy** — they do not replace Accellera UVM + a real simulator.
 
-## Media (planned)
+## Media
 
 | Artifact | Path |
 |----------|------|
+| Transcript | [transcript.md](transcript.md) |
 | Outline | [outline.yaml](outline.yaml) |
-| Transcript stub | [transcript.md](transcript.md) |
-| Slides / video | generate later with **module-slides** |
+| Slides | [slides.pptx](slides.pptx) · [slides.pdf](slides.pdf) |
+| Audio | [audio/full.mp3](audio/full.mp3) |
+| Video | [video.mp4](video.mp4) |
+| Quiz | [quiz.json](quiz.json) |
+| Track A demo | [assets/_demo_m01.sh](assets/_demo_m01.sh) |
+| Lab snapshot | [assets/lab-starter.png](assets/lab-starter.png) |
+| Shell capture | [assets/real-shell.png](assets/real-shell.png) |
 
 ## Files
 
@@ -42,5 +48,7 @@ module01-tb-layers/
 ├── EXAMPLES.md
 ├── outline.yaml
 ├── transcript.md
-└── (optional) examples/
+├── quiz.json
+├── examples/layer-sketch/
+└── assets/
 ```

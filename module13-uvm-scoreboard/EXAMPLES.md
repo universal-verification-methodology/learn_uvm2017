@@ -1,13 +1,13 @@
 # Module 13 examples — Scoreboard
 
-Track A (real UVM literacy). Pair with Track B `uvm-scoreboard` when you want the browser sketch.
+Track A (real UVM literacy). Browser lab is shipped.
 
 ## Prompts
 
-1. Restate the core idea of a **scoreboard** in one sentence (expect vs actual).
-2. Sketch predict → expect queue and monitor → actual on paper; note what an orphan means.
-3. Point to where this appears in [`../learn_uvm2017_sv_verilator/`](../learn_uvm2017_sv_verilator/) if you can find it.
+1. Read `examples/scoreboard-sketch/compare.txt` and restate expect vs actual in one sentence.
+2. Sketch predict → expect and monitor → actual on paper; note orphan cases.
+3. Explain why leftover queues at end of test are usually bugs.
 
-## Stretch (optional)
+## Stretch
 
-Redo the same idea with the `uvm-scoreboard` starter (Compare PASS, then Demo mismatch / orphan presets).
+Open `uvm-scoreboard`, Compare PASS on starter, then load mismatch and orphan presets; grep `write_actual` in the legacy tree.

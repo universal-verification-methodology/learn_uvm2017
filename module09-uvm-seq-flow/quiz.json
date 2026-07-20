@@ -1,0 +1,53 @@
+{
+  "module": "module09-uvm-seq-flow",
+  "title": "Sequence → driver check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "The usual stimulus path is…",
+      "choices": [
+        "sequence → sequencer → driver → vif → DUT",
+        "DUT → driver → sequence only",
+        "monitor → sequence → DUT directly",
+        "config DB → DUT with no driver"
+      ],
+      "answer": 0,
+      "explain": "Sequences hand off; driver translates items to pins."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "A sequence’s job is mainly to…",
+      "choices": [
+        "create/randomize seq_items and start them on a sequencer",
+        "sample the bus and write to analysis_port",
+        "compile RTL inside the testbench",
+        "replace the scoreboard"
+      ],
+      "answer": 0,
+      "explain": "Sequences describe transactions; they do not drive pins."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "After the driver calls get_next_item, it must eventually call…",
+      "choices": [
+        "item_done",
+        "finish_item",
+        "uvm_fatal on the sequencer",
+        "build_phase again"
+      ],
+      "answer": 0,
+      "explain": "item_done releases the sequencer for the next item."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Sequences should wiggle DUT pins directly through the virtual interface.",
+      "answer": false,
+      "explain": "Pin wiggles belong in the driver, not the sequence body."
+    }
+  ]
+}

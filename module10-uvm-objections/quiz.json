@@ -1,0 +1,53 @@
+{
+  "module": "module10-uvm-objections",
+  "title": "Objections check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "raise_objection in run_phase…",
+      "choices": [
+        "keeps the run phase open while work continues",
+        "forces immediate UVM_FATAL",
+        "skips connect_phase",
+        "replaces the scoreboard"
+      ],
+      "answer": 0,
+      "explain": "Raise increments the hold count so run stays alive."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "When the total objection count reaches 0…",
+      "choices": [
+        "the run phase can end (then check/report)",
+        "build_phase restarts",
+        "all sequences auto-delete",
+        "simulator exits without report"
+      ],
+      "answer": 0,
+      "explain": "Zero objections → run can finish → check/report follow."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "If two components each raised once…",
+      "choices": [
+        "both must drop before total hits 0",
+        "one drop ends run immediately",
+        "raises cancel each other",
+        "only the test may drop"
+      ],
+      "answer": 0,
+      "explain": "Each raise adds to the total; each holder must drop."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Forgetting to drop_objection after a raise can hang the sim in run phase.",
+      "answer": true,
+      "explain": "Stuck count > 0 prevents run from ending."
+    }
+  ]
+}

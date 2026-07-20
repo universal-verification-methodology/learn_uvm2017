@@ -1,0 +1,73 @@
+# real shell session (Track A — UVM factory literacy)
+
+$ pwd
+/mnt/d/proj/designs/learning/courses/learn_uvm2017/module05-uvm-factory
+
+$ ls examples/factory-sketch/
+overrides.txt
+
+$ cat examples/factory-sketch/overrides.txt
+UVM factory sketch (literacy — overrides)
+=======================================
+
+Registration:
+  `uvm_component_utils(my_driver)
+  `uvm_object_utils(my_sequence)
+
+Creation (typical):
+  my_driver::type_id::create("drv", this);   // parent = agent
+
+Vocabulary:
+  requested type  — what the source code asks the factory for
+  constructed type — what the factory actually builds
+
+Type override (global for that type):
+  set_type_override_by_type(base_driver::get_type(), error_driver::get_type())
+  → every create(base_driver) yields error_driver
+
+Instance override (one path):
+  set_inst_override_by_type(base_driver::get_type(), error_driver::get_type(),
+                            "env.agent.drv")
+  → only that path gets error_driver
+
+Precedence at a path:
+  instance override > type override > no override (identity create)
+
+Common swap targets:
+  driver / monitor variants (error injection, quiet mode)
+  sequence types (stress vs smoke)
+  whole agent (base_agent → vip_agent)
+
+Timing:
+  set overrides before create — usually early in build phase
+
+Common mistakes:
+  using `new` on UVM components (bypasses factory)
+  setting overrides after create (too late)
+  forgetting which path an instance override matches
+
+$ head -24 ../../learn_uvm2017_sv_verilator/tools/uvm-2017/1800.2-2017-1.0/src/base/uvm_factory.svh
+//
+//------------------------------------------------------------------------------
+// Copyright 2007-2014 Mentor Graphics Corporation
+// Copyright 2015 Analog Devices, Inc.
+// Copyright 2014 Semifore
+// Copyright 2017 Intel Corporation
+// Copyright 2018 Qualcomm, Inc.
+// Copyright 2011 Synopsys, Inc.
+// Copyright 2007-2018 Cadence Design Systems, Inc.
+// Copyright 2013 Verilab
+// Copyright 2013-2018 NVIDIA Corporation
+// Copyright 2017 Cisco Systems, Inc.
+//   All Rights Reserved Worldwide
+//
+//   Licensed under the Apache License, Version 2.0 (the
+//   "License"); you may not use this file except in
+//   compliance with the License.  You may obtain a copy of
+//   the License at
+//
+//       http://www.apache.org/licenses/LICENSE-2.0
+//
+//   Unless required by applicable law or agreed to in
+//   writing, software distributed under the License is
+//   distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR

@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module20-protocol-checker/frames/slide-1.png'
+duration 35.4
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module20-protocol-checker/frames/slide-2.png'
+duration 36.096
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module20-protocol-checker/frames/slide-3.png'
+duration 37.536
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module20-protocol-checker/frames/slide-4.png'
+duration 33.792
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module20-protocol-checker/frames/slide-5.png'
+duration 29.976
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module20-protocol-checker/frames/slide-6.png'
+duration 21.696
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module20-protocol-checker/frames/slide-6.png'

@@ -1,0 +1,45 @@
+SVA implication sketch (literacy)
+=================================
+
+Operators (lite):
+  a |-> b   overlapping: when a true, b must be true SAME cycle
+  a |=> b   non-overlapping: when a true, b must be true NEXT cycle
+
+Typical SVA form:
+  property p_req_ack;
+    @(posedge clk) req |-> ack;      // overlap example
+  endproperty
+  assert property (p_req_ack);
+
+  property p_req_ack_next;
+    @(posedge clk) req |=> ack;     // next-cycle example
+  endproperty
+  assert property (p_req_ack_next);
+
+Evaluation outcomes:
+  PASS     — antecedent fired and consequent matched
+  FAIL     — antecedent fired but consequent did not match
+  VACUOUS  — antecedent never true → no failing attempt (weak check)
+
+Example wave (cycle index 0..7):
+  clk:  _|‾|_|‾|_|‾|_|‾|_|‾|_|‾|_
+  a:    __|_____|________________   (a=1 @ cycle 2)
+  b:    ______|__________________   (b=1 @ cycle 2 → |-> pass)
+  b:    _________|_______________   (b=1 @ cycle 3 → |=> pass)
+
+Attempt rule:
+  implication check starts when a is true on a sampled edge
+
+Where SVA lives:
+  inline in RTL module
+  bind assertion module to DUT
+  runs in parallel with UVM testbench
+
+SVA vs UVM scoreboard:
+  SVA — cycle/signal-level protocol rules close to DUT
+  SB  — transaction-level expect vs actual
+
+Common mistakes:
+  confuse |-> and |=>
+  treat vacuous pass as thorough verification
+  forget @(posedge clk) sampling event

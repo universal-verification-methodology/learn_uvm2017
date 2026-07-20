@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module19-uvm-reporting/frames/slide-1.png'
+duration 37.68
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module19-uvm-reporting/frames/slide-2.png'
+duration 39.864
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module19-uvm-reporting/frames/slide-3.png'
+duration 38.52
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module19-uvm-reporting/frames/slide-4.png'
+duration 34.824
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module19-uvm-reporting/frames/slide-5.png'
+duration 31.728
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module19-uvm-reporting/frames/slide-6.png'
+duration 24.336
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module19-uvm-reporting/frames/slide-6.png'

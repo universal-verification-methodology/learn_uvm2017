@@ -1,12 +1,72 @@
-# Module 09 outline
-title: "Sequence → driver"
-kind: lab
-lab: uvm-seq-flow
+title: Sequence to driver
+footer: learn_uvm2017 — uvm seq flow
 slides:
-  - Course context / why layered TB + UVM matter
-  - Core idea (1 concept)
-  - Track B: show lab starter if shipped (else diagram)
-  - Track A: offline / legacy demo cue
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: Sequence to driver
+  subtitle: A sequence describes what to send, it builds sequence items and hands
+    them to a sequencer
+  notes: A sequence describes what to send—it builds sequence items and hands them
+    to a sequencer. The driver pulls those items and turns them into pin activity
+    on the virtual interface. The path is sequence, then sequencer, then driver, then
+    vif, then DUT. This module walks that handoff step by step. We will step through
+    it in the browser lab, then read the same flow in offline notes.
+- type: bullets
+  title: Items, start and finish, get and done
+  bullets:
+  - The seq item is the transaction object, the currency between sequence and driver
+  - In the sequence body you create an item
+  - The driver does not push
+  - Sequences never wiggle pins directly, that is the driver’s job
+  - Multiple sequences can share one sequencer; arbitration decides who goes next
+  notes: The seq item is the transaction object—the currency between sequence and
+    driver. In the sequence body you create an item, call start item, fill or randomize
+    fields, then finish item—that pushes the item toward the sequencer. The driver
+    does not push; it pulls with get next item on its seq item port, drives the protocol
+    on the vif, then calls item done so the sequencer can move on. Sequences never
+    wiggle pins directly—that is the driver’s job. Multiple sequences can share one
+    sequencer; arbitration decides who goes next.
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: Sequence flow lab starter
+  notes: In the browser lab track, open the sequence flow lab. The starter places
+    a UART byte item at the sequencer—data ready, waiting for the driver. Click Step
+    to move the item to the driver, then to the vif, then to the DUT. Watch the code
+    panel for start item, get next item, and item done. Try Run to DUT to see the
+    full path in one go. Load the at-sequence preset to see where the item is born.
+    Work a few challenges, then Check.
+- type: image
+  title: Real UVM literacy
+  image: assets/real-shell.png
+  caption: Real shell — sequence flow sketch
+  notes: In the real UVM track, open this module’s flow sketch—it lists the sequence
+    body and driver task in plain language. Trace one transaction from create through
+    finish item on the sequence side, then get next item through item done on the
+    driver side. If the legacy offline course is checked out, grep for start item
+    or get next item in a module eight example—you will see the same pull model in
+    SystemVerilog. TLM ports from the last module are what make this handoff possible.
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not drive pins from the sequence, that bypasses the driver and breaks reuse
+  - Do not forget item done after get next item or the sequencer stalls waiting for
+    you
+  - Do not assume finish item means the DUT saw it yet, the driver still has to run
+  - And remember
+  notes: 'Do not drive pins from the sequence—that bypasses the driver and breaks
+    reuse. Do not forget item done after get next item or the sequencer stalls waiting
+    for you. Do not assume finish item means the DUT saw it yet—the driver still has
+    to run. And remember: the browser lab steps through stages for literacy; real
+    UVM runs the driver task in parallel with sequences started from the test.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, step from sequencer to DUT and name each stage
+  - On real UVM, sketch the five-stage path with one example transaction
+  - When you are ready, take the short quiz, then continue to objections in the next
+    module
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    step from sequencer to DUT and name each stage. On real UVM, sketch the five-stage
+    path with one example transaction. When you are ready, take the short quiz, then
+    continue to objections in the next module.

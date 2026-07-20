@@ -1,13 +1,13 @@
 # Module 19 examples — Reporting
 
-Track A (real UVM literacy). Pair with Track B `uvm-reporting` when you want the browser sketch.
+Track A (real UVM literacy). Browser lab is shipped.
 
 ## Prompts
 
-1. Restate **severity vs verbosity** in one sentence.
+1. Read `examples/reporting-sketch/reporting.txt` and restate **severity vs verbosity** in one sentence each.
 2. Sketch when an INFO is filtered vs when an ERROR still prints.
-3. Point to where this appears in [`../learn_uvm2017_sv_verilator/`](../learn_uvm2017_sv_verilator/) if you can find it.
+3. Explain what an ID filter on `DRV` would suppress.
 
-## Stretch (optional)
+## Stretch
 
-Redo the same idea with the `uvm-reporting` starter (shown INFO, then Demo filter / ID filter / ERROR).
+Open `uvm-reporting`, confirm the starter INFO is shown, then try filtered / ID filter / ERROR presets.

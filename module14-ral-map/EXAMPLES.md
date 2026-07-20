@@ -1,13 +1,13 @@
 # Module 14 examples — RAL map
 
-Track A (real UVM literacy). Pair with Track B `ral-map` when you want the browser sketch.
+Track A (real UVM literacy). Browser lab is shipped.
 
 ## Prompts
 
-1. Restate **front-door vs back-door** in one sentence.
-2. Sketch block → register → field with base + offset → absolute address on paper.
-3. Point to where this appears in [`../learn_uvm2017_sv_verilator/`](../learn_uvm2017_sv_verilator/) if you can find it.
+1. Read `examples/ral-sketch/map.txt` and restate front-door vs back-door in one sentence each.
+2. Sketch block → register → field with base + offset → absolute address.
+3. Explain what the mirror is for and why RO fields block writes.
 
-## Stretch (optional)
+## Stretch
 
-Redo the same idea with the `ral-map` starter (CTRL front-door write, then Demo backdoor / STATUS RO peek).
+Open `ral-map`, try CTRL front-door write and DATA backdoor poke, then grep `uvm_reg_block` in the UVM reg headers.

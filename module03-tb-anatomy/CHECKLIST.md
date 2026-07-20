@@ -1,15 +1,15 @@
 # Module 03 checklist — TB anatomy refresh
 
-## Track A — Real UVM
+## Track A — Real SV TB
 
-- [ ] Worked through at least one prompt in [EXAMPLES.md](EXAMPLES.md)
-- [ ] Can explain the outcome in my own words (paper or notes OK while lab is planned)
+- [ ] Read `examples/and2-tb/and2_tb.v`
+- [ ] Can name DUT vs tb vs stimulus vs observe vs initial
 
 ## Track B — Browser lab (`tb-anatomy`)
 
-- [ ] Opened the lab (local or live) **or** noted Coming soon
-- [ ] If shipped: loaded starter + completed a few challenges
+- [ ] Opened the lab (local or live)
+- [ ] Loaded starter + stepped timeline + completed a few challenges
 
 ## Done when
 
-- [ ] I can explain the idea offline **or** I finished the browser challenges (preferably both when shipped)
+- [ ] I can explain classic TB anatomy offline **or** I finished the browser challenges (preferably both)

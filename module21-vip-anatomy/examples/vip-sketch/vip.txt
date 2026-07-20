@@ -1,0 +1,41 @@
+VIP anatomy sketch (literacy)
+=============================
+
+Verification IP package = reusable handoff unit for one protocol/interface.
+
+Four deliverables (all required for COMPLETE):
+  agent     — drive / observe one interface
+              sequencer + driver + monitor + vif / seq items
+  checker   — passive bus-rule / protocol legality
+              orthogonal to env scoreboard (payload expect/actual)
+  coverage  — covergroups / bins: which scenarios did the VIP exercise?
+  docs      — API notes, README, examples, self-test for consumers
+
+Starter (COMPLETE):
+  UART VIP with agent + checker + coverage + docs
+
+Incomplete examples:
+  missing checker  → INCOMPLETE (no legality)
+  missing coverage → INCOMPLETE (no measurement)
+  missing docs     → INCOMPLETE (no handoff)
+  agent only       → scaffold, not a VIP package yet
+
+Typical placement:
+  VIP ships: agent, checker, coverage, docs
+  Env often owns: scoreboard, virtual sequences, test glue
+
+Consumer integrate flow:
+  1. instantiate / factory agent
+  2. bind / enable checker
+  3. sample / close coverage
+  4. read docs + run self-test
+
+Common mistakes:
+  calling agent-only tree a "VIP"
+  stuffing project scoreboard into every VIP
+  shipping code without self-test / README
+  assuming compile success == package complete
+
+Legacy reference:
+  learn_uvm2017_sv_verilator/module7/examples/vip/vip.sv
+  (agent scaffold — txn + seq + driver + agent; add checker/cov/docs for full VIP)

@@ -1,23 +1,33 @@
-# Module 17 transcript — Virtual sequence
+# Module 17 — Virtual sequence
 
-> Stub for voiceover / clip. Expand when recording (module-slides).
+**Module id:** module17-uvm-vseq  
+**Lab:** uvm-vseq  
+**Tracks:** A · B
 
-## Hook
+## Slide 1 — Virtual sequence
 
-Verification needs structure. This module: **Virtual sequence**.
+Multi-agent env gives you several sequencers—one per active agent. A virtual sequence is how one test coordinates traffic across them without cramming unrelated protocols into one agent. The virtual sequencer holds handles to those agent sequencers; the virtual sequence starts sub-sequences on those handles, either one after another or in parallel with fork-join. This module sketches that coordination for UART plus SPI. We will try sequential and parallel starts in the browser lab, then read the same wiring in offline notes.
 
-## Teach
+## Slide 2 — Virtual sequencer vs virtual sequence
 
-A virtual sequencer holds handles to agent sequencers — it does not create them. A virtual sequence starts sub-sequences on those handles, either sequentially or in parallel with fork-join.
+The virtual sequencer is a container—it stores references like uart sqr and spi sqr but does not create the agents. In connect phase the env wires those refs from each agent’s sequencer. The virtual sequence is the coordinator—it extends uvm sequence, grabs the refs from the virtual sequencer, and calls start on sub-sequences. Sequential mode runs UART first, then SPI. Parallel mode uses fork-join so both start at once. Missing or null refs fail at start time—that is why wiring every handle matters before you launch the vseq.
 
-## Show Track B
+## Slide 3 — Browser lab
 
-Open the browser lab, `uvm-vseq`. Load the starter.
+![Virtual sequence lab starter](assets/lab-starter.png)
 
-## Show Track A
+In the browser lab track, open the virtual sequence lab. The starter loads a virtual sequencer with uart sqr and spi sqr wired, and a virtual sequence that already ran UART then SPI sequentially. Click Start to replay coordination and watch the trace panel. Try the parallel preset and see both sub-sequences launch together. Load missing SPI ref and watch start fail when a handle is null. Wire refs first on the unwired preset, then start. Work a few challenges, then Check. The lab is literacy—you still declare refs in connect and body in real UVM.
 
-Point at a legacy UVM example or paper sketch from EXAMPLES.md.
+## Slide 4 — Real UVM literacy
 
-## Your turn
+![Real shell — virtual sequence sketch](assets/real-shell.png)
 
-Complete the checklist for at least one track. Then take the short quiz.
+In the real UVM track, open this module’s virtual sequence sketch—it lists virtual sequencer refs, connect wiring, and sequential versus parallel body patterns in plain language. Trace connect phase assigning env uart sequencer and env spi sequencer into the virtual sequencer fields. If the legacy offline course is checked out, grep for VirtualSequencer or fork in module five virtual sequences—you will see channel coordination with fork-join and sequential starts. Multi-agent env from the last module gives you the sequencers; this module shows how one test drives them in order or in parallel.
+
+## Slide 5 — Pitfalls to watch
+
+Do not expect the virtual sequencer to build agents—it only holds handles you wire in connect. Do not start a sub-sequence on a null ref—check wiring before start. Do not assume sequential and parallel behave the same—fork-join can expose races your scoreboard must handle. Do not put protocol items in the virtual sequence body without delegating to agent sequences—keep pin wiggling in drivers. And remember: virtual sequences coordinate; they do not replace per-agent sequences and sequencers.
+
+## Slide 6 — Your turn
+
+Complete the checklist for at least one track—preferably both. In the browser, run sequential UART then SPI, then switch to parallel and explain the trace difference. On real UVM, sketch virtual sequencer refs and one virtual sequence body with two start calls. When you are ready, take the short quiz, then continue to callbacks in the next module.

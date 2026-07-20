@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module06-uvm-configdb/frames/slide-1.png'
+duration 29.712
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module06-uvm-configdb/frames/slide-2.png'
+duration 39.792
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module06-uvm-configdb/frames/slide-3.png'
+duration 35.4
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module06-uvm-configdb/frames/slide-4.png'
+duration 31.488
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module06-uvm-configdb/frames/slide-5.png'
+duration 26.664
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module06-uvm-configdb/frames/slide-6.png'
+duration 21.384
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module06-uvm-configdb/frames/slide-6.png'

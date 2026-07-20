@@ -1,0 +1,53 @@
+{
+  "module": "module00-intro",
+  "title": "Welcome check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Track A in this course means practice with…",
+      "choices": [
+        "Only the browser tools page",
+        "Real UVM with a local simulator and Accellera library",
+        "PowerPoint slides only",
+        "Verilog RTL synthesis only"
+      ],
+      "answer": 1,
+      "explain": "Track A is the real UVM track—offline compiles and runs you keep."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Track B browser labs are mainly for…",
+      "choices": [
+        "Replacing Accellera UVM in production",
+        "Concept sketches and quick literacy feedback",
+        "Installing commercial VIP automatically",
+        "Editing the IEEE standard document"
+      ],
+      "answer": 1,
+      "explain": "Track B builds intuition in the browser; full fidelity stays offline."
+    },
+    {
+      "id": "q3",
+      "type": "true_false",
+      "prompt": "This course teaches the pyuvm Python framework as its primary path.",
+      "answer": false,
+      "explain": "learn_uvm2017 focuses on SystemVerilog UVM 2017; pyuvm is learn_pyuvm."
+    },
+    {
+      "id": "q4",
+      "type": "multiple_choice",
+      "prompt": "A good first rhythm for a lab module is…",
+      "choices": [
+        "Skip the README and only watch video",
+        "Browser sketch for the idea, then offline UVM when ready",
+        "Only copy code without a checklist",
+        "Start with RAL back-door sequences"
+      ],
+      "answer": 1,
+      "explain": "Browser first for intuition, then real UVM for fidelity, is the recommended path."
+    }
+  ]
+}

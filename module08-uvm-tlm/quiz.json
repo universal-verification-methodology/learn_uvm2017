@@ -1,0 +1,53 @@
+{
+  "module": "module08-uvm-tlm",
+  "title": "TLM ports check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "TLM ports are usually wired in…",
+      "choices": [
+        "build_phase only",
+        "connect_phase (port.connect(export))",
+        "run_phase before reset",
+        "report_phase exclusively"
+      ],
+      "answer": 1,
+      "explain": "connect_phase is where port.connect(export) calls belong."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Driver ↔ sequencer typically uses…",
+      "choices": [
+        "seq_item_port connected to seq_item_export",
+        "only analysis_port",
+        "put_port to reset",
+        "virtual interface connect"
+      ],
+      "answer": 0,
+      "explain": "Pull model: driver seq_item_port → sequencer seq_item_export."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "An analysis_port write()…",
+      "choices": [
+        "broadcasts a transaction to subscribers",
+        "pulls the next seq_item only",
+        "deletes the sequencer",
+        "runs only in build_phase"
+      ],
+      "answer": 0,
+      "explain": "Analysis is one-to-many broadcast via write()."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "After get_next_item, the driver must call item_done or the sequencer may stall.",
+      "answer": true,
+      "explain": "item_done releases the sequencer for the next item."
+    }
+  ]
+}

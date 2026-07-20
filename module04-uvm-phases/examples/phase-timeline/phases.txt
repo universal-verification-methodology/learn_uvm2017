@@ -1,0 +1,25 @@
+UVM phase timeline sketch (literacy — core spine)
+=================================================
+
+CORE PATH (memorize first):
+  build   → construct components (factory create), top-down
+  connect → wire TLM / virtual interfaces, bottom-up
+  run     → time advances; sequences + drivers; objections hold run open
+  check   → scoreboard / self-check pass vs fail
+  report  → summaries, UVM error counts
+
+Neighbors (awareness):
+  end_of_elaboration  — last build-time topology tweak
+  start_of_simulation — just before time moves
+  extract             — gather results after run
+  final               — last cleanup
+
+Run phase notes:
+  - Test raises objection before starting sequences
+  - Drop objection when stimulus/checking is done
+  - No objections → run may end immediately
+
+Common mistakes:
+  - Driving DUT in build (belongs in run via driver)
+  - Forgetting connect after build (ports unwired)
+  - Ending run while sequences still active (objection dropped too early)

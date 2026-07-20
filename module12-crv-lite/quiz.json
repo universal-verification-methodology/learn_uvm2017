@@ -1,0 +1,53 @@
+{
+  "module": "module12-crv-lite",
+  "title": "CRV lite check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "In SystemVerilog, rand marks…",
+      "choices": [
+        "a variable the randomize() solver may assign",
+        "a pin that must stay constant",
+        "a coverage bin only",
+        "a UVM phase name"
+      ],
+      "answer": 0,
+      "explain": "rand fields are randomized by randomize()."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "randomize() returning 1 means…",
+      "choices": [
+        "a legal sample was found under the constraints",
+        "all tests passed",
+        "coverage hit 100%",
+        "connect_phase completed"
+      ],
+      "answer": 0,
+      "explain": "1 = success; fields got legal values."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "randomize() returning 0 usually means…",
+      "choices": [
+        "no value satisfies the constraints (or solver failed)",
+        "the DUT reset failed",
+        "item_done was not called",
+        "UVM_TESTNAME was missing"
+      ],
+      "answer": 0,
+      "explain": "Unsat constraints → randomize fails."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Setting a seed helps reproduce the same random stream for debug.",
+      "answer": true,
+      "explain": "Same seed → same randomize sequence (given same code)."
+    }
+  ]
+}

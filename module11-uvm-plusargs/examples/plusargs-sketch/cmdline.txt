@@ -1,0 +1,38 @@
+UVM plusargs sketch (literacy)
+==============================
+
+Sim command (example):
+  ./simv +UVM_TESTNAME=base_test +SEED=1 +UVM_VERBOSITY=UVM_LOW \
+         +NUM_PKTS=16 +MODE=burst
+
+Roles:
+  +UVM_TESTNAME=<class>  → factory picks which uvm_test to build/run
+  +SEED=<n>              → randomization reproducibility knob
+  +UVM_VERBOSITY=<level> → log noise (UVM_LOW / UVM_MEDIUM / UVM_HIGH …)
+  +CUSTOM=<value>         → project knobs (NUM_PKTS, MODE, …)
+
+Reading custom knobs in SV (two common APIs):
+  // uvm_cmdline_processor (UVM CLP)
+  string val;
+  if (uvm_cmdline_proc.get_arg_value("+test_mode", val)) begin
+    // use val
+  end
+
+  // SystemVerilog built-in
+  int n;
+  if ($value$plusargs("NUM_PKTS=%d", n)) begin
+    // use n
+  end
+
+Makefile pattern:
+  SIM_ARGS += +UVM_TESTNAME=$(TEST) +SEED=$(SEED)
+
+Common mistakes:
+  typo in +UVM_TESTNAME → factory cannot find test class
+  missing + prefix on sim command line
+  expecting +SEED alone to select a test
+  custom knob name mismatch between Makefile and get_arg_value string
+
+Test selection vs knobs:
+  TESTNAME → which test runs (factory)
+  everything else → how the test runs (read inside test/env)

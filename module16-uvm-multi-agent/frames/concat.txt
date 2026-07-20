@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module16-uvm-multi-agent/frames/slide-1.png'
+duration 25.272
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module16-uvm-multi-agent/frames/slide-2.png'
+duration 33.936
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module16-uvm-multi-agent/frames/slide-3.png'
+duration 35.616
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module16-uvm-multi-agent/frames/slide-4.png'
+duration 32.736
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module16-uvm-multi-agent/frames/slide-5.png'
+duration 27.024
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module16-uvm-multi-agent/frames/slide-6.png'
+duration 20.664
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module16-uvm-multi-agent/frames/slide-6.png'

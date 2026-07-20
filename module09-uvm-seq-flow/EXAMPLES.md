@@ -1,13 +1,13 @@
 # Module 09 examples — Sequence → driver
 
-Track A (real UVM literacy). Browser lab may still be planned.
+Track A (real UVM literacy). Browser lab is shipped.
 
 ## Prompts
 
-1. Restate the core idea of **Sequence → driver** in one sentence.
-2. Sketch the block / timeline / override on paper (agent, phase, factory, …).
-3. Point to where this appears in [`../learn_uvm2017_sv_verilator/`](../learn_uvm2017_sv_verilator/) if you can find it.
+1. Read `examples/seq-flow-sketch/flow.txt` and restate the five-stage path in one sentence.
+2. Sketch start_item / finish_item on the sequence side and get_next_item / item_done on the driver side.
+3. Explain why sequences must not wiggle pins directly.
 
-## Stretch (optional)
+## Stretch
 
-When the browser lab ships, redo the same idea with the starter challenges.
+Open `uvm-seq-flow`, step from sequencer to DUT, then grep `get_next_item` in the legacy module-eight tree.

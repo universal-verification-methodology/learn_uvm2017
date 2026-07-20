@@ -1,23 +1,33 @@
-# Module 10 transcript — Objections
+# Module 10 — Objections
 
-> Stub for voiceover / clip. Expand when recording (module-slides).
+**Module id:** module10-uvm-objections  
+**Lab:** uvm-objections  
+**Tracks:** A · B
 
-## Hook
+## Slide 1 — Objections
 
-Verification needs structure. This module: **Objections**.
+Run phase is where your test actually runs—but UVM needs to know when work is still in flight. Objections are the hold counter: raise keeps run open, drop releases your hold, and when the total hits zero run can end. This module shows who is holding and why balance matters. We will watch the counter in the browser lab, then read the same pattern in offline notes.
 
-## Teach
+## Slide 2 — Raise, drop, and the total count
 
-(3–5 sentences on the concept.)
+In run phase you call raise objection on the phase object—that increments the total and keeps simulation time alive. When your task finishes, call drop objection to release your hold. Multiple components can raise at once—test, sequence, env—and every raise needs a matching drop before the total reaches zero. Forget to drop and run hangs with objections stuck above zero. Drop too early and your test ends before sequences or drivers finish. The rule is simple: whoever raises should drop.
 
-## Show Track B
+## Slide 3 — Browser lab
 
-Open the browser lab, `uvm-objections`. Load the starter.
+![Objections lab starter](assets/lab-starter.png)
 
-## Show Track A
+In the browser lab track, open the objections lab. The starter shows test holding one raise—run stays open, total count is one. Try raise and drop with different actors and watch the total. Load the multi preset—test and sequence both hold—and drop one to see run still blocked. Drop all to hit zero and watch the phase pill flip to ended. Work a few challenges, then Check. The lab is literacy; real UVM uses the same calls in your run phase tasks.
 
-Point at a legacy UVM example or paper sketch from EXAMPLES.md.
+## Slide 4 — Real UVM literacy
 
-## Your turn
+![Real shell — objections sketch](assets/real-shell.png)
 
-Complete the checklist for at least one track. Then take the short quiz.
+In the real UVM track, open this module’s objections sketch—it shows raise and drop around sequence start in plain language. Trace the pattern: raise before work, start sequences or fork tasks, wait for completion, then drop. If the legacy offline course is checked out, grep for raise objection in any run phase task—you will see the same bracket around stimulus. Objections tie directly to the sequence flow from the last module—without a raise, run might end before your sequence runs.
+
+## Slide 5 — Pitfalls to watch
+
+Do not raise in build and forget run phase—that is the wrong phase for time advancement. Do not drop before your sequences finish or run ends too soon. Do not assume one component’s drop clears everyone—each holder must drop. Double raises need double drops. And remember: the browser counter is a sketch; real sim hangs show up as run phase never ending in the log.
+
+## Slide 6 — Your turn
+
+Complete the checklist for at least one track—preferably both. In the browser, load multi and explain why one drop is not enough. On real UVM, sketch a run phase task with raise, sequence start, and drop. When you are ready, take the short quiz, then continue to plusargs in the next module.

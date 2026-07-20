@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module10-uvm-objections/frames/slide-1.png'
+duration 23.424
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module10-uvm-objections/frames/slide-2.png'
+duration 32.952
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module10-uvm-objections/frames/slide-3.png'
+duration 32.064
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module10-uvm-objections/frames/slide-4.png'
+duration 32.376
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module10-uvm-objections/frames/slide-5.png'
+duration 24.384
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module10-uvm-objections/frames/slide-6.png'
+duration 20.592
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module10-uvm-objections/frames/slide-6.png'

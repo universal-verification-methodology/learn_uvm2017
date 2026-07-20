@@ -1,13 +1,13 @@
 # Module 07 examples — Agent anatomy
 
-Track A (real UVM literacy). Browser lab may still be planned.
+Track A (real UVM literacy). Browser lab is shipped.
 
 ## Prompts
 
-1. Restate the core idea of **Agent anatomy** in one sentence.
-2. Sketch the block / timeline / override on paper (agent, phase, factory, …).
-3. Point to where this appears in [`../learn_uvm2017_sv_verilator/`](../learn_uvm2017_sv_verilator/) if you can find it.
+1. Read `examples/agent-sketch/anatomy.txt` and restate the core idea in one sentence.
+2. Sketch an active agent with sequencer, driver, monitor, and vif arrows.
+3. Explain what disappears when you switch to passive mode.
 
-## Stretch (optional)
+## Stretch
 
-When the browser lab ships, redo the same idea with the starter challenges.
+Open `uvm-agent`, try passive preset, then grep `uvm_agent` in the legacy architecture example.

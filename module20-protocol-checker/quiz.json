@@ -1,0 +1,53 @@
+{
+  "module": "module20-protocol-checker",
+  "title": "Protocol checker check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "A protocol checker primarily answers…",
+      "choices": [
+        "“Was the bus / handshake legal?”",
+        "“Did expect match actual payload?”",
+        "“Which sequence ran first?”",
+        "“What is the factory override type?”"
+      ],
+      "answer": 0,
+      "explain": "Checkers flag rule violations on the wire."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "A scoreboard primarily answers…",
+      "choices": [
+        "“Was the transaction data / ordering correct?”",
+        "“Was valid held until ready?”",
+        "“Is data stable while stalled?”",
+        "“Are there X values when valid is high?”"
+      ],
+      "answer": 0,
+      "explain": "Scoreboard = functional expect vs actual."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "While valid is high and ready is low, a common rule requires…",
+      "choices": [
+        "data must not change (hold stable)",
+        "valid may drop immediately",
+        "data may be X",
+        "the driver must raise an objection"
+      ],
+      "answer": 0,
+      "explain": "HOLD: no data change during stall."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "A beat can pass all protocol rules yet still fail scoreboard comparison.",
+      "answer": true,
+      "explain": "Legal bus ≠ correct payload."
+    }
+  ]
+}

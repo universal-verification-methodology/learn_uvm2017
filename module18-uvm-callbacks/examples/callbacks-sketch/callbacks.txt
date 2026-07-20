@@ -1,0 +1,50 @@
+UVM callbacks sketch (literacy)
+===============================
+
+Idea:
+  extend a host component (driver, monitor, …) at hook points
+  without subclassing the host — register callback objects instead
+
+Hook flow (driver example):
+  pre_drive(item)  →  drive body on vif  →  post_drive(item)
+
+Callback base (typical):
+  class my_driver_cb extends uvm_callback;
+    virtual function void pre_drive(my_driver drv, my_item item);
+    virtual function void post_drive(my_driver drv, my_item item);
+
+Derived callback (test-specific):
+  class err_inj_cb extends my_driver_cb;
+    function void pre_drive(my_driver drv, my_item item);
+      item.data ^= 8'h01;   // fault inject before drive
+    endfunction
+
+Registration (pair types once):
+  `uvm_register_cb(my_driver, err_inj_cb)
+
+Add instance on the host:
+  err_inj_cb cb = err_inj_cb::type_id::create("cb");
+  uvm_callbacks#(my_driver, err_inj_cb)::add(drv, cb);
+
+Host invokes at hook points:
+  `uvm_do_callbacks(my_driver, err_inj_cb, pre_drive(this, item))
+  // ... drive body ...
+  `uvm_do_callbacks(my_driver, err_inj_cb, post_drive(this, item))
+
+Enable / disable:
+  uvm_callbacks#(my_driver, err_inj_cb)::display(drv);
+  cb.set_enabled(0);   // registered but skipped on next hook
+
+Why callbacks vs subclass:
+  VIP driver stays vendor-clean
+  per-test hooks: err inject, logging, coverage
+  multiple callbacks — registration order = invocation order
+
+Common mistakes:
+  forgot `uvm_register_cb(type pairing)
+  disabled confused with unregistered
+  heavy work in pre hook stalls driver
+  two pre callbacks fighting over same field — mind order
+
+Legacy reference:
+  learn_uvm2017_sv_verilator/module5/examples/callbacks/callbacks.sv

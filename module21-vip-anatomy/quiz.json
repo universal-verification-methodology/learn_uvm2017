@@ -1,0 +1,53 @@
+{
+  "module": "module21-vip-anatomy",
+  "title": "VIP anatomy check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "A complete VIP package typically includes…",
+      "choices": [
+        "agent, protocol checker, coverage, and docs/self-test",
+        "only a driver and a scoreboard",
+        "only plusargs and a Makefile",
+        "only report_phase callbacks"
+      ],
+      "answer": 0,
+      "explain": "Four handoff deliverables: agent + checker + coverage + docs."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Shipping only an agent usually means…",
+      "choices": [
+        "you have a scaffold, not a complete VIP handoff",
+        "coverage and docs are automatically included",
+        "the package is always COMPLETE",
+        "protocol checkers are unnecessary"
+      ],
+      "answer": 0,
+      "explain": "Agent alone ≠ VIP package."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "In VIP anatomy, the checker’s job is…",
+      "choices": [
+        "passive protocol / bus legality rules",
+        "compare expect vs actual payload in the env scoreboard",
+        "create agents in build_phase only",
+        "replace documentation"
+      ],
+      "answer": 0,
+      "explain": "Checker = legality; scoreboard = functional data."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Docs (API notes, examples, self-test) are part of a VIP handoff, not optional decoration.",
+      "answer": true,
+      "explain": "Without docs/self-test, consumers cannot integrate reliably."
+    }
+  ]
+}

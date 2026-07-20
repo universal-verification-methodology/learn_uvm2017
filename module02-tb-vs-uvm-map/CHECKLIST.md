@@ -2,14 +2,14 @@
 
 ## Track A — Real UVM
 
-- [ ] Worked through at least one prompt in [EXAMPLES.md](EXAMPLES.md)
-- [ ] Can explain the outcome in my own words (paper or notes OK while lab is planned)
+- [ ] Read `examples/classic-vs-uvm/map.txt`
+- [ ] Can explain all six classic ↔ UVM pairs in my own words
 
 ## Track B — Browser lab (`tb-vs-uvm-map`)
 
-- [ ] Opened the lab (local or live) **or** noted Coming soon
-- [ ] If shipped: loaded starter + completed a few challenges
+- [ ] Opened the lab (local or live)
+- [ ] Loaded starter + mapped at least three pairs + completed a few challenges
 
 ## Done when
 
-- [ ] I can explain the idea offline **or** I finished the browser challenges (preferably both when shipped)
+- [ ] I can explain the idea offline **or** I finished the browser challenges (preferably both)

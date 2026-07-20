@@ -12,9 +12,9 @@ After this module you can explain and practice the ideas taught by **`ral-map`**
 
 ### Track A — Real UVM (hands-on)
 
-1. Open [EXAMPLES.md](EXAMPLES.md) and work the prompts (often against [`../learn_uvm2017_sv_verilator/`](../learn_uvm2017_sv_verilator/)).
-2. Complete [CHECKLIST.md](CHECKLIST.md) with real UVM/Makefile notes when useful.
-3. Optional self-check: `./scripts/module.sh 14 --check` (from course root).
+1. Open [EXAMPLES.md](EXAMPLES.md) and read `examples/ral-sketch/map.txt`.
+2. Explain block → register → field and front-door vs back-door access.
+3. Optional: grep `uvm_reg_block` in the legacy UVM reg headers.
 
 ### Track B — Browser lab (online)
 
@@ -25,13 +25,19 @@ After this module you can explain and practice the ideas taught by **`ral-map`**
 
 > Browser UVM tools are **concept literacy** — they do not replace Accellera UVM + a real simulator.
 
-## Media (planned)
+## Media
 
 | Artifact | Path |
 |----------|------|
+| Transcript | [transcript.md](transcript.md) |
 | Outline | [outline.yaml](outline.yaml) |
-| Transcript stub | [transcript.md](transcript.md) |
-| Slides / video | generate later with **module-slides** |
+| Slides | [slides.pptx](slides.pptx) · [slides.pdf](slides.pdf) |
+| Audio | [audio/full.mp3](audio/full.mp3) |
+| Video | [video.mp4](video.mp4) |
+| Quiz | [quiz.json](quiz.json) |
+| Track A demo | [assets/_demo_m14.sh](assets/_demo_m14.sh) |
+| Lab snapshot | [assets/lab-starter.png](assets/lab-starter.png) |
+| Shell capture | [assets/real-shell.png](assets/real-shell.png) |
 
 ## Files
 
@@ -40,7 +46,6 @@ module14-ral-map/
 ├── README.md
 ├── CHECKLIST.md
 ├── EXAMPLES.md
-├── outline.yaml
-├── transcript.md
-└── (optional) examples/
+├── examples/ral-sketch/
+└── assets/
 ```

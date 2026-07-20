@@ -1,0 +1,42 @@
+Protocol checker sketch (literacy)
+===================================
+
+Two different questions:
+  protocol checker  →  "Was the bus legal?"
+  scoreboard        →  "Was the data correct?"
+
+Checker role:
+  passive — watches pins / monitor samples each cycle
+  does NOT drive the DUT
+  flags RULE violations (handshake, stability, X, …)
+
+Scoreboard role:
+  compares expect vs actual transactions
+  payload, ordering, side effects
+  usually fed by monitor analysis_port
+
+Example valid/ready rules:
+  HS   — do not drop valid while stalled waiting for ready
+  HOLD — while valid && !ready, data must stay stable
+  X    — when valid is high, data must be known (not X/Z)
+
+Starter beat (all PASS):
+  valid=1, ready=1, data=0xA5, stable → HS/HOLD/X pass
+  scoreboard may still compare expect 0xA5 vs actual 0xA5 separately
+
+Typical UVM placement:
+  SVA bound to interface, or
+  passive uvm_component sampling vif each cycle, or
+  protocol checker inside passive agent
+
+  monitor  → analysis_port → scoreboard (functional)
+  checker  → uvm_error on rule break (protocol)
+
+Common mistakes:
+  scoreboard expected to catch handshake drops
+  checker drives pins (should be passive)
+  checking during reset when signals are meaningless
+  one passing rule assumed to mean all rules pass
+
+Legacy reference:
+  learn_uvm2017_sv_verilator/module6/examples/protocol_checkers/protocol_checkers.sv

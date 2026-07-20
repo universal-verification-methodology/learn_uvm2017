@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module21-vip-anatomy/frames/slide-1.png'
+duration 36.384
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module21-vip-anatomy/frames/slide-2.png'
+duration 39.264
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module21-vip-anatomy/frames/slide-3.png'
+duration 38.568
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module21-vip-anatomy/frames/slide-4.png'
+duration 39.096
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module21-vip-anatomy/frames/slide-5.png'
+duration 37.728
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module21-vip-anatomy/frames/slide-6.png'
+duration 23.736
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module21-vip-anatomy/frames/slide-6.png'

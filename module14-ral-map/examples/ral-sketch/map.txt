@@ -1,0 +1,46 @@
+UVM RAL map sketch (literacy)
+==============================
+
+Hierarchy:
+  uvm_reg_block (uart_reg_block)
+    base address = 0x1000
+    ├── uvm_reg CTRL   @ offset 0x00  → abs 0x1000
+    │     field ENABLE [0]   RW
+    │     field RESERVED [7:1] RO
+    ├── uvm_reg STATUS @ offset 0x04  → abs 0x1004
+    │     field BUSY [0]     RO
+    └── uvm_reg DATA   @ offset 0x08  → abs 0x1008
+          field VALUE [7:0]  RW
+
+Absolute address = block.base + reg.offset
+
+Front-door (bus path):
+  reg_model.uart_reg_block.CTRL.ENABLE.write(1, UVM_FRONTDOOR);
+  // → reg adapter → bus driver → DUT register
+  // mirror updated after successful transfer
+
+Back-door (HDL path):
+  reg_model.uart_reg_block.DATA.VALUE.poke(8'h5A, UVM_BACKDOOR);
+  reg_model.uart_reg_block.STATUS.BUSY.peek(status, UVM_BACKDOOR);
+  // no bus cycles — direct hierarchical reference
+
+Mirror:
+  predicted value in the reg model
+  compare after read: mirror vs sampled DUT value
+
+Access policy:
+  RW — read and write allowed
+  RO — read ok; write blocked
+  WO — write only (less common in sketches)
+
+Typical bring-up flow:
+  1) build reg model from IP spec / reg spec
+  2) lock model, connect adapter to bus agent
+  3) reset + default map
+  4) front-door for integration tests; back-door for debug
+
+Common mistakes:
+  raw address math when map has names
+  backdoor poke without updating mirror expectations
+  writing RO fields
+  front-door without working adapter/reg predictor

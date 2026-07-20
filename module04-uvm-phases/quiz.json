@@ -1,0 +1,53 @@
+{
+  "module": "module04-uvm-phases",
+  "title": "UVM phases check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "The build phase is mainly for…",
+      "choices": [
+        "Constructing the component tree (factory create)",
+        "Printing the final UVM report summary",
+        "Advancing simulation time with pin wiggles",
+        "Comparing scoreboard predict vs actual only"
+      ],
+      "answer": 0,
+      "explain": "Build creates components; it is not the time-consuming run phase."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Connect phase typically walks the tree…",
+      "choices": [
+        "Top-down only",
+        "Bottom-up to wire ports and virtual interfaces",
+        "Random order each run",
+        "Only at report time"
+      ],
+      "answer": 1,
+      "explain": "After build, connect hooks TLM and vifs—usually bottom-up."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Objections in run phase…",
+      "choices": [
+        "Keep simulation alive until dropped",
+        "Replace the need for a scoreboard",
+        "Run only during build",
+        "Are only used in report phase"
+      ],
+      "answer": 0,
+      "explain": "Raise/drop objections control when run may end."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "The browser uvm-phases lab executes Accellera UVM inside your tab.",
+      "answer": false,
+      "explain": "Track B is a concept timeline; real phases run offline with a simulator."
+    }
+  ]
+}

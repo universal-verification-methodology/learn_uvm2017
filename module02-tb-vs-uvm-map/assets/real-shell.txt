@@ -1,0 +1,62 @@
+# real shell session (Track A — classic vs UVM map)
+
+$ pwd
+/mnt/d/proj/designs/learning/courses/learn_uvm2017/module02-tb-vs-uvm-map
+
+$ ls examples/classic-vs-uvm/
+map.txt
+
+$ cat examples/classic-vs-uvm/map.txt
+Classic testbench ↔ UVM map (literacy — six pairs)
+==================================================
+
+1. Pin wiggle          ↔  Driver + virtual interface
+   Classic: initial / task drives DUT pins with delays
+   UVM:     driver pulls seq_items; drives via vif
+
+2. Hard-coded vectors  ↔  Sequence + sequencer
+   Classic: fixed lists / nested tasks per scenario
+   UVM:     sequences generate items; sequencer → driver
+
+3. $display peek       ↔  Monitor + analysis
+   Classic: TB reads wires and prints in same block
+   UVM:     passive monitor → analysis port / TLM
+
+4. Inline expect       ↔  Scoreboard
+   Classic: if (got !== exp) $error in stimulus block
+   UVM:     predict vs actual compare on transactions
+
+5. Flat module tb      ↔  Env + agent(s)
+   Classic: one wrapper — clock, stim, check, $finish
+   UVM:     test → env → agent (sqr/drv/mon) → DUT
+
+6. Copy-paste TB       ↔  Factory / VIP reuse
+   Classic: fork whole tb.v for next block / protocol
+   UVM:     type overrides + packaged agents (VIP)
+
+UART vignette (browser lab starter):
+  send_byte task     ↔  uart sequence item
+  $display on tx     ↔  uart monitor item
+  if (rx !== byte)   ↔  scoreboard byte compare
+
+$ head -20 ../../learn_uvm2017_sv_verilator/docs/MODULE3.md
+# Module 3: UVM Basics
+
+**Goal**: Master UVM class hierarchy and phases
+
+## Overview
+
+This module introduces the Universal Verification Methodology (UVM) using SystemVerilog. You'll learn the fundamental UVM concepts, class hierarchy, phases, and how to structure UVM testbenches. This module establishes the foundation for all advanced UVM concepts.
+
+### Examples and Code Structure
+
+This module includes comprehensive examples and testbenches located in the `module3/` directory:
+
+```
+module3/
+├── examples/              # SystemVerilog UVM examples
+│   ├── class_hierarchy/   # UVM class hierarchy examples
+│   ├── phases/           # UVM phases examples
+│   ├── reporting/        # UVM reporting examples
+│   ├── configdb/         # ConfigDB examples
+│   ├── factory/          # Factory pattern examples

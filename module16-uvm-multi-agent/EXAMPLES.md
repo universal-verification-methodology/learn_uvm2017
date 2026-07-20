@@ -1,13 +1,13 @@
 # Module 16 examples — Multi-agent env
 
-Track A (real UVM literacy). Pair with Track B `uvm-multi-agent` when you want the browser sketch.
+Track A (real UVM literacy). Browser lab is shipped.
 
 ## Prompts
 
-1. Restate why an env might hold **two agents and one scoreboard** in one sentence.
-2. Sketch UART + SPI monitors both connecting analysis into a shared sb.
-3. Point to where this appears in [`../learn_uvm2017_sv_verilator/`](../learn_uvm2017_sv_verilator/) if you can find it.
+1. Read `examples/multi-agent-sketch/env.txt` and restate why env holds two agents and one scoreboard.
+2. Sketch UART + SPI monitor analysis ports fanning into shared sb.
+3. Explain what breaks if one monitor analysis link is missing.
 
-## Stretch (optional)
+## Stretch
 
-Redo the same idea with the `uvm-multi-agent` starter (both ap links, then Demo fan-in / ap gap fail).
+Open `uvm-multi-agent`, demo fan-in on starter, then disconnect one ap and try Observe.

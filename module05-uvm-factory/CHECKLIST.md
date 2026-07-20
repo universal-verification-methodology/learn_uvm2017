@@ -2,14 +2,14 @@
 
 ## Track A — Real UVM
 
-- [ ] Worked through at least one prompt in [EXAMPLES.md](EXAMPLES.md)
-- [ ] Can explain the outcome in my own words
+- [ ] Read `examples/factory-sketch/overrides.txt`
+- [ ] Can explain requested vs constructed type and override precedence
 
 ## Track B — Browser lab (`uvm-factory`)
 
 - [ ] Opened the lab (local or live)
-- [ ] Loaded starter + completed a few challenges
+- [ ] Loaded starter + ran create + completed a few challenges
 
 ## Done when
 
-- [ ] I can explain the idea offline **or** I finished the browser challenges (preferably both when shipped)
+- [ ] I can explain factory overrides offline **or** I finished the browser challenges (preferably both)

@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module05-uvm-factory/frames/slide-1.png'
+duration 25.728
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module05-uvm-factory/frames/slide-2.png'
+duration 44.064
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module05-uvm-factory/frames/slide-3.png'
+duration 35.88
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module05-uvm-factory/frames/slide-4.png'
+duration 32.616
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module05-uvm-factory/frames/slide-5.png'
+duration 26.736
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module05-uvm-factory/frames/slide-6.png'
+duration 21.72
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module05-uvm-factory/frames/slide-6.png'

@@ -1,0 +1,53 @@
+{
+  "module": "module05-uvm-factory",
+  "title": "UVM factory check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "The UVM factory mainly lets you…",
+      "choices": [
+        "Swap constructed types without rewriting every create call",
+        "Synthesize the DUT into gates",
+        "Replace the need for phases",
+        "Run only in the browser lab"
+      ],
+      "answer": 0,
+      "explain": "Overrides change what gets built while source still requests a base type."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "When both apply at the same path, which wins?",
+      "choices": [
+        "Type override always wins",
+        "Instance override wins over type override",
+        "Neither — create fails",
+        "Report phase decides"
+      ],
+      "answer": 1,
+      "explain": "Instance override is more specific and takes precedence at that path."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "A type override on base_driver means…",
+      "choices": [
+        "Only one hierarchy path changes",
+        "Every create of that type uses the substituted type",
+        "The DUT module is replaced",
+        "Connect phase is skipped"
+      ],
+      "answer": 1,
+      "explain": "Type overrides apply globally for that requested type."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Using `new()` directly on UVM components preserves factory override behavior.",
+      "answer": false,
+      "explain": "Factory create (type_id::create) is what honors overrides."
+    }
+  ]
+}

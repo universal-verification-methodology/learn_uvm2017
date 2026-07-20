@@ -1,0 +1,49 @@
+UVM scoreboard sketch (literacy)
+================================
+
+Pipeline:
+  predict/reference  →  expect queue
+  monitor analysis   →  actual queue
+  compare            →  pop fronts, check match
+
+Conceptual compare loop:
+  while (expect_q.size() && actual_q.size()) begin
+    exp = expect_q.pop_front();
+    act = actual_q.pop_front();
+    if (!exp.compare(act))
+      `uvm_error("SB", "mismatch")
+  end
+  // end of test: leftover queues = orphans
+
+Typical UVM wiring:
+  `uvm_analysis_imp_decl(_expected)
+  `uvm_analysis_imp_decl(_actual)
+
+  class my_scoreboard extends uvm_scoreboard;
+    uvm_analysis_imp_expected #(my_txn, my_scoreboard) expected_imp;
+    uvm_analysis_imp_actual   #(my_txn, my_scoreboard) actual_imp;
+    my_txn expect_q[$], actual_q[$];
+
+    function void write_expected(my_txn t);
+      expect_q.push_back(t);
+    endfunction
+
+    function void write_actual(my_txn t);
+      actual_q.push_back(t);
+      try_compare();  // or compare in write
+    endfunction
+  endclass
+
+Connect phase:
+  ref_model.analysis_port.connect(sb.expected_imp);
+  monitor.analysis_port.connect(sb.actual_imp);
+
+Verdicts:
+  PASS    — fronts match, both popped
+  FAIL    — fronts differ
+  ORPHAN  — one queue empty, other not (at compare or end of test)
+
+Common mistakes:
+  compare without data on both sides
+  ignore leftover queues at test end
+  in-order compare on out-of-order protocol (needs different SB)

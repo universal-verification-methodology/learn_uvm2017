@@ -1,0 +1,50 @@
+UVM reporting sketch (literacy)
+===============================
+
+Two independent knobs:
+  severity   = gravity of the message
+  verbosity  = how chatty INFO/WARNING may be
+
+Severity ladder (typical):
+  INFO     — routine status (non-fatal)
+  WARNING  — suspicious but continues
+  ERROR    — check failure; counts toward test fail
+  FATAL    — stops simulation
+
+Verbosity ladder (typical):
+  UVM_NONE < UVM_LOW < UVM_MEDIUM < UVM_HIGH < UVM_FULL < UVM_DEBUG
+
+Macros:
+  `uvm_info("DRV", "byte accepted", UVM_LOW)
+  `uvm_warning("CFG", "default used")
+  `uvm_error("SB", "mismatch")
+  `uvm_fatal("TB", "no vif")
+
+Gate rule (INFO / WARNING concept):
+  message prints if msg_verbosity <= configured threshold
+  example: LOW info shown when threshold is MEDIUM
+            HIGH info filtered when threshold is MEDIUM
+
+Severity wins:
+  ERROR and FATAL typically print regardless of verbosity threshold
+
+ID filter:
+  messages carry an ID string ("DRV", "MON", "SB", …)
+  set_report_id_action("DRV", UVM_NO_ACTION)  // drop family
+  or use report catcher to demote / rewrite
+
+Runtime knobs:
+  +UVM_VERBOSITY=UVM_MEDIUM
+  comp.set_report_verbosity_level(UVM_HIGH, .phase(run_phase))
+
+Hierarchy in log:
+  report includes component context (get_full_name)
+
+Common mistakes:
+  severity confused with verbosity
+  uvm_debug spam in every cycle
+  one ID reused for unrelated messages
+  expecting errors to be hidden by low verbosity
+
+Legacy reference:
+  learn_uvm2017_sv_verilator/module3/examples/reporting/reporting.sv
