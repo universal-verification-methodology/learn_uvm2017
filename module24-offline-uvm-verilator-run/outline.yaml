@@ -1,0 +1,85 @@
+title: Run UVM on Verilator
+footer: learn_uvm2017 — offline uvm verilator run
+slides:
+- type: title
+ title: Run UVM on Verilator
+ subtitle: Modules twenty-two and twenty-three moved you from host literacy to Makefile
+ knobs
+ notes: 'Modules twenty-two and twenty-three moved you from host literacy to Makefile
+ knobs. Module twenty-four is the fidelity step: compile Accellera UVM twenty seventeen
+ with Verilator using the **in-course** and-gate hello. You leave with a command
+ line you can repeat—UVM home, make run, read pass or fail. No dependency on ignored
+ legacy trees for the primary path.'
+- type: bullets
+ title: Verilator-first offline run
+ bullets:
+ - Browser sketches taught factory, agents, and sequences, they do not compile uvm_pkg
+ - 'Offline you use the in-course Makefile: export UVM home, make run with Verilator'
+ - The flow compiles uvm_pkg plus DUT plus test into a C++ executable
+ - First cold compile can take many minutes; later rebuilds reuse objects
+ notes: 'Browser sketches taught factory, agents, and sequences—they do not compile
+ uvm_pkg. Offline you use the in-course Makefile: export UVM home, make run with
+ Verilator. The flow compiles uvm_pkg plus DUT plus test into a C++ executable,
+ then runs with plus UVM test name AndGateTest. First cold compile can take many
+ minutes; later rebuilds reuse objects.'
+- type: bullets
+ title: Offline workflow
+ bullets:
+ - Open examples verilator-uvm-hello beside this curriculum
+ - Export UVM home to Accellera src
+ - Run make dry-run if you skipped module twenty-three
+ - Then make run
+ - Watch Verilator compile stages finish, then the binary print UVM info and a report
+ summary
+ - Capture the exact command and the pass or fail line
+ notes: Open examples verilator-uvm-hello beside this curriculum. Export UVM home
+ to Accellera src. Run make dry-run if you skipped module twenty-three. Then make
+ run. Watch Verilator compile stages finish, then the binary print UVM info and
+ a report summary. Capture the exact command and the pass or fail line. If it fails,
+ record the stage—UVM home, compile, link, or run—and the first error line.
+- type: image
+ title: Real Verilator UVM run
+ image: assets/real-shell.png
+ caption: Real shell — Verilator UVM make run
+ notes: In the real UVM track, enter the in-course hello, export UVM home, then compile
+ and run.
+- type: code
+ title: Real Verilator UVM run — try these
+ code: '# cd in-course Verilator + UVM hello
+
+ cd courses/learn_uvm2017/examples/verilator-uvm-hello
+
+
+ # export UVM_HOME — Accellera UVM 2017 src/
+
+ export UVM_HOME=/path/to/1800.2-2017-1.0/src
+
+
+ # make run — Verilator compile + execute +UVM_TESTNAME=AndGateTest
+
+ make run SIM=verilator
+
+ '
+- type: bullets
+ title: Pitfalls to watch
+ bullets:
+ - Unset UVM home fails before useful compile output
+ - A browser UVM sketch pass is not a Verilator UVM pass
+ - Patience on first compile, UVM templates are heavy
+ - If Verilator is too old for UVM twenty seventeen, upgrade or note the version
+ blocker
+ - Keep the ignored legacy archive out of your default path
+ notes: Unset UVM home fails before useful compile output. A browser UVM sketch pass
+ is not a Verilator UVM pass. Patience on first compile—UVM templates are heavy.
+ If Verilator is too old for UVM twenty seventeen, upgrade or note the version
+ blocker. Keep the ignored legacy archive out of your default path; the in-course
+ hello is the contract for this module.
+- type: bullets
+ title: Your turn
+ bullets:
+ - 'Complete the checklist: dry-run green, make run finished, pass or fail recorded'
+ - Prefer the in-course and-gate hello unless your site policy points elsewhere
+ - When you are ready, take the short quiz, then continue to the wrap module
+ notes: 'Complete the checklist: dry-run green, make run finished, pass or fail recorded.
+ Prefer the in-course and-gate hello unless your site policy points elsewhere.
+ When you are ready, take the short quiz, then continue to the wrap module.'

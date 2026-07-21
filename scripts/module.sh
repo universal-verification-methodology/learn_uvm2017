@@ -27,11 +27,11 @@ case "$ACTION" in
     else
       echo "[INFO] verilator not on PATH (optional / commercial OK)"
     fi
-    LEGACY="$(cd "$ROOT/.." && pwd)/learn_uvm2017_sv_verilator"
-    if [[ -d "$LEGACY" ]]; then
-      echo "[OK] legacy course present: $LEGACY"
+    HELLO="$ROOT/examples/verilator-uvm-hello"
+    if [[ -d "$HELLO" ]]; then
+      echo "[OK] in-course hello: $HELLO"
     else
-      echo "[INFO] legacy learn_uvm2017_sv_verilator not checked out"
+      echo "[INFO] examples/verilator-uvm-hello missing"
     fi
     [[ -f "$MOD_DIR/EXAMPLES.md" ]] && echo "[OK] EXAMPLES.md"
     [[ -f "$MOD_DIR/CHECKLIST.md" ]] && echo "[OK] CHECKLIST.md"

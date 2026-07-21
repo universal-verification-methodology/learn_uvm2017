@@ -26,9 +26,11 @@ Lab-driven syllabus (pass 3). Full product syllabus: [../../syllabus.md](../../s
 | 19 | `lab` | [Reporting](../module19-uvm-reporting/README.md) | `uvm-reporting` | S |
 | 20 | `lab` | [Protocol checker](../module20-protocol-checker/README.md) | `protocol-checker` | S |
 | 21 | `lab` | [VIP anatomy](../module21-vip-anatomy/README.md) | `vip-anatomy` | S |
-| 22 | `offline` | [Run a course UVM example](../module22-offline-uvm-example/README.md) | `course-makefile` | — |
-| 23 | `wrap` | [UVM complete → planning or VIP work](../module23-wrap/README.md) | — | — |
+| 22 | `bridge` | [Verilator as a UVM host](../module22-verilator-uvm-host/README.md) | — | — |
+| 23 | `offline` | [Verilator + UVM Makefile knobs](../module23-verilator-uvm-makefile/README.md) | `course-makefile` | — |
+| 24 | `offline` | [Run UVM on Verilator](../module24-offline-uvm-verilator-run/README.md) | `course-makefile` | — |
+| 25 | `wrap` | [UVM complete → planning or VIP work](../module25-wrap/README.md) | — | — |
 
 ## Dual tracks
 
-See [TWO_TRACKS.md](TWO_TRACKS.md). Offline legacy: [`../learn_uvm2017_sv_verilator/`](../learn_uvm2017_sv_verilator/).
+See [TWO_TRACKS.md](TWO_TRACKS.md). In-course hello: [`../examples/verilator-uvm-hello/`](../examples/verilator-uvm-hello/).

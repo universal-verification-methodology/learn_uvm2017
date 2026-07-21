@@ -1,0 +1,15 @@
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module23-verilator-uvm-makefile/frames/slide-1.png'
+duration 23.616
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module23-verilator-uvm-makefile/frames/slide-2.png'
+duration 30.72
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module23-verilator-uvm-makefile/frames/slide-3.png'
+duration 21.528
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module23-verilator-uvm-makefile/frames/slide-4.png'
+duration 6.76
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module23-verilator-uvm-makefile/frames/slide-5.png'
+duration 5.0
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module23-verilator-uvm-makefile/frames/slide-6.png'
+duration 25.392
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module23-verilator-uvm-makefile/frames/slide-7.png'
+duration 13.656
+file '/mnt/d/proj/designs/learning/courses/learn_uvm2017/module23-verilator-uvm-makefile/frames/slide-7.png'

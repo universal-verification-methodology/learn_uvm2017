@@ -1,0 +1,38 @@
+Verilator as UVM host — bridge sketch
+=====================================
+
+Question:
+ Can Accellera UVM 2017 run with Verilator as the simulator host?
+
+Short answer:
+ Yes — with Makefile glue, UVM_HOME, and realistic expectations.
+
+Host model (Verilator):
+ - Compile SystemVerilog (+ supported TB) to C++
+ - Host executable calls eval each time step
+ - Cycle-oriented / fast regression style
+ - Not the same as a classic event-driven commercial kernel
+
+Host model (classic SV sim):
+ - Event regions, delays, rich scheduling semantics in-process
+ - Often longer builds but broader SV/UVM language tolerance
+
+UVM on Verilator — still UVM:
+ - uvm_pkg + your test compile into the Verilator flow
+ - Phases, factory, agents, sequences still apply at the TB level
+ - Failures often show up as compile/link or unsupported construct errors
+
+Practical limits:
+ - First uvm_pkg + Verilator compile can take many minutes
+ - Respect Verilator SV subset — not every commercial TB idiom ports
+ - UVM_HOME / include paths must be set before make
+ - Debugging may feel like software build + binary run more than GUI sim
+
+Not in this module:
+ - Full Verilator tool course → learn_verilator
+ - Makefile knobs → module 23
+ - Live run → module 24
+
+Optional browser literacy (not required):
+ - sim-pipeline — compile → elaborate → run stages
+ - iverilog-vs-verilator — when teams pick each tool

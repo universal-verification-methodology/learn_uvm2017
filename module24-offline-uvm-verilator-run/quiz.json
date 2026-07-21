@@ -1,0 +1,66 @@
+{
+ "module": "module24-offline-uvm-verilator-run",
+ "title": "Verilator UVM run check",
+ "passing_score": 0.67,
+ "items": [
+ {
+ "id": "q1",
+ "type": "multiple_choice",
+ "prompt": "This offline module’s goal is to…",
+ "choices": [
+ "build and run a small UVM test with Verilator as host via the course Makefile",
+ "replace Accellera UVM with browser sketches only",
+ "skip setting UVM_HOME forever",
+ "teach only VIP packaging with no simulator"
+ ],
+ "answer": 0,
+ "explain": "Track A: UVM_HOME → make run SIM=verilator → read pass/fail."
+ },
+ {
+ "id": "q2",
+ "type": "multiple_choice",
+ "prompt": "Before `make run` in module 24, module 23 expects you to understand…",
+ "choices": [
+ "UVM_HOME, include paths, SIM=verilator, and TEST / +UVM_TESTNAME",
+ "only browser VIP anatomy challenges",
+ "how to delete the Makefile",
+ "Python pyuvm exclusively"
+ ],
+ "answer": 0,
+ "explain": "Module 23 maps Makefile knobs; module 24 executes them."
+ },
+ {
+ "id": "q3",
+ "type": "multiple_choice",
+ "prompt": "A common first Verilator UVM target in the legacy tree is…",
+ "choices": [
+ "module1 test_and_gate_uvm via make run SIM=verilator",
+ "only the platform tools index HTML",
+ "a synthesis netlist with no testbench",
+ "learn_verilator module zero intro only"
+ ],
+ "answer": 0,
+ "explain": "Small UVM + Verilator example under module1/tests/uvm_tests."
+ },
+ {
+ "id": "q4",
+ "type": "true_false",
+ "prompt": "Browser lab success does not replace compiling and running Accellera UVM with Verilator offline.",
+ "answer": true,
+ "explain": "Sketches are literacy; module 24 proves the toolchain."
+ },
+ {
+ "id": "q5",
+ "type": "multiple_choice",
+ "prompt": "The in-course examples/verilator-uvm-hello tree in this curriculum is…",
+ "choices": [
+ "fidelity-only practice surface — prefer commands documented in modules 23–24",
+ "the only place UVM methodology is taught",
+ "a replacement for all browser labs in modules 00–21",
+ "unsupported and must never be opened"
+ ],
+ "answer": 0,
+ "explain": "Archive for Makefile/run fidelity; methodology stays in modules 00–21."
+ }
+ ]
+}

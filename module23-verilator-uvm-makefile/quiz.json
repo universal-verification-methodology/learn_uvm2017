@@ -1,0 +1,66 @@
+{
+ "module": "module23-verilator-uvm-makefile",
+ "title": "Verilator UVM Makefile check",
+ "passing_score": 0.67,
+ "items": [
+ {
+ "id": "q1",
+ "type": "multiple_choice",
+ "prompt": "Before a Verilator UVM compile, you typically must…",
+ "choices": [
+ "set UVM_HOME to Accellera UVM src and use the Makefile’s include paths",
+ "delete uvm_pkg from the build",
+ "run only from the browser tools index",
+ "never set TEST="
+ ],
+ "answer": 0,
+ "explain": "UVM_HOME + includes let uvm_pkg compile with your test."
+ },
+ {
+ "id": "q2",
+ "type": "multiple_choice",
+ "prompt": "SIM=verilator in the course Makefile mainly…",
+ "choices": [
+ "selects the Verilator compile/run recipe for the same TEST target",
+ "disables all UVM phases",
+ "replaces +UVM_TESTNAME permanently",
+ "runs synthesis only"
+ ],
+ "answer": 0,
+ "explain": "SIM picks the simulator backend; TEST names the UVM test."
+ },
+ {
+ "id": "q3",
+ "type": "multiple_choice",
+ "prompt": "+UVM_TESTNAME at run time tells UVM…",
+ "choices": [
+ "which test class to execute inside uvm_pkg",
+ "which wave file to open automatically",
+ "to skip the report phase",
+ "to ignore the Makefile entirely"
+ ],
+ "answer": 0,
+ "explain": "Build TEST= and runtime +UVM_TESTNAME must align."
+ },
+ {
+ "id": "q4",
+ "type": "multiple_choice",
+ "prompt": "A sensible first step in module 23 before a long compile is…",
+ "choices": [
+ "make -n run SIM=verilator TEST=… to preview commands",
+ "delete the Makefile",
+ "unset UVM_HOME to test error messages only",
+ "expect browser lab pass to equal simulator pass"
+ ],
+ "answer": 0,
+ "explain": "Dry-run maps knobs without waiting for Verilator."
+ },
+ {
+ "id": "q5",
+ "type": "true_false",
+ "prompt": "Running make from the wrong directory is a common cause of Makefile failures.",
+ "answer": true,
+ "explain": "Use the test folder that owns the Makefile."
+ }
+ ]
+}

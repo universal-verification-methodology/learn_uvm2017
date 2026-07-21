@@ -30,14 +30,18 @@ learn_uvm2017/
 ├── README.md
 ├── LICENSE
 ├── docs/
-│   ├── MODULES.md       # full module index (00–23)
+│   ├── MODULES.md       # full module index (00–25)
 │   └── TWO_TRACKS.md
 ├── scripts/
 │   └── module.sh
+├── examples/
+│   └── verilator-uvm-hello/   # Track A Accellera UVM + Verilator
 ├── module00-intro/
 ├── module01-tb-layers/ … module21-vip-anatomy/   # lab modules + media
-├── module22-offline-uvm-example/
-└── module23-wrap/
+├── module22-verilator-uvm-host/
+├── module23-verilator-uvm-makefile/
+├── module24-offline-uvm-verilator-run/
+└── module25-wrap/
 ```
 
 Each module ships a **module-slides** media bundle (transcript, deck, audio, video, quiz) generated in the parent monorepo. Rebuild with the skill when content changes.
@@ -45,7 +49,7 @@ Each module ships a **module-slides** media bundle (transcript, deck, audio, vid
 ## Browse or clone
 
 - **Browser labs:** [https://universal-verification-methodology.github.io/learning/tools/](https://universal-verification-methodology.github.io/learning/tools/)
-- **Offline legacy:** [`learn_uvm2017_sv_verilator`](https://github.com/universal-verification-methodology/learn_uvm2017_sv_verilator)
+- **In-course hello:** [`examples/verilator-uvm-hello/`](examples/verilator-uvm-hello/) (Accellera UVM via `UVM_HOME`)
 - **Syllabus (parent):** [`syllabus.md` § learn_uvm2017](https://github.com/universal-verification-methodology/learning/blob/main/syllabus.md#6-learn_uvm2017)
 - **Clone this repo alone:**
 
@@ -84,7 +88,7 @@ Lab modules document both tracks when a browser id exists. Module 22 is **offlin
 
 | Track | Practice surface | Start here |
 |-------|------------------|------------|
-| **A — Real UVM** | UVM + Verilator / commercial · [`../learn_uvm2017_sv_verilator`](../learn_uvm2017_sv_verilator/) | [docs/TWO_TRACKS.md](docs/TWO_TRACKS.md) |
+| **A — Real UVM** | UVM + Verilator / commercial · [`examples/verilator-uvm-hello/`](examples/verilator-uvm-hello/) | [docs/TWO_TRACKS.md](docs/TWO_TRACKS.md) |
 | **B — Browser lab** | Platform sketches | [tb-anatomy](https://universal-verification-methodology.github.io/learning/tools/tb-anatomy/) · [tools](https://universal-verification-methodology.github.io/learning/tools/) |
 
 Lab status snapshot: **21 shipped** · **0 planned** (see [docs/MODULES.md](docs/MODULES.md)).
@@ -117,8 +121,10 @@ Full status table: **[docs/MODULES.md](docs/MODULES.md)**. Clusters: 00 intro ·
 | 19 — Reporting | [module19-uvm-reporting](module19-uvm-reporting/README.md) |
 | 20 — Protocol checker | [module20-protocol-checker](module20-protocol-checker/README.md) |
 | 21 — VIP anatomy | [module21-vip-anatomy](module21-vip-anatomy/README.md) |
-| 22 — Run a course UVM example | [module22-offline-uvm-example](module22-offline-uvm-example/README.md) |
-| 23 — UVM complete → planning or VIP work | [module23-wrap](module23-wrap/README.md) |
+| 22 — Verilator as a UVM host | [module22-verilator-uvm-host](module22-verilator-uvm-host/README.md) |
+| 23 — Verilator + UVM Makefile knobs | [module23-verilator-uvm-makefile](module23-verilator-uvm-makefile/README.md) |
+| 24 — Run UVM on Verilator | [module24-offline-uvm-verilator-run](module24-offline-uvm-verilator-run/README.md) |
+| 25 — UVM complete → planning or VIP work | [module25-wrap](module25-wrap/README.md) |
 
 ## Browser labs
 

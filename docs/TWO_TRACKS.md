@@ -1,12 +1,13 @@
 # Two learning tracks
 
-## Track A — Real UVM
+## Track A — Real UVM (often on Verilator)
 
-Practice with Accellera UVM + Verilator (or commercial).
+Practice with Accellera UVM 2017 + a real simulator.
 
-- Start from [`../learn_uvm2017_sv_verilator/`](../learn_uvm2017_sv_verilator/) until this course owns its own example trees
-- Self-check: `./scripts/module.sh NN --check`
-- Module 22 is the dedicated offline run
+- **Methodology** (modules 00–21): browser sketches + paper notes
+- **Verilator host path** (modules 22–24): limits → Makefile knobs → run a small UVM test with `SIM=verilator`
+- Fidelity examples live under [`../examples/verilator-uvm-hello/`](../examples/verilator-uvm-hello/); Accellera UVM via `UVM_HOME`
+- The ignored legacy tree is optional convenience only — see [`../LEGACY.md`](../LEGACY.md)
 
 Use this track for **fidelity**.
 
@@ -16,11 +17,14 @@ Concept sketches on the learning platform (no Accellera UVM in-tab).
 
 - Local tools: http://127.0.0.1:8080/tools/
 - Live: https://universal-verification-methodology.github.io/learning/tools/
-- Shipped today: full UVM 2017 sketch shelf (`tb-layers` through `vip-anatomy`) plus TB literacy tools (`tb-anatomy`, `tb-vs-uvm-map`, `sv-class-sketch`, `crv-lite`, `sva-timeline`, `vif-wiring`)
+- Shipped: full UVM 2017 sketch shelf (`tb-layers` through `vip-anatomy`) plus TB literacy tools
+
+Modules **22–24** are Track A / offline — use Track B only as a concept refresher (e.g. `sim-pipeline`, `uvm-plusargs`).
 
 ## Recommended path
 
-1. Intro + shipped `tb-anatomy`
-2. Track A notes for planned sketch modules
-3. Module 22 offline Makefile run
-4. Return to browser sketches as they ship
+1. Intro through VIP anatomy (00–21) with Track B labs
+2. Module 22 — Verilator as UVM host (what works / what does not)
+3. Module 23 — Makefile / `UVM_HOME` / `SIM=verilator` knobs
+4. Module 24 — run one small UVM test on Verilator
+5. Wrap → planning / VIP / pyuvm

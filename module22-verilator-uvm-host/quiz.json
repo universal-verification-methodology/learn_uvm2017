@@ -1,0 +1,66 @@
+{
+ "module": "module22-verilator-uvm-host",
+ "title": "Verilator UVM host check",
+ "passing_score": 0.67,
+ "items": [
+ {
+ "id": "q1",
+ "type": "multiple_choice",
+ "prompt": "This bridge module mainly teaches…",
+ "choices": [
+ "what it means to run Accellera UVM 2017 with Verilator as host and what limits to expect",
+ "how to replace UVM with browser sketches forever",
+ "full daily Verilator lint and C++ TB depth",
+ "only VIP packaging rules"
+ ],
+ "answer": 0,
+ "explain": "Bridge orients UVM-on-Verilator before Makefile and run modules."
+ },
+ {
+ "id": "q2",
+ "type": "multiple_choice",
+ "prompt": "Verilator’s host model is best described as…",
+ "choices": [
+ "compile-to-C++ with cycle-oriented eval stepping",
+ "identical to every event-driven commercial SV kernel",
+ "Python-only with no SystemVerilog",
+ "synthesis-only with no simulation"
+ ],
+ "answer": 0,
+ "explain": "Verilator generates a C++ model the host executes."
+ },
+ {
+ "id": "q3",
+ "type": "multiple_choice",
+ "prompt": "Deep Verilator tool literacy (lint, C++ TB, traces) without UVM belongs in…",
+ "choices": [
+ "learn_verilator",
+ "module 22 only",
+ "browser VIP anatomy lab",
+ "learn_unix module zero"
+ ],
+ "answer": 0,
+ "explain": "learn_uvm2017 covers methodology on Verilator; learn_verilator is tool-first."
+ },
+ {
+ "id": "q4",
+ "type": "multiple_choice",
+ "prompt": "Natural next steps after this bridge are…",
+ "choices": [
+ "module 23 Makefile knobs, then module 24 real Verilator UVM run",
+ "skip modules 23–24 and go straight to pyuvm",
+ "never set UVM_HOME",
+ "only re-read module 21 browser lab"
+ ],
+ "answer": 0,
+ "explain": "23 = UVM_HOME/SIM/TEST; 24 = offline run."
+ },
+ {
+ "id": "q5",
+ "type": "true_false",
+ "prompt": "Every commercial UVM testbench idiom ports to Verilator unchanged.",
+ "answer": false,
+ "explain": "Language subset and Makefile glue impose practical limits."
+ }
+ ]
+}

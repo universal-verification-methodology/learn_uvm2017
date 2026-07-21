@@ -1,0 +1,17 @@
+== pwd ==
+/mnt/d/proj/designs/learning/courses/learn_uvm2017/examples/verilator-uvm-hello
+== tree ==
+total 8
+drwxrwxrwx 1 yongfu yongfu 4096 Jul 21 10:41 .
+drwxrwxrwx 1 yongfu yongfu 4096 Jul 21 10:41 ..
+-rwxrwxrwx 1 yongfu yongfu 2289 Jul 21 10:41 Makefile
+-rwxrwxrwx 1 yongfu yongfu 1708 Jul 21 10:46 README.md
+drwxrwxrwx 1 yongfu yongfu 4096 Jul 21 10:41 dut
+drwxrwxrwx 1 yongfu yongfu 4096 Jul 21 10:41 scripts
+drwxrwxrwx 1 yongfu yongfu 4096 Jul 21 10:41 tb
+dut:
+and_gate.v
+
+tb:
+test_and_gate_uvm.sv
+UVM_HOME unset and archive UVM not found — dry-run will error (expected if Accellera not installed)
