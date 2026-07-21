@@ -13,7 +13,7 @@ After this module you can explain and practice the ideas taught by **`tb-layers`
 ### Track A — Real UVM (hands-on)
 
 1. Open [EXAMPLES.md](EXAMPLES.md) and read the Track A sketch under `examples/`.
-2. Explain TB layers in your own words; optional notes against [`../learn_uvm2017_sv_verilator/`](../learn_uvm2017_sv_verilator/).
+2. Explain TB layers in your own words; optional notes against [`../examples/verilator-uvm-hello/`](../examples/verilator-uvm-hello/).
 3. Check off the Track A items in [CHECKLIST.md](CHECKLIST.md).
 
 ### Track B — Browser lab (online)

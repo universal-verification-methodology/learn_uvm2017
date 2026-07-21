@@ -46,5 +46,5 @@ Common mistakes:
   heavy work in pre hook stalls driver
   two pre callbacks fighting over same field — mind order
 
-Legacy reference:
-  learn_uvm2017_sv_verilator/module5/examples/callbacks/callbacks.sv
+Reference example:
+  examples/verilator-uvm-hello/module5/examples/callbacks/callbacks.sv

@@ -14,7 +14,7 @@ After this module you can explain and practice the ideas taught by **`uvm-callba
 
 1. Open [EXAMPLES.md](EXAMPLES.md) and read `examples/callbacks-sketch/callbacks.txt`.
 2. Explain register, enable, and pre → body → post hook order.
-3. Optional: grep `uvm_register_cb` in the legacy callbacks example.
+3. Optional: grep `uvm_register_cb` in the reference callbacks example.
 
 ### Track B — Browser lab (online)
 

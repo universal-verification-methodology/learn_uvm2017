@@ -46,7 +46,7 @@ Common mistakes:
   setting overrides after create (too late)
   forgetting which path an instance override matches
 
-$ head -24 ../../learn_uvm2017_sv_verilator/tools/uvm-2017/1800.2-2017-1.0/src/base/uvm_factory.svh
+$ head -24 ../../examples/verilator-uvm-hello/tools/uvm-2017/1800.2-2017-1.0/src/base/uvm_factory.svh
 //
 //------------------------------------------------------------------------------
 // Copyright 2007-2014 Mentor Graphics Corporation

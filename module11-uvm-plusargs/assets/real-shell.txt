@@ -46,7 +46,7 @@ Test selection vs knobs:
   TESTNAME → which test runs (factory)
   everything else → how the test runs (read inside test/env)
 
-$ grep -n "get_arg_value\|UVM_TESTNAME\|plusarg" ../../learn_uvm2017_sv_verilator/module8/examples/clp/clp.sv | head -12
+$ grep -n "get_arg_value\|UVM_TESTNAME\|plusarg" ../../examples/verilator-uvm-hello/module8/examples/clp/clp.sv | head -12
 8: *   3. Understand plusarg handling
 20: *   - CLP parsing: uvm_cmdline_proc.get_arg_value()
 211: *   - uvm_cmdline_proc.get_arg_value(): Get plusarg value

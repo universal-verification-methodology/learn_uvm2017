@@ -42,7 +42,7 @@ slides:
   caption: Real shell — TLM wiring sketch
   notes: In the real UVM track, open this module’s wiring sketch—it lists connect
     calls in plain language for each pattern. Trace seq item on the stimulus path
-    and analysis on the observe path in one agent hookup. If the legacy offline course
+    and analysis on the observe path in one agent hookup. If the in-course hello
     is checked out, grep for seq item port connect in module eight examples—you will
     see driver dot seq item port dot connect to sequencer dot seq item export, and
     monitor analysis port to scoreboard import. Same picture, real SystemVerilog.

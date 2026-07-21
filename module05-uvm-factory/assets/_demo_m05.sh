@@ -19,10 +19,4 @@ printf '%s\n' '$ cat examples/factory-sketch/overrides.txt'
 cat examples/factory-sketch/overrides.txt
 echo
 
-LEGACY="../../learn_uvm2017_sv_verilator/tools/uvm-2017/1800.2-2017-1.0/src/base/uvm_factory.svh"
-if [ -f "$LEGACY" ]; then
-  printf '%s\n' '$ head -24 ../../learn_uvm2017_sv_verilator/tools/uvm-2017/1800.2-2017-1.0/src/base/uvm_factory.svh'
-  head -24 "$LEGACY"
-else
-  echo '# legacy learn_uvm2017_sv_verilator not present — overrides.txt is enough for this module'
-fi
+echo '# (module examples above are enough for Track A)'

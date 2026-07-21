@@ -14,7 +14,7 @@ After this module you can explain and practice the ideas taught by **`tb-vs-uvm-
 
 1. Open [EXAMPLES.md](EXAMPLES.md) and read `examples/classic-vs-uvm/map.txt`.
 2. Map classic habits to UVM roles in your own words.
-3. Optional: skim legacy notes in [`../learn_uvm2017_sv_verilator/`](../learn_uvm2017_sv_verilator/).
+3. Optional: skim course notes in [`../examples/verilator-uvm-hello/`](../examples/verilator-uvm-hello/).
 
 ### Track B — Browser lab (online)
 

@@ -14,7 +14,7 @@ After this module you can explain and practice the ideas taught by **`ral-map`**
 
 1. Open [EXAMPLES.md](EXAMPLES.md) and read `examples/ral-sketch/map.txt`.
 2. Explain block → register → field and front-door vs back-door access.
-3. Optional: grep `uvm_reg_block` in the legacy UVM reg headers.
+3. Optional: grep `uvm_reg_block` in the reference UVM reg headers.
 
 ### Track B — Browser lab (online)
 

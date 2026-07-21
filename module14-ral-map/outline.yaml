@@ -42,7 +42,7 @@ slides:
   notes: In the real UVM track, open this module’s RAL sketch—it lists block base,
     offsets, and front versus back door in plain language. Trace one write from reg
     model call through adapter to bus, versus a backdoor poke straight to RTL. If
-    the legacy offline course is checked out, peek at uvm reg model headers in the
+    the in-course hello is checked out, peek at uvm reg model headers in the
     UVM tree—you will see block, reg, and field class patterns. RAL connects register
     sequences to the same agent and bus you already know.
 - type: bullets

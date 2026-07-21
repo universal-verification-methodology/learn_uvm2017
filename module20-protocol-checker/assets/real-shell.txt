@@ -47,10 +47,10 @@ Common mistakes:
   checking during reset when signals are meaningless
   one passing rule assumed to mean all rules pass
 
-Legacy reference:
-  learn_uvm2017_sv_verilator/module6/examples/protocol_checkers/protocol_checkers.sv
+Reference example:
+  examples/verilator-uvm-hello/module6/examples/protocol_checkers/protocol_checkers.sv
 
-$ grep -n "CheckerComp\|valid\|ready\|uvm_error" ../../learn_uvm2017_sv_verilator/module6/examples/protocol_checkers/protocol_checkers.sv | head -14
+$ grep -n "CheckerComp\|valid\|ready\|uvm_error" ../../examples/verilator-uvm-hello/module6/examples/protocol_checkers/protocol_checkers.sv | head -14
 19: *   - Detect protocol events (valid asserted)
 20: *   - Check protocol rules (valid held until ready)
 35: *   - valid: Valid signal (source asserts when data valid)

@@ -14,7 +14,7 @@ After this module you can explain and practice the ideas taught by **`crv-lite`*
 
 1. Open [EXAMPLES.md](EXAMPLES.md) and read `examples/crv-sketch/randomize.txt`.
 2. Explain rand, constraints, and what randomize returning 0 means.
-3. Optional: grep `constraint` in the legacy random_utils example.
+3. Optional: grep `constraint` in the reference random_utils example.
 
 ### Track B — Browser lab (online)
 

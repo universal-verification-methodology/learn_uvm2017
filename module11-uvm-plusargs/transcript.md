@@ -22,7 +22,7 @@ In the browser lab track, open the plusargs lab. The starter loads plus UVM test
 
 ![Real shell — plusargs sketch](assets/real-shell.png)
 
-In the real UVM track, open this module’s plusargs sketch—it shows a sample sim command and how to read knobs in plain language. Trace which args select the test versus which ones your test reads in build or run. If the legacy offline course is checked out, grep for get arg value in the cmdline processor example—you will see plus test mode and plus seed parsed in SystemVerilog. Makefile plusargs and simulator args must agree on the plus prefix syntax.
+In the real UVM track, open this module’s plusargs sketch—it shows a sample sim command and how to read knobs in plain language. Trace which args select the test versus which ones your test reads in build or run. If the in-course hello is checked out, grep for get arg value in the cmdline processor example—you will see plus test mode and plus seed parsed in SystemVerilog. Makefile plusargs and simulator args must agree on the plus prefix syntax.
 
 ## Slide 5 — Pitfalls to watch
 

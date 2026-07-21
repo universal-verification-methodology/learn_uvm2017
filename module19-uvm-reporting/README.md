@@ -14,7 +14,7 @@ After this module you can explain and practice the ideas taught by **`uvm-report
 
 1. Open [EXAMPLES.md](EXAMPLES.md) and read `examples/reporting-sketch/reporting.txt`.
 2. Explain severity ladder, verbosity gate, and ID filter.
-3. Optional: grep `uvm_info` in the legacy reporting example.
+3. Optional: grep `uvm_info` in the reference reporting example.
 
 ### Track B — Browser lab (online)
 

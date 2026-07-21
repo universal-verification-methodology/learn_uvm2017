@@ -1,6 +1,6 @@
 # Examples — Verilator + UVM Makefile knobs
 
-Track A only. Use the **in-course** tree (legacy combined course is ignored).
+Track A only. Use the **in-course** tree (combined archive tree is ignored).
 
 ## Prompts
 

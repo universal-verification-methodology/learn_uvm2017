@@ -45,11 +45,11 @@ Common mistakes:
   shipping code without self-test / README
   assuming compile success == package complete
 
-Legacy reference:
-  learn_uvm2017_sv_verilator/module7/examples/vip/vip.sv
+Reference example:
+  examples/verilator-uvm-hello/module7/examples/vip/vip.sv
   (agent scaffold — txn + seq + driver + agent; add checker/cov/docs for full VIP)
 
-$ grep -n "VipAgent\|VipDriver\|VipTxn\|VIP" ../../learn_uvm2017_sv_verilator/module7/examples/vip/vip.sv | head -14
+$ grep -n "VipAgent\|VipDriver\|VipTxn\|VIP" ../../examples/verilator-uvm-hello/module7/examples/vip/vip.sv | head -14
 2: * Module 7 Example 7.5: VIP Development (skeleton)
 3: * Demonstrates how a protocol VIP might be packaged: txn + seq + agent.
 6: *   1. Understand VIP (Verification IP) structure

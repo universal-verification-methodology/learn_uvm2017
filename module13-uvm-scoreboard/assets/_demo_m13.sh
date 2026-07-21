@@ -19,10 +19,4 @@ printf '%s\n' '$ cat examples/scoreboard-sketch/compare.txt'
 cat examples/scoreboard-sketch/compare.txt
 echo
 
-LEGACY="../../learn_uvm2017_sv_verilator/module8/tests/uvm_tests/test_utilities_uvm.sv"
-if [ -f "$LEGACY" ]; then
-  printf '%s\n' '$ grep -n "Scoreboard\|write_expected\|write_actual\|expected_queue\|actual_queue" ../../learn_uvm2017_sv_verilator/module8/tests/uvm_tests/test_utilities_uvm.sv | head -12'
-  grep -n "Scoreboard\|write_expected\|write_actual\|expected_queue\|actual_queue" "$LEGACY" | head -12 || true
-else
-  echo '# legacy learn_uvm2017_sv_verilator not present — compare.txt is enough for this module'
-fi
+echo '# (module examples above are enough for Track A)'

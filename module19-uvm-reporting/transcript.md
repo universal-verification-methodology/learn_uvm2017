@@ -22,7 +22,7 @@ In the browser lab track, open the UVM reporting ladder lab. The starter emits a
 
 ![Real shell — reporting sketch](assets/real-shell.png)
 
-In the real UVM track, open this module’s reporting sketch—it lists severity ladder, verbosity gate, and ID filter rules in plain language. Trace uvm info with ID and verbosity, then compare uvm error which ignores the verbosity gate. If the legacy offline course is checked out, grep for uvm info or UVM HIGH in module three reporting—you will see the same macros with hierarchical context in the log. Reporting complements scoreboard mismatches: errors flag check failures; verbosity keeps routine info under control.
+In the real UVM track, open this module’s reporting sketch—it lists severity ladder, verbosity gate, and ID filter rules in plain language. Trace uvm info with ID and verbosity, then compare uvm error which ignores the verbosity gate. If the in-course hello is checked out, grep for uvm info or UVM HIGH in module three reporting—you will see the same macros with hierarchical context in the log. Reporting complements scoreboard mismatches: errors flag check failures; verbosity keeps routine info under control.
 
 ## Slide 5 — Pitfalls to watch
 

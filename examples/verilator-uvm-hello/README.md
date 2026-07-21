@@ -1,7 +1,6 @@
 # Verilator + UVM 2017 hello (and-gate)
 
 Minimal **in-course** Track A example for `learn_uvm2017` modules **23–24**.
-Does **not** require editing the ignored legacy tree `learn_uvm2017_sv_verilator` (see [`../../LEGACY.md`](../../LEGACY.md)).
 
 ## Layout
 
@@ -21,12 +20,7 @@ verilator-uvm-hello/
 | `make` + C++ compiler | Used by Verilator `--binary` |
 | Accellera UVM 2017-1.0 | Extract tarball; set `UVM_HOME` to the **`src`** directory containing `uvm_pkg.sv` |
 
-UVM is **not** vendored in this course (large Accellera tree). Download from Accellera, or for local monorepo convenience only:
-
-```bash
-# optional — Accellera tree under the ignored legacy course (if present)
-export UVM_HOME="$PWD/../../learn_uvm2017_sv_verilator/tools/uvm-2017/1800.2-2017-1.0/src"
-```
+UVM is **not** vendored in this course (large Accellera tree). Download from Accellera and point `UVM_HOME` at its `src/` directory.
 
 ## Run
 

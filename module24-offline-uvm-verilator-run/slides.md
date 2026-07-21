@@ -54,7 +54,7 @@ make run SIM=verilator
 - A browser UVM sketch pass is not a Verilator UVM pass
 - Patience on first compile, UVM templates are heavy
 - If Verilator is too old for UVM twenty seventeen, upgrade or note the version blocker
-- Keep the ignored legacy archive out of your default path
+- Keep the external archive out of your default path
 
 ---
 

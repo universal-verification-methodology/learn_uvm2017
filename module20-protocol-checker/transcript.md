@@ -22,7 +22,7 @@ In the browser lab track, open the protocol checker sketch lab. The starter show
 
 ![Real shell — protocol checker sketch](assets/real-shell.png)
 
-In the real UVM track, open this module’s protocol checker sketch—it lists handshake, data hold, and no-X rules plus checker versus scoreboard roles in plain language. Trace a passive checker sampling valid and ready each cycle without driving. If the legacy offline course is checked out, grep for CheckerComp or valid held in module six protocol checkers—you will see handshake monitoring with uvm error on violation. SVA on the interface is the same idea in declarative form; the monitor still feeds the scoreboard for payload checks.
+In the real UVM track, open this module’s protocol checker sketch—it lists handshake, data hold, and no-X rules plus checker versus scoreboard roles in plain language. Trace a passive checker sampling valid and ready each cycle without driving. If the in-course hello is checked out, grep for CheckerComp or valid held in module six protocol checkers—you will see handshake monitoring with uvm error on violation. SVA on the interface is the same idea in declarative form; the monitor still feeds the scoreboard for payload checks.
 
 ## Slide 5 — Pitfalls to watch
 

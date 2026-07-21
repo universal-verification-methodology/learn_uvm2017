@@ -22,7 +22,7 @@ In the browser lab track, open the VIP anatomy lab. The starter loads a complete
 
 ![Real shell — VIP anatomy sketch](assets/real-shell.png)
 
-In the real UVM track, open this module’s VIP sketch—it lists agent, checker, coverage, and docs as a reuse checklist in plain language. Trace how an agent alone is not enough for handoff, and how checker and coverage sit beside the agent. If the legacy offline course is checked out, grep for VipAgent or VIP in module seven vip—you will see a skeleton with transaction, sequence, driver, and agent. That example is the agent scaffold; real VIP packages add checker, coverage, and docs on top. Protocol checkers from the last module are one of those four pieces.
+In the real UVM track, open this module’s VIP sketch—it lists agent, checker, coverage, and docs as a reuse checklist in plain language. Trace how an agent alone is not enough for handoff, and how checker and coverage sit beside the agent. If the in-course hello is checked out, grep for VipAgent or VIP in module seven vip—you will see a skeleton with transaction, sequence, driver, and agent. That example is the agent scaffold; real VIP packages add checker, coverage, and docs on top. Protocol checkers from the last module are one of those four pieces.
 
 ## Slide 5 — Pitfalls to watch
 

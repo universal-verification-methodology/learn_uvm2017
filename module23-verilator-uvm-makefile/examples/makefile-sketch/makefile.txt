@@ -3,15 +3,14 @@ Verilator + UVM Makefile knobs (literacy)
 
 Practice surface:
  courses/learn_uvm2017/examples/verilator-uvm-hello/
- module1/tests/uvm_tests/Makefile
- (legacy archive — fidelity-only; commands documented here)
+ Makefile
 
 Four knobs you will meet repeatedly:
 
 1. UVM_HOME
  - Points at Accellera UVM library src (uvm_pkg lives here)
- - Course tree example:
- export UVM_HOME=$PWD/tools/uvm-2017/1800.2-2017-1.0/src
+ - Example:
+ export UVM_HOME=/path/to/1800.2-2017-1.0/src
  - Unset → early make failure (missing uvm_pkg / includes)
 
 2. Include paths
@@ -30,13 +29,12 @@ Four knobs you will meet repeatedly:
 Typical command shape (module 24 executes this for real):
 
  cd courses/learn_uvm2017/examples/verilator-uvm-hello
- export UVM_HOME=$PWD/tools/uvm-2017/1800.2-2017-1.0/src
- cd module1/tests/uvm_tests
- make run SIM=verilator TEST=test_and_gate_uvm
+ export UVM_HOME=/path/to/1800.2-2017-1.0/src
+ make run SIM=verilator
 
 This module (23): dry-run first
 
- make -n run SIM=verilator TEST=test_and_gate_uvm
+ make dry-run
 
 Common fail modes:
  - UVM_HOME wrong or unset

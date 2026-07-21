@@ -9,7 +9,7 @@ slides:
  knobs. Module twenty-four is the fidelity step: compile Accellera UVM twenty seventeen
  with Verilator using the **in-course** and-gate hello. You leave with a command
  line you can repeat—UVM home, make run, read pass or fail. No dependency on ignored
- legacy trees for the primary path.'
+ external archives for the primary path.'
 - type: bullets
  title: Verilator-first offline run
  bullets:
@@ -68,11 +68,11 @@ slides:
  - Patience on first compile, UVM templates are heavy
  - If Verilator is too old for UVM twenty seventeen, upgrade or note the version
  blocker
- - Keep the ignored legacy archive out of your default path
+ - Keep the external archive out of your default path
  notes: Unset UVM home fails before useful compile output. A browser UVM sketch pass
  is not a Verilator UVM pass. Patience on first compile—UVM templates are heavy.
  If Verilator is too old for UVM twenty seventeen, upgrade or note the version
- blocker. Keep the ignored legacy archive out of your default path; the in-course
+ blocker. Keep the external archive out of your default path; the in-course
  hello is the contract for this module.
 - type: bullets
  title: Your turn

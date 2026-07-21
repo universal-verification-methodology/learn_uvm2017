@@ -47,5 +47,5 @@ Common mistakes:
   driving pins inside vseq instead of delegating to agent sequences
   parallel fork-join without checking scoreboard / ordering assumptions
 
-Legacy reference:
-  learn_uvm2017_sv_verilator/module5/examples/virtual_sequences/virtual_sequences.sv
+Reference example:
+  examples/verilator-uvm-hello/module5/examples/virtual_sequences/virtual_sequences.sv

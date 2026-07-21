@@ -32,7 +32,7 @@
  {
  "id": "q3",
  "type": "multiple_choice",
- "prompt": "A common first Verilator UVM target in the legacy tree is…",
+ "prompt": "A common first Verilator UVM target in the in-course hello is…",
  "choices": [
  "module1 test_and_gate_uvm via make run SIM=verilator",
  "only the platform tools index HTML",

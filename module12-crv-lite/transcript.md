@@ -22,7 +22,7 @@ In the browser lab track, open the constraint random lite lab. The starter loads
 
 ![Real shell — CRV sketch](assets/real-shell.png)
 
-In the real UVM track, open this module’s CRV sketch—it shows rand, constraint, and randomize on a sequence item in plain language. Trace how a transaction gets legal field values before the driver sends it. If the legacy offline course is checked out, grep for rand and constraint in a random utils example—you will see valid data and valid address blocks in SystemVerilog. Sequence items and testbench classes both use the same randomize pattern.
+In the real UVM track, open this module’s CRV sketch—it shows rand, constraint, and randomize on a sequence item in plain language. Trace how a transaction gets legal field values before the driver sends it. If the in-course hello is checked out, grep for rand and constraint in a random utils example—you will see valid data and valid address blocks in SystemVerilog. Sequence items and testbench classes both use the same randomize pattern.
 
 ## Slide 5 — Pitfalls to watch
 

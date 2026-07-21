@@ -19,10 +19,4 @@ printf '%s\n' '$ cat examples/multi-agent-sketch/env.txt'
 cat examples/multi-agent-sketch/env.txt
 echo
 
-LEGACY="../../learn_uvm2017_sv_verilator/module6/examples/multi_agent/multi_agent.sv"
-if [ -f "$LEGACY" ]; then
-  printf '%s\n' '$ grep -n "MA_Env\|MA_Agent\|uvm_env\|analysis_port" ../../learn_uvm2017_sv_verilator/module6/examples/multi_agent/multi_agent.sv | head -12'
-  grep -n "MA_Env\|MA_Agent\|uvm_env\|analysis_port" "$LEGACY" | head -12 || true
-else
-  echo '# legacy learn_uvm2017_sv_verilator not present — env.txt is enough for this module'
-fi
+echo '# (module examples above are enough for Track A)'

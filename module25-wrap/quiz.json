@@ -11,7 +11,7 @@
  "recaps outcomes and points to the next courses on the ladder",
  "introduces a brand-new browser lab",
  "replaces Accellera UVM with sketches forever",
- "deletes the legacy Verilator tree"
+ "deletes the in-course Verilator tree"
  ],
  "answer": 0,
  "explain": "Wrap modules summarize and link the syllabus next step."

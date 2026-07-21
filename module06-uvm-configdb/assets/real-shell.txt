@@ -45,7 +45,7 @@ Common mistakes:
   set too late (getter already ran)
   expecting sibling agent to see another agent's set
 
-$ head -28 ../../learn_uvm2017_sv_verilator/tools/uvm-2017/1800.2-2017-1.0/src/base/uvm_config_db.svh
+$ head -28 ../../examples/verilator-uvm-hello/tools/uvm-2017/1800.2-2017-1.0/src/base/uvm_config_db.svh
 //----------------------------------------------------------------------
 // Copyright 2010-2014 Mentor Graphics Corporation
 // Copyright 2015 Analog Devices, Inc.

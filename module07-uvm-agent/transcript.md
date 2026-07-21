@@ -22,7 +22,7 @@ In the browser lab track, open the agent anatomy lab. You will see the agent box
 
 ![Real shell — agent anatomy sketch](assets/real-shell.png)
 
-In the real UVM track, open this module’s examples folder and read the anatomy sketch—it lists active versus passive build rules in plain language. Trace how a sequence item would flow from sequencer to driver to interface in an active agent, and how the monitor still publishes in parallel. If the legacy offline course is checked out, grep for uvm agent in any example—you will see the same trio in SystemVerilog class declarations. You are connecting the layer map from earlier modules to concrete agent innards.
+In the real UVM track, open this module’s examples folder and read the anatomy sketch—it lists active versus passive build rules in plain language. Trace how a sequence item would flow from sequencer to driver to interface in an active agent, and how the monitor still publishes in parallel. If the in-course hello is checked out, grep for uvm agent in any example—you will see the same trio in SystemVerilog class declarations. You are connecting the layer map from earlier modules to concrete agent innards.
 
 ## Slide 5 — Pitfalls to watch
 

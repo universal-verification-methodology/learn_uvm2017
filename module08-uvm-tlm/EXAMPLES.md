@@ -10,4 +10,4 @@ Track A (real UVM literacy). Browser lab is shipped.
 
 ## Stretch
 
-Open `uvm-tlm`, disconnect analysis on starter, then grep `seq_item_port.connect` in the legacy module-eight tree.
+Open `uvm-tlm`, disconnect analysis on starter, then grep `seq_item_port.connect` in the module-eight tree.

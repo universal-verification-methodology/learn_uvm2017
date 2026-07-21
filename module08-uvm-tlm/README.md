@@ -14,7 +14,7 @@ After this module you can explain and practice the ideas taught by **`uvm-tlm`**
 
 1. Open [EXAMPLES.md](EXAMPLES.md) and read `examples/tlm-sketch/wiring.txt`.
 2. Explain seq item, put/get, and analysis patterns in your own words.
-3. Optional: grep connect calls in the legacy course tree.
+3. Optional: grep connect calls in this module’s examples.
 
 ### Track B — Browser lab (online)
 

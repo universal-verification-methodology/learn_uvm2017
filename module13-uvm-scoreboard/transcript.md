@@ -22,7 +22,7 @@ In the browser lab track, open the scoreboard expect actual lab. The starter loa
 
 ![Real shell — scoreboard sketch](assets/real-shell.png)
 
-In the real UVM track, open this module’s scoreboard sketch—it lists expect and actual queues and compare in plain language. Trace how monitor analysis connects to actual import and how a reference model feeds expect. If the legacy offline course is checked out, grep for uvm scoreboard in a module eight test—you will see write expected and write actual functions with queue pop loops. TLM analysis from module eight is what fills these queues.
+In the real UVM track, open this module’s scoreboard sketch—it lists expect and actual queues and compare in plain language. Trace how monitor analysis connects to actual import and how a reference model feeds expect. If the in-course hello is checked out, grep for uvm scoreboard in a module eight test—you will see write expected and write actual functions with queue pop loops. TLM analysis from module eight is what fills these queues.
 
 ## Slide 5 — Pitfalls to watch
 

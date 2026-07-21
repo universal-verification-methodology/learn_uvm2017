@@ -54,7 +54,7 @@ Common mistakes:
   writing RO fields
   front-door without working adapter/reg predictor
 
-$ grep -n "class uvm_reg_block\|uvm_reg_map\|frontdoor\|backdoor" ../../learn_uvm2017_sv_verilator/tools/uvm-2017/1800.2-2017-1.0/src/reg/uvm_reg_block.svh | head -10
+$ grep -n "class uvm_reg_block\|uvm_reg_map\|frontdoor\|backdoor" ../../examples/verilator-uvm-hello/tools/uvm-2017/1800.2-2017-1.0/src/reg/uvm_reg_block.svh | head -10
 31:class uvm_reg_block extends uvm_object;
 46:   local bit            maps[uvm_reg_map];
 57:   local uvm_reg_backdoor backdoor;

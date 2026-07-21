@@ -19,10 +19,4 @@ printf '%s\n' '$ cat examples/classic-vs-uvm/map.txt'
 cat examples/classic-vs-uvm/map.txt
 echo
 
-LEGACY="../../learn_uvm2017_sv_verilator/docs/MODULE3.md"
-if [ -f "$LEGACY" ]; then
-  printf '%s\n' '$ head -20 ../../learn_uvm2017_sv_verilator/docs/MODULE3.md'
-  head -20 "$LEGACY"
-else
-  echo '# legacy learn_uvm2017_sv_verilator not present — map.txt is enough for this module'
-fi
+echo '# (module examples above are enough for Track A)'

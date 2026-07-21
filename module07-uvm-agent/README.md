@@ -14,7 +14,7 @@ After this module you can explain and practice the ideas taught by **`uvm-agent`
 
 1. Open [EXAMPLES.md](EXAMPLES.md) and read `examples/agent-sketch/anatomy.txt`.
 2. Explain active vs passive and the roles of sequencer, driver, monitor.
-3. Optional: grep `uvm_agent` in the legacy course tree.
+3. Optional: grep `uvm_agent` in this module’s examples.
 
 ### Track B — Browser lab (online)
 

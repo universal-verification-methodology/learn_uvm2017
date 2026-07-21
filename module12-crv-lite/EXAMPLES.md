@@ -10,4 +10,4 @@ Track A (real UVM / SV literacy). Browser lab is shipped.
 
 ## Stretch
 
-In `crv-lite`, roll ten times on range with seed 42 vs seed 99, then grep `constraint` in the legacy random_utils tree.
+In `crv-lite`, roll ten times on range with seed 42 vs seed 99, then grep `constraint` in the reference random_utils tree.

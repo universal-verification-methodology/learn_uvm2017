@@ -19,10 +19,4 @@ printf '%s\n' '$ cat examples/agent-sketch/anatomy.txt'
 cat examples/agent-sketch/anatomy.txt
 echo
 
-LEGACY="../../learn_uvm2017_sv_verilator/module6/examples/architecture/architecture.sv"
-if [ -f "$LEGACY" ]; then
-  printf '%s\n' '$ grep -n "uvm_agent\|ArchAgent" ../../learn_uvm2017_sv_verilator/module6/examples/architecture/architecture.sv | head -8'
-  grep -n "uvm_agent\|ArchAgent" "$LEGACY" | head -8 || true
-else
-  echo '# legacy learn_uvm2017_sv_verilator not present — anatomy.txt is enough for this module'
-fi
+echo '# (module examples above are enough for Track A)'

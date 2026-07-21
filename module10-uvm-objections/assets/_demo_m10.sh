@@ -19,10 +19,4 @@ printf '%s\n' '$ cat examples/objections-sketch/holds.txt'
 cat examples/objections-sketch/holds.txt
 echo
 
-LEGACY="../../learn_uvm2017_sv_verilator/module8/tests/uvm_tests/test_utilities_uvm.sv"
-if [ -f "$LEGACY" ]; then
-  printf '%s\n' '$ grep -n "raise_objection\|drop_objection" ../../learn_uvm2017_sv_verilator/module8/tests/uvm_tests/test_utilities_uvm.sv'
-  grep -n "raise_objection\|drop_objection" "$LEGACY"
-else
-  echo '# legacy learn_uvm2017_sv_verilator not present — holds.txt is enough for this module'
-fi
+echo '# (module examples above are enough for Track A)'

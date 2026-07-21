@@ -46,5 +46,5 @@ Common mistakes:
   one ID reused for unrelated messages
   expecting errors to be hidden by low verbosity
 
-Legacy reference:
-  learn_uvm2017_sv_verilator/module3/examples/reporting/reporting.sv
+Reference example:
+  examples/verilator-uvm-hello/module3/examples/reporting/reporting.sv

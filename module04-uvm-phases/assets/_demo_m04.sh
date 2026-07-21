@@ -19,10 +19,4 @@ printf '%s\n' '$ cat examples/phase-timeline/phases.txt'
 cat examples/phase-timeline/phases.txt
 echo
 
-LEGACY="../../learn_uvm2017_sv_verilator/module6/examples/architecture/architecture.sv"
-if [ -f "$LEGACY" ]; then
-  printf '%s\n' '$ grep -n "phase" ../../learn_uvm2017_sv_verilator/module6/examples/architecture/architecture.sv | head -8'
-  grep -n "phase" "$LEGACY" | head -8 || true
-else
-  echo '# legacy learn_uvm2017_sv_verilator not present — phases.txt is enough for this module'
-fi
+echo '# (module examples above are enough for Track A)'

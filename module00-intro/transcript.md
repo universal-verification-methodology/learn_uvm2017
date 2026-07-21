@@ -18,7 +18,7 @@ Every lab module offers two ways to practice. The real UVM track uses your own s
 
 ## Slide 4 — Set up the real UVM track
 
-Obtain a UVM library and a simulator that can run it. Open the legacy offline course tree linked from this repo—it holds Makefile examples and SystemVerilog UVM tests. Confirm you can compile and run a small testbench once. Module twenty-two in this course is the dedicated offline run; you do not need a perfect farm on day one, only a path that works on your machine.
+Obtain a UVM library and a simulator that can run it. Open the in-course hello linked from this repo—it holds Makefile examples and SystemVerilog UVM tests. Confirm you can compile and run a small testbench once. Module twenty-two in this course is the dedicated offline run; you do not need a perfect farm on day one, only a path that works on your machine.
 
 ## Slide 5 — Set up the browser lab track
 

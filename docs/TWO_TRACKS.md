@@ -7,7 +7,6 @@ Practice with Accellera UVM 2017 + a real simulator.
 - **Methodology** (modules 00–21): browser sketches + paper notes
 - **Verilator host path** (modules 22–24): limits → Makefile knobs → run a small UVM test with `SIM=verilator`
 - Fidelity examples live under [`../examples/verilator-uvm-hello/`](../examples/verilator-uvm-hello/); Accellera UVM via `UVM_HOME`
-- The ignored legacy tree is optional convenience only — see [`../LEGACY.md`](../LEGACY.md)
 
 Use this track for **fidelity**.
 

@@ -19,10 +19,4 @@ printf '%s\n' '$ cat examples/checker-sketch/checker.txt'
 cat examples/checker-sketch/checker.txt
 echo
 
-LEGACY="../../learn_uvm2017_sv_verilator/module6/examples/protocol_checkers/protocol_checkers.sv"
-if [ -f "$LEGACY" ]; then
-  printf '%s\n' '$ grep -n "CheckerComp\|valid\|ready\|uvm_error" ../../learn_uvm2017_sv_verilator/module6/examples/protocol_checkers/protocol_checkers.sv | head -14'
-  grep -n "CheckerComp\|valid\|ready\|uvm_error" "$LEGACY" | head -14 || true
-else
-  echo '# legacy learn_uvm2017_sv_verilator not present — checker.txt is enough for this module'
-fi
+echo '# (module examples above are enough for Track A)'

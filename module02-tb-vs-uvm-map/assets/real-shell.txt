@@ -39,7 +39,7 @@ UART vignette (browser lab starter):
   $display on tx     ↔  uart monitor item
   if (rx !== byte)   ↔  scoreboard byte compare
 
-$ head -20 ../../learn_uvm2017_sv_verilator/docs/MODULE3.md
+$ head -20 ../../examples/verilator-uvm-hello/docs/MODULE3.md
 # Module 3: UVM Basics
 
 **Goal**: Master UVM class hierarchy and phases

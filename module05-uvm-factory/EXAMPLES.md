@@ -10,4 +10,4 @@ Track A (real UVM literacy). Browser lab is shipped.
 
 ## Stretch
 
-Open `uvm-factory`, try the agent VIP swap preset, then grep `set_type_override` in the legacy course.
+Open `uvm-factory`, try the agent VIP swap preset, then grep `set_type_override` in the in-course hello.

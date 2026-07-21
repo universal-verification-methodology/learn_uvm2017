@@ -19,5 +19,5 @@ printf '%s\n' '$ cat examples/sva-sketch/implication.txt'
 cat examples/sva-sketch/implication.txt
 echo
 
-echo '# SVA examples often live in RTL/bind — no dedicated legacy lab file in this course tree'
+echo '# SVA examples often live in RTL/bind — no dedicated reference lab file in this course tree'
 echo '# use implication.txt + sva-timeline browser lab for literacy'

@@ -19,10 +19,4 @@ printf '%s\n' '$ cat examples/layer-sketch/hierarchy.txt'
 cat examples/layer-sketch/hierarchy.txt
 echo
 
-LEGACY="../../learn_uvm2017_sv_verilator/module6/examples/architecture/architecture.sv"
-if [ -f "$LEGACY" ]; then
-  printf '%s\n' '$ head -32 ../../learn_uvm2017_sv_verilator/module6/examples/architecture/architecture.sv'
-  head -32 "$LEGACY"
-else
-  echo '# legacy learn_uvm2017_sv_verilator not present — hierarchy.txt is enough for this module'
-fi
+echo '# (module examples above are enough for Track A)'

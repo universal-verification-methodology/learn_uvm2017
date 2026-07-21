@@ -10,4 +10,4 @@ Track A (real UVM literacy). Browser lab is shipped.
 
 ## Stretch
 
-Open `uvm-agent`, try passive preset, then grep `uvm_agent` in the legacy architecture example.
+Open `uvm-agent`, try passive preset, then grep `uvm_agent` in the reference architecture example.

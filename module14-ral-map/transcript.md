@@ -22,7 +22,7 @@ In the browser lab track, open the register model map lab. The starter loads uar
 
 ![Real shell — RAL map sketch](assets/real-shell.png)
 
-In the real UVM track, open this module’s RAL sketch—it lists block base, offsets, and front versus back door in plain language. Trace one write from reg model call through adapter to bus, versus a backdoor poke straight to RTL. If the legacy offline course is checked out, peek at uvm reg model headers in the UVM tree—you will see block, reg, and field class patterns. RAL connects register sequences to the same agent and bus you already know.
+In the real UVM track, open this module’s RAL sketch—it lists block base, offsets, and front versus back door in plain language. Trace one write from reg model call through adapter to bus, versus a backdoor poke straight to RTL. If the in-course hello is checked out, peek at uvm reg model headers in the UVM tree—you will see block, reg, and field class patterns. RAL connects register sequences to the same agent and bus you already know.
 
 ## Slide 5 — Pitfalls to watch
 

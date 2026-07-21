@@ -10,4 +10,4 @@ Track A (real UVM literacy). Browser lab is shipped.
 
 ## Stretch
 
-Open `uvm-scoreboard`, Compare PASS on starter, then load mismatch and orphan presets; grep `write_actual` in the legacy tree.
+Open `uvm-scoreboard`, Compare PASS on starter, then load mismatch and orphan presets; grep `write_actual` in the in-course hello.

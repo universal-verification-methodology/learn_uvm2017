@@ -10,4 +10,4 @@ Track A (real UVM literacy). Browser lab is shipped.
 
 ## Stretch
 
-Open `uvm-objections`, load multi preset, drop one actor, then grep `raise_objection` in the legacy tree.
+Open `uvm-objections`, load multi preset, drop one actor, then grep `raise_objection` in the in-course hello.

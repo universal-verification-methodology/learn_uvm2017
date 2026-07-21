@@ -57,7 +57,7 @@ Common mistakes:
   ignore leftover queues at test end
   in-order compare on out-of-order protocol (needs different SB)
 
-$ grep -n "Scoreboard\|write_expected\|write_actual\|expected_queue\|actual_queue" ../../learn_uvm2017_sv_verilator/module8/tests/uvm_tests/test_utilities_uvm.sv | head -12
+$ grep -n "Scoreboard\|write_expected\|write_actual\|expected_queue\|actual_queue" ../../examples/verilator-uvm-hello/module8/tests/uvm_tests/test_utilities_uvm.sv | head -12
 121: * Scoreboard using comparator
 123:class UtilitiesScoreboard extends uvm_scoreboard;
 124:    UtilitiesTransaction expected_queue[$];

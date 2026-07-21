@@ -14,7 +14,7 @@ After this module you can explain and practice the ideas taught by **`uvm-plusar
 
 1. Open [EXAMPLES.md](EXAMPLES.md) and read `examples/plusargs-sketch/cmdline.txt`.
 2. Explain `+UVM_TESTNAME` versus custom knobs like `+SEED` and `+NUM_PKTS`.
-3. Optional: grep `get_arg_value` in the legacy CLP example.
+3. Optional: grep `get_arg_value` in the reference CLP example.
 
 ### Track B — Browser lab (online)
 

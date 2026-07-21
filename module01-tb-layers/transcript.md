@@ -22,7 +22,7 @@ In the browser lab track, open the testbench layer diagram lab from the tools pa
 
 ![Real shell — layer hierarchy sketch](assets/real-shell.png)
 
-In the real UVM track, open this module’s examples folder and read the hierarchy sketch—it mirrors the browser diagram in plain text. If you have the legacy offline course checked out next door, peek at the architecture example header: same test, env, agent, sequencer, driver, monitor story in real SystemVerilog comments. You are not compiling UVM yet; you are learning to read the stack before you run Make.
+In the real UVM track, open this module’s examples folder and read the hierarchy sketch—it mirrors the browser diagram in plain text. If you have the in-course hello checked out next door, peek at the architecture example header: same test, env, agent, sequencer, driver, monitor story in real SystemVerilog comments. You are not compiling UVM yet; you are learning to read the stack before you run Make.
 
 ## Slide 5 — Pitfalls to watch
 
@@ -30,4 +30,4 @@ Do not confuse the test with the environment—the test is thin; the env owns st
 
 ## Slide 6 — Your turn
 
-Complete the checklist for at least one track—preferably both. In the browser, load the starter and finish a few challenges. On real UVM, restate the two paths—stimulus and observe—in your own words and skim one legacy example. When you are ready, take the short quiz, then continue to basic testbench versus UVM map in the next module.
+Complete the checklist for at least one track—preferably both. In the browser, load the starter and finish a few challenges. On real UVM, restate the two paths—stimulus and observe—in your own words and skim one offline example. When you are ready, take the short quiz, then continue to basic testbench versus UVM map in the next module.

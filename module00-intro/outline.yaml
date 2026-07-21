@@ -40,10 +40,10 @@ slides:
   title: Set up the real UVM track
   bullets:
   - Obtain a UVM library and a simulator that can run it
-  - Open the legacy offline course tree linked from this repo
+  - Open the in-course hello linked from this repo
   - Confirm you can compile and run a small testbench once
   - Module twenty-two in this course is the dedicated offline run
-  notes: Obtain a UVM library and a simulator that can run it. Open the legacy offline
+  notes: Obtain a UVM library and a simulator that can run it. Open the offline
     course tree linked from this repo—it holds Makefile examples and SystemVerilog
     UVM tests. Confirm you can compile and run a small testbench once. Module twenty-two
     in this course is the dedicated offline run; you do not need a perfect farm on

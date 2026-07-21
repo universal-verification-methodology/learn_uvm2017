@@ -10,4 +10,4 @@ Track A (real UVM literacy). Browser lab is shipped.
 
 ## Stretch
 
-Open `uvm-phases`, load starter, walk all core phases, then grep `build_phase` in the legacy course.
+Open `uvm-phases`, load starter, walk all core phases, then grep `build_phase` in the in-course hello.

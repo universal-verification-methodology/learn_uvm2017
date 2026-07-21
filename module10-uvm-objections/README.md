@@ -14,7 +14,7 @@ After this module you can explain and practice the ideas taught by **`uvm-object
 
 1. Open [EXAMPLES.md](EXAMPLES.md) and read `examples/objections-sketch/holds.txt`.
 2. Explain raise/drop balance and why run hangs when count stays above zero.
-3. Optional: grep `raise_objection` in the legacy course tree.
+3. Optional: grep `raise_objection` in this module’s examples.
 
 ### Track B — Browser lab (online)
 

@@ -14,7 +14,7 @@ After this module you can explain and practice the ideas taught by **`protocol-c
 
 1. Open [EXAMPLES.md](EXAMPLES.md) and read `examples/checker-sketch/checker.txt`.
 2. Explain checker vs scoreboard and three valid/ready rules.
-3. Optional: grep `CheckerComp` in the legacy protocol_checkers example.
+3. Optional: grep `CheckerComp` in the reference protocol_checkers example.
 
 ### Track B — Browser lab (online)
 

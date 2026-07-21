@@ -36,6 +36,6 @@ Common mistakes:
   shipping code without self-test / README
   assuming compile success == package complete
 
-Legacy reference:
-  learn_uvm2017_sv_verilator/module7/examples/vip/vip.sv
+Reference example:
+  examples/verilator-uvm-hello/module7/examples/vip/vip.sv
   (agent scaffold — txn + seq + driver + agent; add checker/cov/docs for full VIP)

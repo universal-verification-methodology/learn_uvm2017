@@ -28,7 +28,7 @@ Notes:
   - Env may hold multiple agents; scoreboard often shared.
   - Flat classic TB collapses these roles into one module.
 
-$ head -32 ../../learn_uvm2017_sv_verilator/module6/examples/architecture/architecture.sv
+$ head -32 ../../examples/verilator-uvm-hello/module6/examples/architecture/architecture.sv
 /**
  * Module 6 Example 6.1: Testbench Architecture
  * Demonstrates a structured, hierarchical UVM environment skeleton.

@@ -22,7 +22,7 @@ In the browser lab track, open the multi-agent env lab. The starter loads UART a
 
 ![Real shell — multi-agent sketch](assets/real-shell.png)
 
-In the real UVM track, open this module’s multi-agent sketch—it lists env, two agents, and scoreboard fan-in in plain language. Trace build creating uart agent and spi agent, then connect linking both monitor analysis ports to scoreboard imports. If the legacy offline course is checked out, grep for multi agent in module six—you will see an env with two agents and coordination patterns. Virtual sequences on the next module often start traffic on multiple agents from one test.
+In the real UVM track, open this module’s multi-agent sketch—it lists env, two agents, and scoreboard fan-in in plain language. Trace build creating uart agent and spi agent, then connect linking both monitor analysis ports to scoreboard imports. If the in-course hello is checked out, grep for multi agent in module six—you will see an env with two agents and coordination patterns. Virtual sequences on the next module often start traffic on multiple agents from one test.
 
 ## Slide 5 — Pitfalls to watch
 

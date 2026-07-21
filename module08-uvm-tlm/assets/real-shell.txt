@@ -43,7 +43,7 @@ Common mistakes:
    forget item_done after get_next_item
    treating analysis like a paired export (it's broadcast)
 
-$ grep -n "seq_item_port\|analysis_port\|\.connect(" ../../learn_uvm2017_sv_verilator/module8/tests/uvm_tests/test_utilities_uvm.sv | head -10
+$ grep -n "seq_item_port\|analysis_port\|\.connect(" ../../examples/verilator-uvm-hello/module8/tests/uvm_tests/test_utilities_uvm.sv | head -10
 80:            seq_item_port.get_next_item(txn);
 83:            seq_item_port.item_done();
 92:    uvm_analysis_port #(UtilitiesTransaction) analysis_port;

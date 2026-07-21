@@ -14,7 +14,7 @@ After this module you can explain and practice the ideas taught by **`uvm-factor
 
 1. Open [EXAMPLES.md](EXAMPLES.md) and read `examples/factory-sketch/overrides.txt`.
 2. Explain requested vs constructed type and instance vs type override.
-3. Optional: skim `uvm_factory.svh` in the legacy course tree.
+3. Optional: skim `uvm_factory.svh` in this module’s examples.
 
 ### Track B — Browser lab (online)
 

@@ -22,7 +22,7 @@ In the browser lab track, open the sequence flow lab. The starter places a UART 
 
 ![Real shell — sequence flow sketch](assets/real-shell.png)
 
-In the real UVM track, open this module’s flow sketch—it lists the sequence body and driver task in plain language. Trace one transaction from create through finish item on the sequence side, then get next item through item done on the driver side. If the legacy offline course is checked out, grep for start item or get next item in a module eight example—you will see the same pull model in SystemVerilog. TLM ports from the last module are what make this handoff possible.
+In the real UVM track, open this module’s flow sketch—it lists the sequence body and driver task in plain language. Trace one transaction from create through finish item on the sequence side, then get next item through item done on the driver side. If the in-course hello is checked out, grep for start item or get next item in a module eight example—you will see the same pull model in SystemVerilog. TLM ports from the last module are what make this handoff possible.
 
 ## Slide 5 — Pitfalls to watch
 

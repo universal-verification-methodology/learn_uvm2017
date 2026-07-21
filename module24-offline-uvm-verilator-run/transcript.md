@@ -6,7 +6,7 @@
 
 ## Slide 1 — Run UVM on Verilator
 
-Modules twenty-two and twenty-three moved you from host literacy to Makefile knobs. Module twenty-four is the fidelity step: compile Accellera UVM twenty seventeen with Verilator using the **in-course** and-gate hello. You leave with a command line you can repeat—UVM home, make run, read pass or fail. No dependency on ignored legacy trees for the primary path.
+Modules twenty-two and twenty-three moved you from host literacy to Makefile knobs. Module twenty-four is the fidelity step: compile Accellera UVM twenty seventeen with Verilator using the **in-course** and-gate hello. You leave with a command line you can repeat—UVM home, make run, read pass or fail. No dependency on external archives for the primary path.
 
 ## Slide 2 — Verilator-first offline run
 
@@ -35,7 +35,7 @@ make run SIM=verilator
 
 ## Slide 5 — Pitfalls to watch
 
-Unset UVM home fails before useful compile output. A browser UVM sketch pass is not a Verilator UVM pass. Patience on first compile—UVM templates are heavy. If Verilator is too old for UVM twenty seventeen, upgrade or note the version blocker. Keep the ignored legacy archive out of your default path; the in-course hello is the contract for this module.
+Unset UVM home fails before useful compile output. A browser UVM sketch pass is not a Verilator UVM pass. Patience on first compile—UVM templates are heavy. If Verilator is too old for UVM twenty seventeen, upgrade or note the version blocker. Keep the external archive out of your default path; the in-course hello is the contract for this module.
 
 ## Slide 6 — Your turn
 

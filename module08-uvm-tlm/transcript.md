@@ -22,7 +22,7 @@ In the browser lab track, open the TLM port wiring lab. The starter loads both c
 
 ![Real shell — TLM wiring sketch](assets/real-shell.png)
 
-In the real UVM track, open this module’s wiring sketch—it lists connect calls in plain language for each pattern. Trace seq item on the stimulus path and analysis on the observe path in one agent hookup. If the legacy offline course is checked out, grep for seq item port connect in module eight examples—you will see driver dot seq item port dot connect to sequencer dot seq item export, and monitor analysis port to scoreboard import. Same picture, real SystemVerilog.
+In the real UVM track, open this module’s wiring sketch—it lists connect calls in plain language for each pattern. Trace seq item on the stimulus path and analysis on the observe path in one agent hookup. If the in-course hello is checked out, grep for seq item port connect in module eight examples—you will see driver dot seq item port dot connect to sequencer dot seq item export, and monitor analysis port to scoreboard import. Same picture, real SystemVerilog.
 
 ## Slide 5 — Pitfalls to watch
 

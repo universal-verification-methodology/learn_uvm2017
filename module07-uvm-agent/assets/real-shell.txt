@@ -40,7 +40,7 @@ Common mistakes:
   passive agent with no monitor (wrong — passive still monitors)
   driver/monitor without vif set on agent path
 
-$ grep -n "uvm_agent\|ArchAgent" ../../learn_uvm2017_sv_verilator/module6/examples/architecture/architecture.sv | head -8
+$ grep -n "uvm_agent\|ArchAgent" ../../examples/verilator-uvm-hello/module6/examples/architecture/architecture.sv | head -8
 15: *           └── ArchAgent (uvm_agent)
 354: * ArchAgent: Agent for architecture example
 370:class ArchAgent extends uvm_agent;

@@ -14,7 +14,7 @@ After this module you can explain and practice the ideas taught by **`uvm-vseq`*
 
 1. Open [EXAMPLES.md](EXAMPLES.md) and read `examples/vseq-sketch/vseq.txt`.
 2. Explain virtual sequencer refs and sequential vs parallel vseq body.
-3. Optional: grep `VirtualSequencer` in the legacy virtual_sequences example.
+3. Optional: grep `VirtualSequencer` in the reference virtual_sequences example.
 
 ### Track B — Browser lab (online)
 

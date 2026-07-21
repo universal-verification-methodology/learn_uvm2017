@@ -22,7 +22,7 @@ In the browser lab track, open the virtual sequence lab. The starter loads a vir
 
 ![Real shell — virtual sequence sketch](assets/real-shell.png)
 
-In the real UVM track, open this module’s virtual sequence sketch—it lists virtual sequencer refs, connect wiring, and sequential versus parallel body patterns in plain language. Trace connect phase assigning env uart sequencer and env spi sequencer into the virtual sequencer fields. If the legacy offline course is checked out, grep for VirtualSequencer or fork in module five virtual sequences—you will see channel coordination with fork-join and sequential starts. Multi-agent env from the last module gives you the sequencers; this module shows how one test drives them in order or in parallel.
+In the real UVM track, open this module’s virtual sequence sketch—it lists virtual sequencer refs, connect wiring, and sequential versus parallel body patterns in plain language. Trace connect phase assigning env uart sequencer and env spi sequencer into the virtual sequencer fields. If the in-course hello is checked out, grep for VirtualSequencer or fork in module five virtual sequences—you will see channel coordination with fork-join and sequential starts. Multi-agent env from the last module gives you the sequencers; this module shows how one test drives them in order or in parallel.
 
 ## Slide 5 — Pitfalls to watch
 

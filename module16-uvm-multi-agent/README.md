@@ -14,7 +14,7 @@ After this module you can explain and practice the ideas taught by **`uvm-multi-
 
 1. Open [EXAMPLES.md](EXAMPLES.md) and read `examples/multi-agent-sketch/env.txt`.
 2. Explain env with two agents and shared scoreboard fan-in.
-3. Optional: grep `MA_Env` in the legacy multi_agent example.
+3. Optional: grep `MA_Env` in the reference multi_agent example.
 
 ### Track B — Browser lab (online)
 

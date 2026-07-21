@@ -8,9 +8,6 @@
 # Example (after extracting the Accellera tarball):
 #   export UVM_HOME=/path/to/1800.2-2017-1.0/src
 #   make run SIM=verilator
-#
-# Optional monorepo convenience (archive fidelity only — not required):
-#   export UVM_HOME=$PWD/../../learn_uvm2017_sv_verilator/tools/uvm-2017/1800.2-2017-1.0/src
 
 SIM ?= verilator
 TEST ?= test_and_gate_uvm

@@ -44,7 +44,7 @@ slides:
   caption: Real shell — ConfigDB sketch
   notes: In the real UVM track, open this module’s examples folder and read the set-get
     sketch—it mirrors the browser tables in plain language. Practice saying set path,
-    field, value, then get path, field, and expected winner. If the legacy offline
+    field, value, then get path, field, and expected winner. If the offline
     course is checked out, skim the config DB header or any test that sets a virtual
     interface on an agent—the same triple appears in SystemVerilog macros. You are
     learning where vif handles live before you debug a null-interface crash.

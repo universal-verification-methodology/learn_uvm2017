@@ -22,7 +22,7 @@ In the browser lab track, open the objections lab. The starter shows test holdin
 
 ![Real shell — objections sketch](assets/real-shell.png)
 
-In the real UVM track, open this module’s objections sketch—it shows raise and drop around sequence start in plain language. Trace the pattern: raise before work, start sequences or fork tasks, wait for completion, then drop. If the legacy offline course is checked out, grep for raise objection in any run phase task—you will see the same bracket around stimulus. Objections tie directly to the sequence flow from the last module—without a raise, run might end before your sequence runs.
+In the real UVM track, open this module’s objections sketch—it shows raise and drop around sequence start in plain language. Trace the pattern: raise before work, start sequences or fork tasks, wait for completion, then drop. If the in-course hello is checked out, grep for raise objection in any run phase task—you will see the same bracket around stimulus. Objections tie directly to the sequence flow from the last module—without a raise, run might end before your sequence runs.
 
 ## Slide 5 — Pitfalls to watch
 

@@ -41,7 +41,7 @@ slides:
   caption: Real shell — CRV sketch
   notes: In the real UVM track, open this module’s CRV sketch—it shows rand, constraint,
     and randomize on a sequence item in plain language. Trace how a transaction gets
-    legal field values before the driver sends it. If the legacy offline course is
+    legal field values before the driver sends it. If the in-course hello is
     checked out, grep for rand and constraint in a random utils example—you will see
     valid data and valid address blocks in SystemVerilog. Sequence items and testbench
     classes both use the same randomize pattern.

@@ -41,6 +41,6 @@ Before you memorize UVM macros, you need a map of the testbench stack
 ## Your turn
 - Complete the checklist for at least one track, preferably both
 - In the browser, load the starter and finish a few challenges
-- Restate the two paths, stimulus and observe, in your own words and skim one legacy example
+- Restate the two paths, stimulus and observe, in your own words and skim one offline example
 - When you are ready
 

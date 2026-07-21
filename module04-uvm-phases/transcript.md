@@ -22,7 +22,7 @@ In the browser lab track, open the UVM phase timeline lab. You will see a horizo
 
 ![Real shell — phase timeline sketch](assets/real-shell.png)
 
-In the real UVM track, open this module’s examples folder and read the phase timeline sketch. For each core phase, say what happens and which direction the tree walk uses. If the legacy offline course is checked out next door, skim any example that declares build phase, connect phase, and run phase—you will see the same names in SystemVerilog methods. You are learning the schedule before you debug a stuck run phase in anger.
+In the real UVM track, open this module’s examples folder and read the phase timeline sketch. For each core phase, say what happens and which direction the tree walk uses. If the in-course hello is checked out next door, skim any example that declares build phase, connect phase, and run phase—you will see the same names in SystemVerilog methods. You are learning the schedule before you debug a stuck run phase in anger.
 
 ## Slide 5 — Pitfalls to watch
 

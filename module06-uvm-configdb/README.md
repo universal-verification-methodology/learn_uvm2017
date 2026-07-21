@@ -14,7 +14,7 @@ After this module you can explain and practice the ideas taught by **`uvm-config
 
 1. Open [EXAMPLES.md](EXAMPLES.md) and read `examples/configdb-sketch/set-get.txt`.
 2. Explain set path, field, value and get walk-up with specificity.
-3. Optional: skim `uvm_config_db.svh` in the legacy course tree.
+3. Optional: skim `uvm_config_db.svh` in this module’s examples.
 
 ### Track B — Browser lab (online)
 

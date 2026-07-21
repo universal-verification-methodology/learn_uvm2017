@@ -10,4 +10,4 @@ Track A (real UVM literacy). Browser lab is shipped.
 
 ## Stretch
 
-Open `uvm-seq-flow`, step from sequencer to DUT, then grep `get_next_item` in the legacy module-eight tree.
+Open `uvm-seq-flow`, step from sequencer to DUT, then grep `get_next_item` in the module-eight tree.

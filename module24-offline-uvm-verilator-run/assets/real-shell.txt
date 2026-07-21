@@ -1,15 +1,7 @@
 == pwd ==
 /mnt/d/proj/designs/learning/courses/learn_uvm2017/examples/verilator-uvm-hello
-total 8
-drwxrwxrwx 1 user user 4096 Jul 21 10:41 .
-drwxrwxrwx 1 user user 4096 Jul 21 10:41 ..
--rwxrwxrwx 1 user user 2289 Jul 21 10:41 Makefile
--rwxrwxrwx 1 user user 1708 Jul 21 10:46 README.md
-drwxrwxrwx 1 user user 4096 Jul 21 10:41 dut
-drwxrwxrwx 1 user user 4096 Jul 21 10:41 tb
 dut:
 and_gate.v
-
 tb:
 test_and_gate_uvm.sv
 == Makefile head ==
@@ -23,18 +15,8 @@ test_and_gate_uvm.sv
 # Example (after extracting the Accellera tarball):
 #   export UVM_HOME=/path/to/1800.2-2017-1.0/src
 #   make run SIM=verilator
-#
-# Optional monorepo convenience (archive fidelity only — not required):
-#   export UVM_HOME=$PWD/../../learn_uvm2017_sv_verilator/tools/uvm-2017/1800.2-2017-1.0/src
 
 SIM ?= verilator
 TEST ?= test_and_gate_uvm
-TOPLEVEL ?= $(TEST)
-# UVM test class registered inside tb/test_and_gate_uvm.sv
-UVM_TESTNAME ?= AndGateTest
-
-ifeq ($(UVM_HOME),)
-  $(error UVM_HOME is not set. Point it at Accellera UVM 2017 …/src (see README.md))
-endif
 UVM_HOME=unset
 (Full make run omitted in demo capture — learners run: make run SIM=verilator)

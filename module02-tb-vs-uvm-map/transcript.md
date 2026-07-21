@@ -22,7 +22,7 @@ In the browser lab track, open the basic testbench versus UVM map lab. You will 
 
 ![Real shell — classic vs UVM map](assets/real-shell.png)
 
-In the real UVM track, open this module’s examples folder and read the six-pair map—it mirrors the browser table in plain text. For each classic habit, say the UVM role aloud before you open source code. If the legacy offline course is checked out next door, skim any example where a driver converts items to pin activity—that is the pin-wiggle pair in real SystemVerilog. You are building a mental Rosetta stone, not running a full regression yet.
+In the real UVM track, open this module’s examples folder and read the six-pair map—it mirrors the browser table in plain text. For each classic habit, say the UVM role aloud before you open source code. If the in-course hello is checked out next door, skim any example where a driver converts items to pin activity—that is the pin-wiggle pair in real SystemVerilog. You are building a mental Rosetta stone, not running a full regression yet.
 
 ## Slide 5 — Pitfalls to watch
 

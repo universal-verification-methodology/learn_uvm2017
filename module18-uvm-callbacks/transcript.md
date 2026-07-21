@@ -22,7 +22,7 @@ In the browser lab track, open the callbacks sketch lab. The starter registers e
 
 ![Real shell — callbacks sketch](assets/real-shell.png)
 
-In the real UVM track, open this module’s callbacks sketch—it lists callback base, registration, and pre body post flow in plain language. Trace uvm register cb pairing the driver type with your callback type, then uvm do callbacks at pre drive and post drive inside the driver run task. If the legacy offline course is checked out, grep for uvm register cb or pre drive in module five callbacks—you will see fault inject and logging without forking the driver source. Callbacks complement factory overrides: hooks extend behavior at runtime per test.
+In the real UVM track, open this module’s callbacks sketch—it lists callback base, registration, and pre body post flow in plain language. Trace uvm register cb pairing the driver type with your callback type, then uvm do callbacks at pre drive and post drive inside the driver run task. If the in-course hello is checked out, grep for uvm register cb or pre drive in module five callbacks—you will see fault inject and logging without forking the driver source. Callbacks complement factory overrides: hooks extend behavior at runtime per test.
 
 ## Slide 5 — Pitfalls to watch
 

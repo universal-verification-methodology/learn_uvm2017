@@ -44,7 +44,7 @@ slides:
   caption: Real shell — plusargs sketch
   notes: In the real UVM track, open this module’s plusargs sketch—it shows a sample
     sim command and how to read knobs in plain language. Trace which args select the
-    test versus which ones your test reads in build or run. If the legacy offline
+    test versus which ones your test reads in build or run. If the offline
     course is checked out, grep for get arg value in the cmdline processor example—you
     will see plus test mode and plus seed parsed in SystemVerilog. Makefile plusargs
     and simulator args must agree on the plus prefix syntax.

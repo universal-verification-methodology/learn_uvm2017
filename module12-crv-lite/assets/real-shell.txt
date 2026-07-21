@@ -56,7 +56,7 @@ UVM tie-in:
   seq_item.randomize() before start_item
   plus SEED plusarg from module 11 for replay
 
-$ grep -n "rand \|constraint\|randomize" ../../learn_uvm2017_sv_verilator/module8/examples/random_utils/random_utils.sv | head -12
+$ grep -n "rand \|constraint\|randomize" ../../examples/verilator-uvm-hello/module8/examples/random_utils/random_utils.sv | head -12
 266: * RandomTransaction: Transaction with random constraints
 269: *   - Random fields with constraints
 274:    rand logic [7:0] data;      // Data (8-bit, constrained)

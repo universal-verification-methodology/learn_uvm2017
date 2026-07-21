@@ -19,10 +19,4 @@ printf '%s\n' '$ cat examples/vseq-sketch/vseq.txt'
 cat examples/vseq-sketch/vseq.txt
 echo
 
-LEGACY="../../learn_uvm2017_sv_verilator/module5/examples/virtual_sequences/virtual_sequences.sv"
-if [ -f "$LEGACY" ]; then
-  printf '%s\n' '$ grep -n "VirtualSequencer\|VirtualSequence\|fork\|join" ../../learn_uvm2017_sv_verilator/module5/examples/virtual_sequences/virtual_sequences.sv | head -14'
-  grep -n "VirtualSequencer\|VirtualSequence\|VirtualSequencesTest\|fork\|join" "$LEGACY" | head -14 || true
-else
-  echo '# legacy learn_uvm2017_sv_verilator not present — vseq.txt is enough for this module'
-fi
+echo '# (module examples above are enough for Track A)'

@@ -19,10 +19,4 @@ printf '%s\n' '$ cat examples/vip-sketch/vip.txt'
 cat examples/vip-sketch/vip.txt
 echo
 
-LEGACY="../../learn_uvm2017_sv_verilator/module7/examples/vip/vip.sv"
-if [ -f "$LEGACY" ]; then
-  printf '%s\n' '$ grep -n "VipAgent\|VipDriver\|VipTxn\|VIP" ../../learn_uvm2017_sv_verilator/module7/examples/vip/vip.sv | head -14'
-  grep -n "VipAgent\|VipDriver\|VipTxn\|VipSeq\|VIP" "$LEGACY" | head -14 || true
-else
-  echo '# legacy learn_uvm2017_sv_verilator not present — vip.txt is enough for this module'
-fi
+echo '# (module examples above are enough for Track A)'

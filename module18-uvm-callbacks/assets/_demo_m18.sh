@@ -19,10 +19,4 @@ printf '%s\n' '$ cat examples/callbacks-sketch/callbacks.txt'
 cat examples/callbacks-sketch/callbacks.txt
 echo
 
-LEGACY="../../learn_uvm2017_sv_verilator/module5/examples/callbacks/callbacks.sv"
-if [ -f "$LEGACY" ]; then
-  printf '%s\n' '$ grep -n "uvm_register_cb\|uvm_do_callbacks\|pre_drive\|post_drive" ../../learn_uvm2017_sv_verilator/module5/examples/callbacks/callbacks.sv | head -14'
-  grep -n "uvm_register_cb\|uvm_do_callbacks\|pre_drive\|post_drive\|DriverCallback" "$LEGACY" | head -14 || true
-else
-  echo '# legacy learn_uvm2017_sv_verilator not present — callbacks.txt is enough for this module'
-fi
+echo '# (module examples above are enough for Track A)'

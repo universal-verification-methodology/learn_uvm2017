@@ -14,7 +14,7 @@ After this module you can explain and practice the ideas taught by **`uvm-scoreb
 
 1. Open [EXAMPLES.md](EXAMPLES.md) and read `examples/scoreboard-sketch/compare.txt`.
 2. Explain predict → expect, monitor → actual, and what orphans mean.
-3. Optional: grep scoreboard queues in the legacy module-eight test.
+3. Optional: grep scoreboard queues in the module-eight test.
 
 ### Track B — Browser lab (online)
 

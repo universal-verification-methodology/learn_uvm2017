@@ -14,7 +14,7 @@ After this module you can explain and practice the ideas taught by **`uvm-phases
 
 1. Open [EXAMPLES.md](EXAMPLES.md) and read `examples/phase-timeline/phases.txt`.
 2. Recite build → connect → run → check → report and note where objections live.
-3. Optional: skim phase methods in [`../learn_uvm2017_sv_verilator/`](../learn_uvm2017_sv_verilator/).
+3. Optional: skim phase methods in [`../examples/verilator-uvm-hello/`](../examples/verilator-uvm-hello/).
 
 ### Track B — Browser lab (online)
 

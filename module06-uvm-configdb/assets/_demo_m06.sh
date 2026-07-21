@@ -19,10 +19,4 @@ printf '%s\n' '$ cat examples/configdb-sketch/set-get.txt'
 cat examples/configdb-sketch/set-get.txt
 echo
 
-LEGACY="../../learn_uvm2017_sv_verilator/tools/uvm-2017/1800.2-2017-1.0/src/base/uvm_config_db.svh"
-if [ -f "$LEGACY" ]; then
-  printf '%s\n' '$ head -28 ../../learn_uvm2017_sv_verilator/tools/uvm-2017/1800.2-2017-1.0/src/base/uvm_config_db.svh'
-  head -28 "$LEGACY"
-else
-  echo '# legacy learn_uvm2017_sv_verilator not present — set-get.txt is enough for this module'
-fi
+echo '# (module examples above are enough for Track A)'

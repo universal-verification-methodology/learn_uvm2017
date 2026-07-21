@@ -14,7 +14,7 @@ After this module you can explain and practice the ideas taught by **`vip-anatom
 
 1. Open [EXAMPLES.md](EXAMPLES.md) and read `examples/vip-sketch/vip.txt`.
 2. Explain agent + checker + coverage + docs as a complete VIP handoff.
-3. Optional: grep `VipAgent` in the legacy vip example.
+3. Optional: grep `VipAgent` in the reference vip example.
 
 ### Track B — Browser lab (online)
 

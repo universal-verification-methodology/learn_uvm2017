@@ -55,10 +55,10 @@ Common mistakes:
   one ID reused for unrelated messages
   expecting errors to be hidden by low verbosity
 
-Legacy reference:
-  learn_uvm2017_sv_verilator/module3/examples/reporting/reporting.sv
+Reference example:
+  examples/verilator-uvm-hello/module3/examples/reporting/reporting.sv
 
-$ grep -n "uvm_info\|uvm_error\|UVM_HIGH\|verbosity" ../../learn_uvm2017_sv_verilator/module3/examples/reporting/reporting.sv | head -14
+$ grep -n "uvm_info\|uvm_error\|UVM_HIGH\|verbosity" ../../examples/verilator-uvm-hello/module3/examples/reporting/reporting.sv | head -14
 3: * Demonstrates UVM reporting system with severity and verbosity levels.
 8: *   3. Master verbosity levels (LOW, MEDIUM, HIGH, FULL, DEBUG)
 13: *   - `uvm_info: Informational message (severity: INFO)

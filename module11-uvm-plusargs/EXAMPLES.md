@@ -10,4 +10,4 @@ Track A (real UVM literacy). Browser lab is shipped.
 
 ## Stretch
 
-Open `uvm-plusargs`, try no-testname and unknown-test presets, then grep `get_arg_value` in the legacy CLP example.
+Open `uvm-plusargs`, try no-testname and unknown-test presets, then grep `get_arg_value` in the reference CLP example.

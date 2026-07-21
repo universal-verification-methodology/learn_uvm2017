@@ -33,7 +33,7 @@ Common mistakes:
   - Forgetting connect after build (ports unwired)
   - Ending run while sequences still active (objection dropped too early)
 
-$ grep -n "phase" ../../learn_uvm2017_sv_verilator/module6/examples/architecture/architecture.sv | head -8
+$ grep -n "phase" ../../examples/verilator-uvm-hello/module6/examples/architecture/architecture.sv | head -8
 10: *   5. Understand UVM phases execution
 28: *   - build_phase: Create components
 29: *   - connect_phase: Connect components (driver-sequencer)

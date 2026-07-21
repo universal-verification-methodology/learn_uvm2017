@@ -45,6 +45,6 @@ Common mistakes:
   forget item_done → sequencer stalls
   assuming finish_item means DUT already saw the transaction
 
-$ grep -n "start_item\|finish_item\|get_next_item\|item_done" ../../learn_uvm2017_sv_verilator/module8/tests/uvm_tests/test_utilities_uvm.sv | head -10
+$ grep -n "start_item\|finish_item\|get_next_item\|item_done" ../../examples/verilator-uvm-hello/module8/tests/uvm_tests/test_utilities_uvm.sv | head -10
 80:            seq_item_port.get_next_item(txn);
 83:            seq_item_port.item_done();

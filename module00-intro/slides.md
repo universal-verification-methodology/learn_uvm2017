@@ -28,7 +28,7 @@ Verification at block and chip level needs structure, not only a DUT and a few d
 
 ## Set up the real UVM track
 - Obtain a UVM library and a simulator that can run it
-- Open the legacy offline course tree linked from this repo
+- Open the in-course hello linked from this repo
 - Confirm you can compile and run a small testbench once
 - Module twenty-two in this course is the dedicated offline run
 

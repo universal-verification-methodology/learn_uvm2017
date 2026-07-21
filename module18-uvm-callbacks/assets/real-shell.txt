@@ -55,10 +55,10 @@ Common mistakes:
   heavy work in pre hook stalls driver
   two pre callbacks fighting over same field — mind order
 
-Legacy reference:
-  learn_uvm2017_sv_verilator/module5/examples/callbacks/callbacks.sv
+Reference example:
+  examples/verilator-uvm-hello/module5/examples/callbacks/callbacks.sv
 
-$ grep -n "uvm_register_cb\|uvm_do_callbacks\|pre_drive\|post_drive" ../../learn_uvm2017_sv_verilator/module5/examples/callbacks/callbacks.sv | head -14
+$ grep -n "uvm_register_cb\|uvm_do_callbacks\|pre_drive\|post_drive" ../../examples/verilator-uvm-hello/module5/examples/callbacks/callbacks.sv | head -14
 8: *   3. Master callback registration (`uvm_register_cb)
 9: *   4. Understand callback invocation (`uvm_do_callbacks)
 72: *   - pre_drive: Called before driving transaction

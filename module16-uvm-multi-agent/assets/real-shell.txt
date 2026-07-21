@@ -51,10 +51,10 @@ Common mistakes:
   one global is_active for unlike agents
   scoreboard expects one stream but two unrelated protocols mixed
 
-Legacy reference:
-  learn_uvm2017_sv_verilator/module6/examples/multi_agent/multi_agent.sv
+Reference example:
+  examples/verilator-uvm-hello/module6/examples/multi_agent/multi_agent.sv
 
-$ grep -n "MA_Env\|MA_Agent\|uvm_env\|analysis_port" ../../learn_uvm2017_sv_verilator/module6/examples/multi_agent/multi_agent.sv | head -12
+$ grep -n "MA_Env\|MA_Agent\|uvm_env\|analysis_port" ../../examples/verilator-uvm-hello/module6/examples/multi_agent/multi_agent.sv | head -12
 14: *     └── MA_Env (uvm_env)
 15: *           ├── MA_Agent a0 (agent_id=0)
 18: *           └── MA_Agent a1 (agent_id=1)

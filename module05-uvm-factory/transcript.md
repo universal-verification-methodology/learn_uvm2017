@@ -22,7 +22,7 @@ In the browser lab track, open the factory override sketch lab. You will see req
 
 ![Real shell — factory override sketch](assets/real-shell.png)
 
-In the real UVM track, open this module’s examples folder and read the override sketch—it lists registration, create, type override, and instance override in plain language. Say aloud: requested type is what the code asks for; constructed type is what the factory builds. If the legacy offline course is checked out, grep for set type override or factory create in any example—you will meet the same vocabulary in SystemVerilog. You are learning swap points before you debug a wrong driver in a regression.
+In the real UVM track, open this module’s examples folder and read the override sketch—it lists registration, create, type override, and instance override in plain language. Say aloud: requested type is what the code asks for; constructed type is what the factory builds. If the in-course hello is checked out, grep for set type override or factory create in any example—you will meet the same vocabulary in SystemVerilog. You are learning swap points before you debug a wrong driver in a regression.
 
 ## Slide 5 — Pitfalls to watch
 

@@ -13,14 +13,14 @@
 | **A — Real UVM** | Local UVM + Verilator (or commercial) | Muscle memory, Makefile runs you keep |
 | **B — Browser lab** | Concept sketches on the learning platform | Layer / phase / factory intuition |
 
-Prereq: **learn_systemverilog** + TB comfort. Legacy offline path: [`../learn_uvm2017_sv_verilator/`](../learn_uvm2017_sv_verilator/).
+Prereq: **learn_systemverilog** + TB comfort. Offline path: [`../examples/verilator-uvm-hello/`](../examples/verilator-uvm-hello/).
 
 Browser labs are **sketches** — they do not run Accellera UVM. Full fidelity is Track A / module 22.
 
 ## Setup (Track A)
 
 1. Install / obtain a UVM library and a simulator that can run it (Verilator UVM flow or commercial).
-2. Open legacy examples under [`../learn_uvm2017_sv_verilator/`](../learn_uvm2017_sv_verilator/) for Makefile / Verilator UVM runs (see module 22).
+2. Open examples under [`../examples/verilator-uvm-hello/`](../examples/verilator-uvm-hello/) for Makefile / Verilator UVM runs (see module 22).
 3. Confirm `make` (or course scripts) can compile a small TB.
 
 ## Setup (Track B)

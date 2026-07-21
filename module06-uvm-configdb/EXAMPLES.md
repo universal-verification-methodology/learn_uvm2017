@@ -10,4 +10,4 @@ Track A (real UVM literacy). Browser lab is shipped.
 
 ## Stretch
 
-Open `uvm-configdb`, try more-specific-wins and sibling_miss presets, then grep `uvm_config_db` in the legacy course.
+Open `uvm-configdb`, try more-specific-wins and sibling_miss presets, then grep `uvm_config_db` in the in-course hello.

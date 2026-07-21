@@ -14,7 +14,7 @@ After this module you can explain and practice the ideas taught by **`uvm-seq-fl
 
 1. Open [EXAMPLES.md](EXAMPLES.md) and read `examples/seq-flow-sketch/flow.txt`.
 2. Trace sequence → sequencer → driver → vif → DUT for one transaction.
-3. Optional: grep `start_item` / `get_next_item` in the legacy course tree.
+3. Optional: grep `start_item` / `get_next_item` in this module’s examples.
 
 ### Track B — Browser lab (online)
 

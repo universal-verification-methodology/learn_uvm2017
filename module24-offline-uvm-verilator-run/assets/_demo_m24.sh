@@ -9,8 +9,7 @@ ls -la
 ls dut tb
 echo "== Makefile head =="; head -40 Makefile
 if [[ -z "${UVM_HOME:-}" ]]; then
-  CAND="$ROOT/../learn_uvm2017_sv_verilator/tools/uvm-2017/1800.2-2017-1.0/src"
-  if [[ -f "$CAND/uvm_pkg.sv" ]]; then export UVM_HOME="$CAND"; fi
+  echo "UVM_HOME unset — set it to Accellera UVM 2017 …/src (see hello README)"
 fi
 echo "UVM_HOME=${UVM_HOME:-unset}"
 make dry-run || true
